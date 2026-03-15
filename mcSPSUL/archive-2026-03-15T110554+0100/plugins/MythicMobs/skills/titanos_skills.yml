@@ -1,0 +1,67 @@
+# 1. AMBIENTNÍ VIZUÁL - Kolem bosse krouží zlatý prstenec a padají jiskry
+TitanosAmbientVisual:
+  Skills:
+  # Zlatý prstenec (Orbital použitý jen pro vizuál)
+  - orbital{onTick=[- effect:particles{p=dust;color=#FFD700;a=10;s=0.1}];d=100;i=1;r=3.5;v=20} @self
+  # Padající jiskry z nebe na bosse
+  - effect:particles{p=glow;a=20;hs=2;vs=4;s=0.1;oy=5} @self
+  # Elektrické výboje u nohou
+  - effect:particles{p=electric_spark;a=5;hs=2;vs=1} @self
+
+# 2. PULS ZEMĚ - Každé 2 sekundy vyšle vlnu prachu
+TitanosGroundPulse:
+  Skills:
+  - effect:particles{p=cloud;a=50;hs=6;vs=0.1;s=0.2} @self
+  - effect:sound{s=entity.warden.heartbeat;v=2;p=0.5} @self
+
+# 3. KRYSTALICKÝ PAPRSEK - Raycast s explozí
+TitanosRay:
+  Skills:
+  - effect:sound{s=entity.warden.sonic_boom;v=2;p=0.8} @self
+  - raycast{
+      onTick=[
+        - effect:particles{p=end_rod;a=15;s=0.1}
+        - effect:particles{p=dust;color=#FF4500;a=10}
+      ];
+      onHit=[
+        - explosion{yield=2;damage=20;fire=false}
+        - effect:particles{p=flash;a=1} @target
+      ];
+      maxDistance=40} @target
+
+# 4. STORM OF JUDGEMENT - Náhodné blesky kolem bosse
+TitanosLightningStorm:
+  Skills:
+  - message{msg="&e&lTitanos: &fHleďte na mou moc!"} @PlayersInRadius{r=40}
+  - repeat{
+      i=5;amount=10;
+      onRepeat=[
+        - lightning @target{r=15;sort=RANDOM}
+        - damage{a=10} @PlayersInRadius{r=3}
+      ]} @self
+
+# 5. METEORICKÝ ROJ - Přeplácané padající koule
+TitanosMeteors:
+  Skills:
+  - orbital{
+      onTick=[
+        - effect:particles{p=flame;a=20;s=0.1}
+        - effect:particles{p=lava;a=5}
+        - effect:particles{p=large_smoke;a=5}
+      ];
+      onHit=[
+        - explosion{yield=4;damage=25}
+        - effect:particles{p=explosion_emitter;a=1}
+      ];
+      d=200;r=12;v=30;oy=20} @self
+
+# 6. ENRAGE FÁZE - Zčervenání a totální chaos
+TitanosEnrage:
+  Skills:
+  - message{msg="&4&lTITANOS SE ROZZUŘIL!"} @PlayersInRadius{r=100}
+  - setbossbar{color=RED;style=SOLID} @self
+  - aura{auraName=HellSky;d=99999;i=20;
+      onTick=[
+        - effect:particles{p=ash;a=100;hs=10;vs=10} @PlayersInRadius{r=30}
+        - effect:sound{s=ambient.basalt_deltas.mood;v=1;p=0.5} @self
+      ]} @self

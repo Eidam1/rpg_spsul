@@ -1,0 +1,15 @@
+# === Skript's variable storage ===
+# Please do not modify this file manually!
+#
+# version: 2.12.2
+
+grassblocks.15b58a17-7ace-3397-9eaa-b854f8b453f5, long, 0000000000000011
+quests::15b58a17-7ace-3397-9eaa-b854f8b453f5::collect_apple, string, 8006616374697665
+quests::15b58a17-7ace-3397-9eaa-b854f8b453f5::collect_apple::progress, long, 0000000000000000
+quests::15b58a17-7ace-3397-9eaa-b854f8b453f5::kill_zombie, string, 8006616374697665
+quests::15b58a17-7ace-3397-9eaa-b854f8b453f5::kill_zombie::progress, long, 0000000000000000
+"quests.15b58a17-7ace-3397-9eaa-b854f8b453f5.seber jablka", string, 8006616374697665
+"quests.15b58a17-7ace-3397-9eaa-b854f8b453f5.seber jablka.progress", long, 0000000000000000
+"quests.15b58a17-7ace-3397-9eaa-b854f8b453f5.zabij zombie", string, 8006616374697665
+"quests.15b58a17-7ace-3397-9eaa-b854f8b453f5.zabij zombie.progress", long, 0000000000000000
+

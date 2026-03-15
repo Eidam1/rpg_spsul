@@ -1,0 +1,159 @@
+# ==========================================
+# RPG SKILLS - CLEAN VERZE (BEZ DEBUGU)
+# ==========================================
+
+options:
+    base_cost: 1000
+    off_class_mult: 20
+    # ZVÝŠENO NA 5% (0.05)
+    dmg_per_level: 0.05
+    # ZVÝŠENO NA 5% OBRANY
+    def_per_level: 0.05
+    # ZVÝŠENO NA 2 HP (1 srdce)
+    hp_per_level: 2
+
+# --- VÝBĚR CLASSY ---
+command /setclass <text> <player>:
+    permission: rpg.admin
+    trigger:
+        if arg-1 is "Archer" or "SwordMan" or "Magic" or "Tank":
+            set {rpg::class::%arg-2's uuid%} to arg-1
+            # Reset pokud nemá
+            if {rpg::skill::ranged::%arg-2's uuid%} is not set:
+                set {rpg::skill::ranged::%arg-2's uuid%} to 1
+            if {rpg::skill::melee::%arg-2's uuid%} is not set:
+                set {rpg::skill::melee::%arg-2's uuid%} to 1
+            if {rpg::skill::magic::%arg-2's uuid%} is not set:
+                set {rpg::skill::magic::%arg-2's uuid%} to 1
+            if {rpg::skill::defense::%arg-2's uuid%} is not set:
+                set {rpg::skill::defense::%arg-2's uuid%} to 1
+            
+            send "&a[RPG] &e%arg-2% &7je nyní &b%arg-1%" to player
+            
+            # HP RESET
+            execute console command "attribute %arg-2% minecraft:generic.max_health base set 20"
+        else:
+            send "&cArcher, SwordMan, Magic, Tank"
+
+# --- RESET ---
+command /resetrpg <player>:
+    permission: rpg.admin
+    trigger:
+        set {_u} to arg-1's uuid
+        delete {rpg::class::%{_u}%}
+        delete {rpg::skill::ranged::%{_u}%}
+        delete {rpg::skill::melee::%{_u}%}
+        delete {rpg::skill::magic::%{_u}%}
+        delete {rpg::skill::defense::%{_u}%}
+        execute console command "attribute %arg-1% minecraft:generic.max_health base set 20"
+        heal arg-1
+        send "&c[RPG] Reset hotov." to player
+
+# --- STATISTIKY ---
+command /stats:
+    trigger:
+        set {_u} to player's uuid
+        send "&6--- TVOJE LEVELY ---"
+        send "&cMelee: %{rpg::skill::melee::%{_u}%}%"
+        send "&aRanged: %{rpg::skill::ranged::%{_u}%}%"
+        send "&dMagic: %{rpg::skill::magic::%{_u}%}%"
+        send "&9Defense: %{rpg::skill::defense::%{_u}%}%"
+
+# ==========================================
+# LOGIKA POŠKOZENÍ (BEZ VÝPISU DO CHATU)
+# ==========================================
+on damage with priority highest:
+    attacker is a player
+    victim is a player or a mob
+    
+    # Zjistíme, co držíš
+    set {_tool} to type of attacker's tool
+    
+    # -- 1. ARCHER --
+    if damage cause is projectile:
+        set {_lvl} to {rpg::skill::ranged::%attacker's uuid%} ? 1
+        set {_bonus} to 1 + (({_lvl} - 1) * {@dmg_per_level})
+        
+        set {_dmg} to damage * {_bonus}
+        set damage to {_dmg}
+
+    # -- 2. SWORDMAN --
+    else if damage cause is attack or sweep attack:
+        
+        # Seznam mečů natvrdo (tohle ti fungovalo)
+        if attacker's tool is netherite sword or diamond sword or iron sword or golden sword or stone sword or wooden sword:
+            
+            set {_lvl} to {rpg::skill::melee::%attacker's uuid%} ? 1
+            set {_bonus} to 1 + (({_lvl} - 1) * {@dmg_per_level})
+            
+            set {_dmg} to damage * {_bonus}
+            set damage to {_dmg}
+
+    # -- 3. MAGIC --
+    else if damage cause is magic or poison or potion:
+        set {_lvl} to {rpg::skill::magic::%attacker's uuid%} ? 1
+        set {_bonus} to 1 + (({_lvl} - 1) * {@dmg_per_level})
+        set damage to damage * {_bonus}
+
+# --- OBRANA (TANK) ---
+on damage with priority highest:
+    victim is a player
+    set {_lvl} to {rpg::skill::defense::%victim's uuid%} ? 1
+    
+    if {_lvl} > 1:
+        set {_reduction} to (({_lvl} - 1) * {@def_per_level})
+        if {_reduction} > 0.8:
+            set {_reduction} to 0.8
+            
+        set damage to damage * (1 - {_reduction})
+
+# --- HP UPDATE ---
+function upgradeHealth(p: player):
+    set {_uuid} to {_p}'s uuid
+    set {_lvl} to {rpg::skill::defense::%{_uuid}%} ? 1
+    
+    # 20HP + 4HP za level
+    set {_finalHP} to 20 + (({_lvl} - 1) * {@hp_per_level})
+    
+    # Příkaz pro nastavení HP
+    execute console command "attribute %{_p}% minecraft:generic.max_health base set %{_finalHP}%"
+
+on join:
+    wait 2 seconds
+    upgradeHealth(player)
+
+command /buyskill <text>:
+    trigger:
+        set {_skill} to arg-1
+        set {_uuid} to player's uuid
+        if {rpg::class::%{_uuid}%} is not set:
+            send "&cNemáš classu!"
+            stop
+            
+        if {rpg::skill::%{_skill}%::%{_uuid}%} is not set:
+            set {rpg::skill::%{_skill}%::%{_uuid}%} to 1
+
+        set {_currentLvl} to {rpg::skill::%{_skill}%::%{_uuid}%}
+        set {_cost} to {@base_cost} * {_currentLvl}
+        
+        # Stále zdarma pro test (jak jsi měl v kódu)
+        add 1 to {rpg::skill::%{_skill}%::%{_uuid}%}
+        send "&aKoupen level %{_skill}%!"
+        
+        if {_skill} is "defense":
+            upgradeHealth(player)
+            heal player
+        
+# --- PAPI PLACEHOLDERY ---
+papi placeholder for the prefix "rpg":
+    set {_u} to player's uuid
+    if identifier is "class":
+        set the result to {rpg::class::%{_u}%} ? "&cNeurčeno"
+    if identifier is "lvl_ranged":
+        set the result to "%{rpg::skill::ranged::%{_u}%} ? 1%"
+    if identifier is "lvl_melee":
+        set the result to "%{rpg::skill::melee::%{_u}%} ? 1%"
+    if identifier is "lvl_magic":
+        set the result to "%{rpg::skill::magic::%{_u}%} ? 1%"
+    if identifier is "lvl_defense":
+        set the result to "%{rpg::skill::defense::%{_u}%} ? 1%"

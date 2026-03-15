@@ -1,0 +1,60 @@
+# 1. ČERNÁ DÍRA (Naváděný projektil)
+XarothMissile:
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=2;p=0.5} @self
+  - projectile{
+      onTick=[
+        - effect:particles{p=portal;a=30;hs=0.4;vs=0.4;s=0.1}
+        - effect:particles{p=large_smoke;a=15;hs=0.3;vs=0.3;s=0.05}
+        - effect:particles{p=dust;color=#000000;a=10;s=1}
+      ];
+      onHit=[
+        - explosion{yield=3;damage=20;fire=false}
+        - pull{v=12} @PlayersInRadius{r=6}
+        - damage{a=25}
+        - potion{type=WITHER;d=100;l=3}
+      ];
+      v=15;
+      i=1;
+      # Offsety pro obřího bosse (startuje před hlavami)
+      hO=2.5; 
+      vO=5.0; 
+      mr=60;
+      sm=true} @target
+
+# 2. EVENT HORIZONT (Gravitace podle počtu hráčů)
+EventHorizont:
+  Skills:
+  - aura{auraName=GravityWell;d=20;i=5;
+      onTick=[
+        - effect:particles{p=reverse_portal;a=40;hs=10;vs=2}
+        - pull{v="0.8 * (1 + nodes.nearby_players)"} @PlayersInRadius{r=20}
+        - potion{type=WITHER;d=40;l=2} @PlayersInRadius{r=8}
+      ]} @self
+
+# 3. KVANTOVÝ PAPRSEK (Raycast Laser)
+XarothBeam:
+  Skills:
+  - effect:sound{s=entity.warden.sonic_boom;v=2;p=0.5} @self
+  - raycast{
+      onTick=[
+        - effect:particles{p=dust;color=#800080;a=10;s=0.2}
+      ];
+      onHit=[
+        - damage{a=25}
+        - ignite{d=60}
+      ];
+      maxDistance=40} @target
+
+# 4. FÁZE 2 (Zatmění)
+XarothPhase2:
+  Skills:
+  - message{msg="&4&lXAROTH: &0&lPOHŘBÍM VÁS VE TMĚ!"} @PlayersInRadius{r=100}
+  - potion{type=BLINDNESS;d=400;l=1} @PlayersInRadius{r=64}
+  - effect:sound{s=entity.wither.spawn;v=2;p=0.5} @self
+  - orbital{
+      onTick=[
+        - effect:particles{p=witch;a=5}
+        - damage{a=15} @PlayersInRadius{r=4}
+      ];
+      d=400;i=1;r=12;v=25} @self

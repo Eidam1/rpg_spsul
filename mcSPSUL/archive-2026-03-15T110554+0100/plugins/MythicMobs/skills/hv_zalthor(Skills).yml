@@ -1,0 +1,295 @@
+#-------------------------
+#     Made by helove 
+#     Discord helove
+#-------------------------
+  
+# -- General -- # 
+
+hv_zalthor_active:
+  Cooldown: 10
+  Conditions:
+  - targetwithin{d=20} true
+  - hastag{t=hv_zalthor_active} false
+  Skills:
+  - gcd{ticks=44} @self
+  - sound{s=hv_zalthor.spawn;v=2;p=0.8} @self
+  - setspeed{s=0} @self
+  - state{s=active} @self
+  - lockmodel{l=false} @self 
+  - defaultstate{t=idle;s=idle} @self
+  - addtag{t=hv_zalthor_active} @self
+  - delay 44
+  - removetag{t=hv_zalthor_not_active} @self
+  - setspeed{s=1} @self  
+
+hv_zalthor_step:
+  Conditions:
+  - hastag{t=hv_zalthor_not_active} false
+  - moving true
+  - inblock{b=WATER,LAVA} false
+  - offgcd
+  Skills:
+  - sound{s=hv_zalthor.step;v=1;p=1} @self
+    
+hv_zalthor_hammer_top:
+  Cooldown: 16
+  Conditions:
+  - offgcd
+  - hastag{t=hv_zalthor_not_active} false
+  TargetConditions:
+  - distance{d=2to6} true
+  Skills:
+  - gcd{ticks=60} @self
+  - state{s=hammer_top} @self
+  - setspeed{s=0} @self
+  - delay 22
+  - Aura{auraName=hv_zalthor_hammer_top_totem;onTick=hv_zalthor_hammer_top_totem_tick;interval=1;duration=7} @self
+  - delay 3
+  - sound{s=hv_zalthor.hammer_top;v=3;p=1.6} @self
+  - sound{s=hv_zalthor.hammer;v=3;p=1.6} @self
+  - delay 1
+  - lockmodel{l=true} @self
+  - setai{ai=false} @self
+  - delay 14
+  - lockmodel{l=false} @self
+  - setai{ai=true} @self
+  - delay 20
+  - setspeed{s=1} @self
+  
+hv_zalthor_hammer_top_totem_tick:
+  Skills:
+  - totem{ch=1;md=1;oH=hv_zalthor_hammer_top_damage;hr=2.5;vr=2.5;hnp=true;drawhitbox=false;ti=25} @modelpart{pid=hammer_t;o=model}
+  
+hv_zalthor_hammer_top_damage:
+  TargetConditions:
+  - hasaura hv_zalthor_hammer_top_damage false
+  Skills:
+  - basedamage{m=3.5;pi=true}
+  - throw{v=5;vy=0}
+  - Aura{auraName=hv_zalthor_hammer_top_damage;duration=10}
+  - shieldbreak{duration=100}
+  
+hv_zalthor_spin:
+  Cooldown: 24
+  Conditions:
+  - offgcd
+  - health{h=<250} true
+  TargetConditions:
+  - distance{d=0to6} true
+  Skills:
+  - gcd{ticks=155} @self
+  - state{s=spin} @self
+  - setspeed{s=0} @self
+  - delay 10
+  - sound{s=hv_zalthor.woosh;v=3;p=0.5} @self
+  - delay 5
+  - Aura{auraName=hv_zalthor_spin_totem;onTick=hv_zalthor_spin_totem_tick;interval=1;duration=100} @self
+  - Aura{auraName=hv_zalthor_spin_totem_sound;onTick=hv_zalthor_spin_totem_tick_sound;interval=10;duration=100} @self
+  - delay 5
+  - setspeed{s=1.5} @self
+  - delay 98
+  - Aura{auraName=hv_zalthor_spin_totem2;onTick=hv_zalthor_spin_totem_tick2;interval=1;duration=7} @self
+  - delay 4
+  - setspeed{s=0} @self
+  - lockmodel{l=true} @self
+  - sound{s=hv_zalthor.hammer_top;v=3;p=1} @self
+  - sound{s=hv_zalthor.hammer;v=3;p=1.6} @self
+  - delay 13
+  - lockmodel{l=false} @self
+  - delay 20
+  - setspeed{s=1} @self
+  
+hv_zalthor_spin_totem_tick:
+  Skills:
+  - totem{md=1;oH=hv_zalthor_spin_damage;hr=2;vr=2;hnp=true;drawhitbox=false;ti=25} @modelpart{pid=hammer_t;o=model}
+  
+hv_zalthor_spin_damage:
+  TargetConditions:
+  - hasaura hv_zalthor_spin_damage false
+  Skills:
+  - basedamage{m=2;pi=true}
+  - throw{v=5;vy=0}
+  - Aura{auraName=hv_zalthor_spin_damage;duration=5}
+  - shieldbreak{duration=100}
+  
+hv_zalthor_spin_totem_tick2:
+  Skills:
+  - totem{md=1;oH=hv_zalthor_spin_damage2;hr=2.2;vr=2.2;hnp=true;drawhitbox=false;ti=25} @modelpart{pid=hammer_t;o=model}
+  
+hv_zalthor_spin_damage2:
+  TargetConditions:
+  - hasaura hv_zalthor_spin_damage2 false
+  Skills:
+  - basedamage{m=3.5;pi=true}
+  - throw{v=15;vy=-5}
+  - Aura{auraName=hv_zalthor_spin_damage2;duration=5}
+  - shieldbreak{duration=100}
+  
+hv_zalthor_spin_totem_tick_sound:
+  Skills:
+  - sound{s=hv_zalthor.woosh;v=3;p=0.5} @self
+
+hv_zalthor_jump_attack:
+  Cooldown: 20
+  Conditions:
+  - offgcd
+  - health{h=<280} true
+  TargetConditions:
+  - distance{d=0to6} true
+  Skills:
+  - gcd{ticks=90} @self
+  - state{s=jump_attack} @self
+  - setspeed{s=0} @self
+  - delay 40
+  - setspeed{s=1.5} @self 
+  - delay 2
+  - Aura{auraName=hv_zalthor_jump_attack_totem;onTick=hv_zalthor_jump_attack_totem_tick;interval=1;duration=5} @self
+  - delay 3
+  - sound{s=hv_zalthor.jump_attack;v=3;p=1} @self
+  - sound{s=hv_zalthor.hammer;v=3;p=1.6} @self
+  - delay 1
+  - skill{s=hv_zalthor_jump_attack_aoe} @EIR{r=12}
+  - setspeed{s=0} @self
+  - lockmodel{l=true} @self
+  - delay 24
+  - lockmodel{l=false} @self
+  - delay 20
+  - setspeed{s=1} @self
+  
+hv_zalthor_jump_attack_aoe:
+  Skills:
+  - basedamage{m=3;pi=true;is=true}
+  - throw{v=5;vy=12}
+  - blockwave{duration=35;material=deepslate;radius=12;radiusY=1;velocity=2;shape=sphere;hs=false;n=0.2} @selflocation
+  - blockwave{duration=35;material=cobblestone;radius=12;radiusY=1;velocity=2;shape=sphere;hs=false;n=0.2} @selflocation
+  - blockwave{duration=35;material=blackstone;radius=12;radiusY=1;velocity=2;shape=sphere;hs=false;n=0.2} @selflocation
+   
+hv_zalthor_jump_attack_totem_tick:
+  Skills:
+  - totem{md=1;oH=hv_zalthor_jump_attack_damage;hr=2.2;vr=2.2;hnp=true;drawhitbox=false;ti=25} @modelpart{pid=hammer_t;o=model}
+  
+hv_zalthor_jump_attack_damage:
+  TargetConditions:
+  - hasaura hv_zalthor_jump_attack_damage false
+  Skills:
+  - basedamage{m=4;pi=true}
+  - Aura{auraName=hv_zalthor_jump_attack_damage;duration=5}
+  - shieldbreak{duration=120}
+  
+hv_zalthor_grab_try:
+  Cooldown: 16
+  Conditions:
+  - offgcd
+  - health{h=<280} true
+  TargetConditions:
+  - distance{d=0to6} true
+  Skills:
+  - gcd{ticks=40} @self
+  - state{s=grab_try} @self
+  - delay 10
+  - setspeed{s=2.5} @self
+  - delay 4
+  - setspeed{s=0} @self
+  - lockmodel{l=true} @self
+  - totem{md=6;oH=hv_zalthor_grab;hr=2;vr=2;drawhitbox=false;ti=25} @modelpart{pid=grab}
+  - delay 6
+  - skill{s=check_passengers_hv_zalthor_grab_try} @modelpart{pid=grab}
+  
+check_passengers_hv_zalthor_grab_try:
+  Conditions:
+  - ModelHasPassenger{p=grab} false
+  Skills:
+  - lockmodel{l=false} @self
+  - setspeed{s=1} @self
+   
+hv_zalthor_grab:
+  Skills:
+  - gcd{ticks=60} @self
+  - damage{a=6} @ModelPassengers{p=grab}
+  - mountmodel{mid=hv_zalthor;driver=false;pbone=grab;dmg=true}
+  - state{s=grab_try;r=true} @self
+  - state{s=grab} @self
+  - delay 24
+  - sound{s=hv_zalthor.woosh;v=3;p=1} @self
+  - delay 2
+  - totem{md=1;oH=hv_zalthor_grab_throw;hr=1;vr=1;drawhitbox=false;ti=25} @modelpart{pid=grab}
+  - delay 8
+  - setAI{ai=true} @self
+  - lockmodel{l=false} @self
+  - delay 26
+  - setspeed{s=1} @self
+
+hv_zalthor_grab_throw:
+  Skills:
+  - dismountall{mid=hv_zalthor;p=grab} @self
+  - delay 1
+  - throw{v=15;vy=1}
+  
+hv_zalthor_stun:
+  Cooldown: 32
+  Conditions:
+  - offgcd
+  - health{h=<200} true
+  Skills:
+  - gcd{ticks=150} @self
+  - state{s=stun} @self
+  - setspeed{s=0} @self
+  - delay 6
+  - lockmodel{l=true} @self
+  - setAI{ai=false} @self
+  - delay 2
+  - sound{s=hv_zalthor.step;v=1;p=1.2} @self
+  - partvis{mid=hv_zalthor;p=stars;v=true;child=true} @self
+  - delay 112
+  - partvis{mid=hv_zalthor;p=stars;v=false;child=true} @self
+  - delay 20
+  - lockmodel{l=false} @self 
+  - setAI{ai=true} @self
+  - delay 10
+  - setspeed{s=1} @self
+  
+hv_zalthor_poke:
+  Cooldown: 12
+  Conditions:
+  - offgcd
+  - hastag{t=hv_zalthor_not_active} false
+  TargetConditions:
+  - distance{d=4to10} true
+  Skills:
+  - gcd{ticks=40} @self
+  - state{s=poke} @self
+  - setspeed{s=0} @self
+  - delay 15
+  - setspeed{s=2.5} @self
+  - Aura{auraName=hv_zalthor_poke_totem;onTick=hv_zalthor_poke_totem_tick;interval=1;duration=6} @self
+  - sound{s=hv_zalthor.woosh;v=3;p=1} @self
+  - delay 4
+  - sound{s=entity.player.attack.knockback;v=3;p=0.3} @self
+  - delay 2
+  - setspeed{s=0} @self
+  - delay 2
+  - lockmodel{l=true} @self
+  - delay 8
+  - lockmodel{l=false} @self
+  - delay 9
+  - setspeed{s=1} @self
+  
+hv_zalthor_poke_totem_tick:
+  Skills:
+  - totem{md=1;oH=hv_zalthor_poke_damage;hr=2;vr=2;hnp=true;drawhitbox=false;ti=25} @modelpart{pid=hammer_t;o=model}
+  
+hv_zalthor_poke_damage:
+  TargetConditions:
+  - hasaura hv_zalthor_poke_damage false
+  Skills:
+  - basedamage{m=3.5}
+  - throw{v=12;vy=1}
+  - Aura{auraName=hv_zalthor_poke_damage;duration=5}
+  - shieldbreak{duration=100}
+  
+#-------------------------
+#     Made by helove 
+#     Discord helove
+#-------------------------
+
+#5a9b88f39e764c304ed148102c9baac6

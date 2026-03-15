@@ -1,0 +1,44 @@
+Vesper:
+  Type: EVOKER
+  Display: '&b&l☠ Vesper, Pán Duší ☠ &7[HP <mob.hp{f=0}>]'
+  Health: 300
+  Attributes:
+    max_health: 300
+    movement_speed: 0.25
+    follow_range: 64
+  Options:
+    Scale: 1.6
+    AlwaysShowName: true
+    PreventOtherDrops: true
+    Silent: true
+    # Evoker normálně vyvolává Vexy, my mu dáme vlastní skilly
+    PreventSpellCast: true 
+  BossBar:
+    Enabled: true
+    Title: '&b&lVesper &8- &f<mob.hp{f=0}> / <mob.mhp{f=0}>'
+    Color: BLUE
+    Style: NOTCHED_10
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  Skills:
+  # --- TOTÁLNÍ VIZUÁL (Premium Aura) ---
+  - skill{s=VesperSoulAura} @self ~onTimer:5
+  
+  # --- ÚTOKY ---
+  # 1. Duševní paprsek (Raycast - čím dál jsi, tím víc to bolí)
+  - skill{s=SoulRay} @target ~onTimer:80
+  # 2. Vír duší (Orbital - přitahuje hráče)
+  - skill{s=SoulVortex} @self ~onTimer:140
+  # 3. Vyvolání "Ztracených duší" (Minioni)
+  - skill{s=SummonLostSouls} @self ~onTimer:300
+  
+  # --- ENRAGE FÁZE (při 150 HP) ---
+  - skill{s=VesperEnrage} @self ~onHealth:150
+  
+  # --- DEATH SKILL ---
+  - skill{s=VesperDeath} @self ~onDeath

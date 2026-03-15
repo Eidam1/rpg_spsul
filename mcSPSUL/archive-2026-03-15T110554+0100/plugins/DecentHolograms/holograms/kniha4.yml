@@ -1,0 +1,12 @@
+location: SpawnVesnice:22.970:-54.233:30.315
+enabled: true
+display-range: 48
+update-range: 48
+update-interval: 20
+facing: 0.0
+down-origin: false
+pages:
+- lines:
+  - content: '#ICON: BOOK !ENCHANTED'
+    height: 0.6
+  actions: {}

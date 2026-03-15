@@ -1,0 +1,25 @@
+Kryos:
+  Type: WITHER_SKELETON
+  Display: '&b&lKryos &7[HP <mob.hp>]'
+  Health: 600
+  Damage: 15
+  # 1.21.4 oprava atributů
+  Attributes:
+    max_health: 600
+  Options:
+    MovementSpeed: 0.3
+    KnockbackResistance: 1
+    PreventOtherDrops: true
+    FollowRange: 40
+  BossBar:
+    Enabled: true
+    Title: '&bKryos: &f<mob.hp> / <mob.mhp>'
+    Color: BLUE
+    Style: NOTCHED_10
+  Skills:
+  # Pasivní aura mrazu (Premium mechanika Aura)
+  - skill{s=MrazivaAura} @self ~onTimer:20
+  # Ledové projektily (Orbitaly)
+  - skill{s=LedoveStřepiny} @self ~onTimer:100
+  # Skok a zmrazení země
+  - skill{s=LedovySkok} @target ~onTimer:300

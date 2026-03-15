@@ -1,0 +1,8 @@
+on break of grass block:
+    add 1 to {grassblocks.%player%}
+
+command /pocet_grassu:
+    trigger:
+        if {grassblocks.%player%} is not set:
+            set {grassblocks.%player%} to 0
+        send "&aVykopal jsi &e%{grassblocks.%player%}% &aGrass Blocků!"

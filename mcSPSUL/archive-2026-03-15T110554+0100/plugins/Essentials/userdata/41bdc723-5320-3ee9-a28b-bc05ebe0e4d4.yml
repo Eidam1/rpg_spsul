@@ -1,0 +1,38 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 89.203.223.28
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1765650235145
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1765650486622
+  login: 1765650153898
+money: '0'
+last-account-name: jakubcze_
+lastlocation:
+  world: b0115cc8-ba4f-4081-b9cc-0fa114119dbc
+  world-name: world
+  x: 0.32349578945451546
+  y: 110.0
+  z: 58.30412685493066
+  yaw: 20.40032958984375
+  pitch: 19.950016021728516
+logoutlocation:
+  world: 6101c691-aff4-4389-88b9-01b72106bd28
+  world-name: SpawnVesnice
+  x: 4.820289107561546
+  y: -59.0
+  z: -3.6646637368313097
+  yaw: 72.886962890625
+  pitch: 14.250066757202148

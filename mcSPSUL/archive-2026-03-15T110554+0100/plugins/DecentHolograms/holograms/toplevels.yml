@@ -1,0 +1,32 @@
+location: SpawnVesnice:-8.436:-55.384:-22.305
+enabled: true
+display-range: 48
+update-range: 48
+update-interval: 20
+facing: 0.0
+down-origin: false
+pages:
+- lines:
+  - content: '&b&lTOP LEVELY (Power)'
+    height: 0.3
+  - content: '&e1. &f%auraskills_lb_power_1_name% &7- &bLevel %auraskills_lb_power_1_value%'
+    height: 0.3
+  - content: '&72. &f%auraskills_lb_power_2_name% &7- &bLevel %auraskills_lb_power_2_value%'
+    height: 0.3
+  - content: '&63. &f%auraskills_lb_power_3_name% &7- &bLevel %auraskills_lb_power_3_value%'
+    height: 0.3
+  - content: '&f4. &f%auraskills_lb_power_4_name% &7- &bLevel %auraskills_lb_power_4_value%'
+    height: 0.3
+  - content: '&f5. &f%auraskills_lb_power_5_name% &7- &bLevel %auraskills_lb_power_5_value%'
+    height: 0.3
+  - content: '&f6. &f%auraskills_lb_power_6_name% &7- &bLevel %auraskills_lb_power_6_value%'
+    height: 0.3
+  - content: '&f7. &f%auraskills_lb_power_7_name% &7- &bLevel %auraskills_lb_power_7_value%'
+    height: 0.3
+  - content: '&f8. &f%auraskills_lb_power_8_name% &7- &bLevel %auraskills_lb_power_8_value%'
+    height: 0.3
+  - content: '&f9. &f%auraskills_lb_power_9_name% &7- &bLevel %auraskills_lb_power_9_value%'
+    height: 0.3
+  - content: '&f10. &f%auraskills_lb_power_10_name% &7- &bLevel %auraskills_lb_power_10_value%'
+    height: 0.3
+  actions: {}

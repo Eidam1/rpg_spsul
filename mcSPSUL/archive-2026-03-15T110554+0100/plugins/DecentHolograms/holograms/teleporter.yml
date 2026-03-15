@@ -1,0 +1,14 @@
+location: SpawnVesnice:0.613:-58.000:-22.329
+enabled: true
+display-range: 48
+update-range: 48
+update-interval: 20
+facing: 0.0
+down-origin: false
+pages:
+- lines:
+  - content: '&bKlikni na NPC'
+    height: 0.3
+  - content: '&eAby si mohl objevovat naše světy'
+    height: 0.3
+  actions: {}

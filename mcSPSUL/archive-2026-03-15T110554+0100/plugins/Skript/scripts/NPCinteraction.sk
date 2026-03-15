@@ -1,0 +1,3 @@
+on rightclick:
+    if name of clicked entity is "Adam":
+        execute player command "/menu"

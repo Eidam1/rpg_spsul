@@ -1,0 +1,94 @@
+animations:
+  welcome_back:
+    use-minimessage: true
+    use-papi: false
+    name: welcome_back
+    fps: 20.0 # 20 snímků za sekundu (velmi plynulé)
+    frames:
+    # 1. Postupné psaní (objevení textu)
+    - V
+    - Ví
+    - Vít
+    - Vítej
+    - 'Vítej '
+    - 'Vítej z'
+    - 'Vítej zp'
+    - 'Vítej zpě'
+    - 'Vítej zpět'
+    - 'Vítej zpět!'
+    
+    # 2. Plný duhový efekt (Animace barvy)
+    - <rainbow:1>Vítej zpět!
+    - <rainbow:2>Vítej zpět!
+    - <rainbow:3>Vítej zpět!
+    - <rainbow:4>Vítej zpět!
+    - <rainbow:5>Vítej zpět!
+    - <rainbow:6>Vítej zpět!
+    - <rainbow:7>Vítej zpět!
+    - <rainbow:8>Vítej zpět!
+    - <rainbow:9>Vítej zpět!
+    - <rainbow:10>Vítej zpět!
+    - <rainbow:11>Vítej zpět!
+    - <rainbow:12>Vítej zpět!
+    - <rainbow:13>Vítej zpět!
+    - <rainbow:14>Vítej zpět!
+    - <rainbow:15>Vítej zpět!
+    
+    # 3. Postupné mizení (efekt se obrací)
+    - <rainbow:15>Vítej zpět
+    - <rainbow:15>Vítej zpě
+    - <rainbow:15>Vítej zp
+    - <rainbow:15>Vítej z
+    - <rainbow:15>Vítej 
+    - <rainbow:15>Vítej
+    - <rainbow:15>Víte
+    - <rainbow:15>Vít
+    - <rainbow:15>Ví
+    - <rainbow:15>V
+    - ' ' # Prázdné řádky na konci pro pauzu
+    - ' '
+    - ' '
+    - ' '
+    - ' '
+    sounds: {}
+    commands: {}
+  
+  # Zbytek kódů (example_sounds, example_commands) zůstává nezměněn
+  example_sounds:
+    use-minimessage: true
+    use-papi: false
+    name: example_sounds
+    fps: 1.0
+    frames:
+    - You can also add
+    - You can also add
+    - You can also add <gold><bold>SOUNDS!<reset>
+    sounds:
+      2:
+      - namespace: minecraft
+        value: entity.experience_orb.pickup
+        source: PLAYER
+        pitch: 1.0
+    commands: {}
+  example_commands:
+    use-minimessage: false
+    use-papi: false
+    name: example_commands
+    fps: 1.0
+    frames:
+    - Look at the chat
+    - Look at the chat
+    - Continue looking at the chat ^^
+    - Continue looking at the chat ^^
+    - Just one more time ^^
+    - Just one more time ^^
+    sounds: {}
+    commands:
+      0:
+      - '[MESSAGE] <newline>You can send <gold>messages<reset> to users in each frame'
+      2:
+      - '[CONSOLE] msg %player% Send command from the console. Hi %player%!'
+      - '[PLAYER] me Or from the user, I''m happy'
+      4:
+      - '[MESSAGE] <newline>And you can display the <gold>current frame<reset> <gray><italic>(You
+        are at frame %frame%)<reset>'

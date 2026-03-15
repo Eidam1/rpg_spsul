@@ -1,0 +1,56 @@
+# --- KULOMET ---
+
+# --- NAČÍTÁNÍ PŘEDMĚTU PŘI STARTU SERVERU ---
+on load:
+    # Vytvoření unikátního předmětu (LUK)
+    set {_gun} to bow named "&c&lKulomet Dávných"
+    set lore of {_gun} to "&7Magický luk, který střílí rachejtle!" and "&ePravé kliknutí - Střelba"
+    # Značka: Použijeme Power 5 jako unikátní enchant pro luk.
+    enchant {_gun} with power 5
+    # Uložení předmětu do proměnné
+    set {Kulomet} to {_gun}
+
+# --- PŘÍKAZ PRO ZÍSKÁNÍ PŘEDMĚTU ---
+command /getgun:
+    permission: op
+    trigger:
+        give {Kulomet} to player
+
+# --- LOGIKA STŘELBY KULOMETU ---
+on right click with bow:
+    # Kontrola, jestli luk má naši unikátní značku (Power 5)
+    if player's tool is enchanted with power 5:
+        
+        # 1. Zvuk (OPRAVA: Použitý jednoduchý, garantovaný zvuk)
+        play sound "ENTITY_IRON_GOLEM_ATTACK" to player
+        
+        # 2. Odebrání luku z ruky (simulace "nabíjení")
+        remove 1 of player's tool from player
+        
+        # 3. Vystřelení projektilu (RACHEJTLE)
+        shoot a firework rocket from player at speed 2.5
+        
+        # 4. Vrácení luku po 0.25 sekundy (5 ticků)
+        wait 1 ticks
+        
+        # 5. Vrácení unikátního luku
+        give {Kulomet} to player
+        send action bar "&cKulomet je připraven!" to player
+
+# --- LOGIKA POŠKOZENÍ (Rachejtle) ---
+on projectile hit:
+    # Kontrola, jestli se jedná o Rachejtli
+    if projectile is a firework rocket:
+        
+        # Kontrola, jestli projektil zasáhl entitu (např. moba nebo hráče)
+        if victim is set:
+            
+            # 1. Uděl 4 jednotky poškození (2 srdce)
+            damage victim by 4
+            
+            # 2. Zvuk zásahu
+            play sound "ENTITY_GENERIC_HURT" to victim
+            
+            # 3. Zpětná vazba pro střelce
+            if shooter is player:
+                send action bar "&cZásah kulometem! Udělil jsi 2 srdce poškození." to shooter

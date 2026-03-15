@@ -1,0 +1,13 @@
+conditions:
+  vip:
+    type: HAS_PERMISSION
+    value: 'group.vip'
+  not_vip:
+    type: NOT_HAVE_PERMISSION
+    value: 'group.vip'
+  level_higher_5:
+    type: EXPRESSION
+    value: '{player_level} > 5'
+  player_spawn:
+    type: EXPRESSION
+    value: '"{player_world}" = "spawn"'

@@ -1,0 +1,46 @@
+hv_zalthor:
+  Type: husk
+  Display: '&6Zalthor'
+  Health: 300
+  Damage: 5
+  DamageModifiers:
+  - PROJECTILE 0.25
+  - FALL 0.1
+  Faction: hv_zalthor
+  Modules:
+    ThreatTable: true
+  Options:
+    AlwaysShowName: true
+    PreventOtherDrops: true
+    Silent: true
+    FollowRange: 32
+    PreventItemPickup: true
+    PreventSunburn: true
+    PreventRandomEquipment: true
+    MovementSpeed: 0.2
+    KnockbackResistance: 1
+    Collidable: false
+  BossBar:
+    Enabled: true
+    Title: '&6Zalthor'
+    Range: 40
+    Color: RED
+    Style: SEGMENTED_10
+  Skills:
+  - model{mid=hv_zalthor;ride=true;drive=true;s=1;d=false} @self ~onSpawn
+  - CancelEvent{sync=true} @self ~onAttack
+  - defaultstate{t=idle;s=not_active} @self ~onSpawn
+  - lockmodel{l=true;delay=2} @self ~onSpawn
+  - setspeed{s=0} @self ~onSpawn
+  - addtag{t=hv_zalthor_not_active} @self ~onSpawn
+  - partvis{mid=hv_zalthor;p=stars;v=false;child=true} @self ~onSpawn
+  - partvis{mid=hv_zalthor;p=stars;v=false;child=true} @self ~onDeath
+  - sound{s=hv_zalthor.step;v=1;p=1.2;delay=8} @self ~onDeath
+  - sound{s=hv_zalthor.step;v=1;p=0.7;delay=48} @self ~onDeath
+  - BodyClamp{mh=25;rde=0;rdu=0} @self ~onSpawn
+  - skill{s=hv_zalthor_active} @target ~onTimer:10
+  - skill{s=hv_zalthor_step} @self ~onTimer:20
+  - sound{s=hv_zalthor.hurt;v=3;p=1.5} @self ~onDamaged
+  - skill{s=hv_zalthor_stun} @target ~onDamaged
+  - randomskill{s=hv_zalthor_hammer_top,hv_zalthor_spin,hv_zalthor_jump_attack,hv_zalthor_grab_try,hv_zalthor_poke} @target ~onTimer:20
+#5a9b88f39e764c304ed148102c9baac6

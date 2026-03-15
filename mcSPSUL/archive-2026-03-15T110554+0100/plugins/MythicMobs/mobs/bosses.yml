@@ -1,0 +1,53 @@
+# --- HLAVNÍ BOSS ---
+MujGolem:
+  Type: IRON_GOLEM
+  Display: '&fObří Golem &7[HP <mob.hp>]'
+  Health: 300
+  Damage: 20
+  
+  # --- DOVEDNOSTI (Tohle ti chybělo) ---
+  Skills:
+  - skill{s=GolemVyvolaniMinionu} @self ~onTimer:200 # Spawne miniony každých 10 sekund
+  - skill{s=GolemOdhozeni} @target ~onAttack # Odhodí hráče při útoku
+  
+  BossBar:
+    Enabled: true
+    Title: '&fObří Golem'
+    Range: 40
+    Color: RED
+    Style: SOLID
+  
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  
+  Options:
+    Scale: 2
+    KnockbackResistance: 1
+    MovementSpeed: 0.25
+    FollowRange: 32
+
+  Drops:
+  - IRON_BLOCK 10 1
+  - NETHERITE_BLOCK 1 1
+
+# --- MALÝ POMOCNÍK ---
+MalyGolem:
+  Type: IRON_GOLEM
+  Display: '&7Malý Golem'
+  Health: 40
+  Damage: 5
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  Options:
+    Scale: 0.7
+    PreventOtherDrops: true

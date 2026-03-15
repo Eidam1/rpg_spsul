@@ -1,0 +1,16 @@
+{
+    "__comment": "JimStoneCraft - 2025",
+    "animation": {
+        "frames": [
+            {
+                "index": 0,
+                "time": 10
+            },
+            {
+                "index": 1,
+                "time": 4
+            }
+        ],
+        "height": 10
+    }
+}

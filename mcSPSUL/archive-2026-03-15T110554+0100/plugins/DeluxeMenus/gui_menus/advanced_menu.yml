@@ -1,0 +1,962 @@
+menu_title: '&8&lSeznam Questů'
+open_command: questmenu
+size: 45
+items:
+  # ==============================
+  # === 1. ZOMBIE QUEST ===
+  # ==============================
+  'quest_zombie_done':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 10
+    priority: 1
+    view_requirement:
+      requirements:
+        done:
+          type: string equals
+          input: '%skript_quests::{player}::zombie_tier%'
+          output: '4'
+    display_name: '&a&lZabiják Zombií'
+    lore:
+      - '&7Úkol: &fZabíjet Zombie'
+      - '&7Status: &a&lDOKONČENO ✔'
+
+  'quest_zombie_active':
+    material: ZOMBIE_HEAD
+    slot: 10
+    priority: 2
+    view_requirement:
+      requirements:
+        active:
+          type: regex matches
+          input: '%skript_quests::{player}::zombie_tier%'
+          regex: '1|2|3'
+    display_name: '&e&lZabiják Zombií'
+    lore:
+      - '&7Úkol: &fZabíjet Zombie'
+      - '&7Úroveň: &f%skript_quests::{player}::zombie_tier%/3'
+      - '&7Postup: &f%skript_quests::{player}::zombie_progress%'
+      - ''
+      - '&7Cíle:'
+      - '&8- &7Tier 1: &f5 ks'
+      - '&8- &7Tier 2: &f10 ks'
+      - '&8- &7Tier 3: &f15 ks'
+      - ''
+      - '&ePři dokončení získáš odměnu!'
+
+  'quest_zombie_claim':
+    material: SKELETON_SKULL
+    slot: 10
+    priority: 3
+    display_name: '&c&lZabiják Zombií'
+    lore:
+      - '&7Úkol: &fZabíjet Zombie'
+      - '&7Status: &cNepřijato'
+      - ''
+      - '&7Cíl pro start: &f5 ks'
+      - '&aKlikni pro přijetí úkolu!'
+    left_click_commands:
+      - '[player] claimquest zombie'
+      - '[refresh]'
+
+  # ==============================
+  # === 2. SKELETON QUEST ===
+  # ==============================
+  'quest_skeleton_done':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 11
+    priority: 1
+    view_requirement:
+      requirements:
+        done:
+          type: string equals
+          input: '%skript_quests::{player}::skeleton_tier%'
+          output: '4'
+    display_name: '&a&lLovec Kostí'
+    lore:
+      - '&7Úkol: &fZabíjet Skeletony'
+      - '&7Status: &a&lDOKONČENO ✔'
+  'quest_skeleton_active':
+    material: BONE
+    slot: 11
+    priority: 2
+    view_requirement:
+      requirements:
+        active:
+          type: regex matches
+          input: '%skript_quests::{player}::skeleton_tier%'
+          regex: '1|2|3'
+    display_name: '&e&lLovec Kostí'
+    lore:
+      - '&7Úkol: &fZabíjet Skeletony'
+      - '&7Úroveň: &f%skript_quests::{player}::skeleton_tier%/3'
+      - '&7Postup: &f%skript_quests::{player}::skeleton_progress%'
+      - ''
+      - '&7Cíle:'
+      - '&8- &7Tier 1: &f5 ks'
+      - '&8- &7Tier 2: &f10 ks'
+      - '&8- &7Tier 3: &f15 ks'
+  'quest_skeleton_claim':
+    material: BONE
+    slot: 11
+    priority: 3
+    display_name: '&c&lLovec Kostí'
+    lore:
+      - '&7Úkol: &fZabíjet Skeletony'
+      - '&7Status: &cNepřijato'
+      - ''
+      - '&7Cíl pro start: &f5 ks'
+      - '&aKlikni pro přijetí!'
+    left_click_commands:
+      - '[player] claimquest skeleton'
+      - '[refresh]'
+
+  # ==============================
+  # === 3. SPIDER QUEST ===
+  # ==============================
+  'quest_spider_done':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 12
+    priority: 1
+    view_requirement:
+      requirements:
+        done:
+          type: string equals
+          input: '%skript_quests::{player}::spider_tier%'
+          output: '4'
+    display_name: '&a&lHubitel Pavouků'
+    lore:
+      - '&7Úkol: &fZabíjet Pavouky'
+      - '&7Status: &a&lDOKONČENO ✔'
+  'quest_spider_active':
+    material: SPIDER_EYE
+    slot: 12
+    priority: 2
+    view_requirement:
+      requirements:
+        active:
+          type: regex matches
+          input: '%skript_quests::{player}::spider_tier%'
+          regex: '1|2|3'
+    display_name: '&e&lHubitel Pavouků'
+    lore:
+      - '&7Úkol: &fZabíjet Pavouky'
+      - '&7Úroveň: &f%skript_quests::{player}::spider_tier%/3'
+      - '&7Postup: &f%skript_quests::{player}::spider_progress%'
+      - ''
+      - '&7Cíle:'
+      - '&8- &7Tier 1: &f5 ks'
+      - '&8- &7Tier 2: &f10 ks'
+      - '&8- &7Tier 3: &f15 ks'
+  'quest_spider_claim':
+    material: SPIDER_EYE
+    slot: 12
+    priority: 3
+    display_name: '&c&lHubitel Pavouků'
+    lore:
+      - '&7Úkol: &fZabíjet Pavouky'
+      - '&7Status: &cNepřijato'
+      - ''
+      - '&7Cíl pro start: &f5 ks'
+      - '&aKlikni pro přijetí!'
+    left_click_commands:
+      - '[player] claimquest spider'
+      - '[refresh]'
+
+  # ==============================
+  # === 4. CREEPER QUEST ===
+  # ==============================
+  'quest_creeper_done':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 13
+    priority: 1
+    view_requirement:
+      requirements:
+        done:
+          type: string equals
+          input: '%skript_quests::{player}::creeper_tier%'
+          output: '4'
+    display_name: '&a&lPyrotechnik'
+    lore:
+      - '&7Úkol: &fZabíjet Creepery'
+      - '&7Status: &a&lDOKONČENO ✔'
+  'quest_creeper_active':
+    material: GUNPOWDER
+    slot: 13
+    priority: 2
+    view_requirement:
+      requirements:
+        active:
+          type: regex matches
+          input: '%skript_quests::{player}::creeper_tier%'
+          regex: '1|2|3'
+    display_name: '&e&lPyrotechnik'
+    lore:
+      - '&7Úkol: &fZabíjet Creepery'
+      - '&7Úroveň: &f%skript_quests::{player}::creeper_tier%/3'
+      - '&7Postup: &f%skript_quests::{player}::creeper_progress%'
+      - ''
+      - '&7Cíle:'
+      - '&8- &7Tier 1: &f5 ks'
+      - '&8- &7Tier 2: &f10 ks'
+      - '&8- &7Tier 3: &f15 ks'
+  'quest_creeper_claim':
+    material: GUNPOWDER
+    slot: 13
+    priority: 3
+    display_name: '&c&lPyrotechnik'
+    lore:
+      - '&7Úkol: &fZabíjet Creepery'
+      - '&7Status: &cNepřijato'
+      - ''
+      - '&7Cíl pro start: &f5 ks'
+      - '&aKlikni pro přijetí!'
+    left_click_commands:
+      - '[player] claimquest creeper'
+      - '[refresh]'
+
+  # ==============================
+  # === 5. COW QUEST ===
+  # ==============================
+  'quest_cow_done':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 14
+    priority: 1
+    view_requirement:
+      requirements:
+        done:
+          type: string equals
+          input: '%skript_quests::{player}::cow_tier%'
+          output: '4'
+    display_name: '&a&lŘezník'
+    lore:
+      - '&7Úkol: &fZabíjet Krávy'
+      - '&7Status: &a&lDOKONČENO ✔'
+  'quest_cow_active':
+    material: BEEF
+    slot: 14
+    priority: 2
+    view_requirement:
+      requirements:
+        active:
+          type: regex matches
+          input: '%skript_quests::{player}::cow_tier%'
+          regex: '1|2|3'
+    display_name: '&e&lŘezník'
+    lore:
+      - '&7Úkol: &fZabíjet Krávy'
+      - '&7Úroveň: &f%skript_quests::{player}::cow_tier%/3'
+      - '&7Postup: &f%skript_quests::{player}::cow_progress%'
+      - ''
+      - '&7Cíle:'
+      - '&8- &7Tier 1: &f5 ks'
+      - '&8- &7Tier 2: &f10 ks'
+      - '&8- &7Tier 3: &f15 ks'
+  'quest_cow_claim':
+    material: BEEF
+    slot: 14
+    priority: 3
+    display_name: '&c&lŘezník'
+    lore:
+      - '&7Úkol: &fZabíjet Krávy'
+      - '&7Status: &cNepřijato'
+      - ''
+      - '&7Cíl pro start: &f5 ks'
+      - '&aKlikni pro přijetí!'
+    left_click_commands:
+      - '[player] claimquest cow'
+      - '[refresh]'
+
+  # ==============================
+  # === 6. ENDERMAN QUEST ===
+  # ==============================
+  'quest_enderman_done':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 15
+    priority: 1
+    view_requirement:
+      requirements:
+        done:
+          type: string equals
+          input: '%skript_quests::{player}::enderman_tier%'
+          output: '4'
+    display_name: '&a&lEnd Hunter'
+    lore:
+      - '&7Úkol: &fZabíjet Endermany'
+      - '&7Status: &a&lDOKONČENO ✔'
+  'quest_enderman_active':
+    material: ENDER_PEARL
+    slot: 15
+    priority: 2
+    view_requirement:
+      requirements:
+        active:
+          type: regex matches
+          input: '%skript_quests::{player}::enderman_tier%'
+          regex: '1|2|3'
+    display_name: '&e&lEnd Hunter'
+    lore:
+      - '&7Úkol: &fZabíjet Endermany'
+      - '&7Úroveň: &f%skript_quests::{player}::enderman_tier%/3'
+      - '&7Postup: &f%skript_quests::{player}::enderman_progress%'
+      - ''
+      - '&7Cíle:'
+      - '&8- &7Tier 1: &f5 ks'
+      - '&8- &7Tier 2: &f10 ks'
+      - '&8- &7Tier 3: &f15 ks'
+  'quest_enderman_claim':
+    material: ENDER_PEARL
+    slot: 15
+    priority: 3
+    display_name: '&c&lEnd Hunter'
+    lore:
+      - '&7Úkol: &fZabíjet Endermany'
+      - '&7Status: &cNepřijato'
+      - ''
+      - '&7Cíl pro start: &f5 ks'
+      - '&aKlikni pro přijetí!'
+    left_click_commands:
+      - '[player] claimquest enderman'
+      - '[refresh]'
+
+  # ==============================
+  # === 7. APPLE QUEST ===
+  # ==============================
+  'quest_apple_done':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 16
+    priority: 1
+    view_requirement:
+      requirements:
+        done:
+          type: string equals
+          input: '%skript_quests::{player}::apple_tier%'
+          output: '4'
+    display_name: '&a&lSběrač Jablek'
+    lore:
+      - '&7Úkol: &fSbírat Jablka'
+      - '&7Status: &a&lDOKONČENO ✔'
+  'quest_apple_active':
+    material: APPLE
+    slot: 16
+    priority: 2
+    view_requirement:
+      requirements:
+        active:
+          type: regex matches
+          input: '%skript_quests::{player}::apple_tier%'
+          regex: '1|2|3'
+    display_name: '&e&lSběrač Jablek'
+    lore:
+      - '&7Úkol: &fSbírat Jablka'
+      - '&7Úroveň: &f%skript_quests::{player}::apple_tier%/3'
+      - '&7Postup: &f%skript_quests::{player}::apple_progress%'
+      - ''
+      - '&7Cíle:'
+      - '&8- &7Tier 1: &f5 ks'
+      - '&8- &7Tier 2: &f10 ks'
+      - '&8- &7Tier 3: &f15 ks'
+  'quest_apple_claim':
+    material: APPLE
+    slot: 16
+    priority: 3
+    display_name: '&c&lSběrač Jablek'
+    lore:
+      - '&7Úkol: &fSbírat Jablka'
+      - '&7Status: &cNepřijato'
+      - ''
+      - '&7Cíl pro start: &f5 ks'
+      - '&aKlikni pro přijetí!'
+    left_click_commands:
+      - '[player] claimquest apple'
+      - '[refresh]'
+
+  # ==============================
+  # === 8. STONE QUEST ===
+  # ==============================
+  'quest_stone_done':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 19
+    priority: 1
+    view_requirement:
+      requirements:
+        done:
+          type: string equals
+          input: '%skript_quests::{player}::stone_tier%'
+          output: '4'
+    display_name: '&a&lHorník (Kámen)'
+    lore:
+      - '&7Úkol: &fVytěžit Stone'
+      - '&7Status: &a&lDOKONČENO ✔'
+  'quest_stone_active':
+    material: COBBLESTONE
+    slot: 19
+    priority: 2
+    view_requirement:
+      requirements:
+        active:
+          type: regex matches
+          input: '%skript_quests::{player}::stone_tier%'
+          regex: '1|2|3'
+    display_name: '&e&lHorník (Kámen)'
+    lore:
+      - '&7Úkol: &fVytěžit Stone'
+      - '&7Úroveň: &f%skript_quests::{player}::stone_tier%/3'
+      - '&7Postup: &f%skript_quests::{player}::stone_progress%'
+      - ''
+      - '&7Cíle:'
+      - '&8- &7Tier 1: &f5 ks'
+      - '&8- &7Tier 2: &f10 ks'
+      - '&8- &7Tier 3: &f15 ks'
+  'quest_stone_claim':
+    material: COBBLESTONE
+    slot: 19
+    priority: 3
+    display_name: '&c&lHorník (Kámen)'
+    lore:
+      - '&7Úkol: &fVytěžit Stone'
+      - '&7Status: &cNepřijato'
+      - ''
+      - '&7Cíl pro start: &f5 ks'
+      - '&aKlikni pro přijetí!'
+    left_click_commands:
+      - '[player] claimquest stone'
+      - '[refresh]'
+
+  # ==============================
+  # === 9. COAL QUEST ===
+  # ==============================
+  'quest_coal_done':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 20
+    priority: 1
+    view_requirement:
+      requirements:
+        done:
+          type: string equals
+          input: '%skript_quests::{player}::coal_tier%'
+          output: '4'
+    display_name: '&a&lUhlokop'
+    lore:
+      - '&7Úkol: &fVytěžit Coal Ore'
+      - '&7Status: &a&lDOKONČENO ✔'
+  'quest_coal_active':
+    material: COAL
+    slot: 20
+    priority: 2
+    view_requirement:
+      requirements:
+        active:
+          type: regex matches
+          input: '%skript_quests::{player}::coal_tier%'
+          regex: '1|2|3'
+    display_name: '&e&lUhlokop'
+    lore:
+      - '&7Úkol: &fVytěžit Coal Ore'
+      - '&7Úroveň: &f%skript_quests::{player}::coal_tier%/3'
+      - '&7Postup: &f%skript_quests::{player}::coal_progress%'
+      - ''
+      - '&7Cíle:'
+      - '&8- &7Tier 1: &f5 ks'
+      - '&8- &7Tier 2: &f10 ks'
+      - '&8- &7Tier 3: &f15 ks'
+  'quest_coal_claim':
+    material: COAL
+    slot: 20
+    priority: 3
+    display_name: '&c&lUhlokop'
+    lore:
+      - '&7Úkol: &fVytěžit Coal Ore'
+      - '&7Status: &cNepřijato'
+      - ''
+      - '&7Cíl pro start: &f5 ks'
+      - '&aKlikni pro přijetí!'
+    left_click_commands:
+      - '[player] claimquest coal'
+      - '[refresh]'
+
+  # ==============================
+  # === 10. IRON QUEST ===
+  # ==============================
+  'quest_iron_done':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 21
+    priority: 1
+    view_requirement:
+      requirements:
+        done:
+          type: string equals
+          input: '%skript_quests::{player}::iron_tier%'
+          output: '4'
+    display_name: '&a&lŽelezář'
+    lore:
+      - '&7Úkol: &fVytěžit Iron Ore'
+      - '&7Status: &a&lDOKONČENO ✔'
+  'quest_iron_active':
+    material: IRON_INGOT
+    slot: 21
+    priority: 2
+    view_requirement:
+      requirements:
+        active:
+          type: regex matches
+          input: '%skript_quests::{player}::iron_tier%'
+          regex: '1|2|3'
+    display_name: '&e&lŽelezář'
+    lore:
+      - '&7Úkol: &fVytěžit Iron Ore'
+      - '&7Úroveň: &f%skript_quests::{player}::iron_tier%/3'
+      - '&7Postup: &f%skript_quests::{player}::iron_progress%'
+      - ''
+      - '&7Cíle:'
+      - '&8- &7Tier 1: &f5 ks'
+      - '&8- &7Tier 2: &f10 ks'
+      - '&8- &7Tier 3: &f15 ks'
+  'quest_iron_claim':
+    material: IRON_INGOT
+    slot: 21
+    priority: 3
+    display_name: '&c&lŽelezář'
+    lore:
+      - '&7Úkol: &fVytěžit Iron Ore'
+      - '&7Status: &cNepřijato'
+      - ''
+      - '&7Cíl pro start: &f5 ks'
+      - '&aKlikni pro přijetí!'
+    left_click_commands:
+      - '[player] claimquest iron'
+      - '[refresh]'
+
+  # ==============================
+  # === 11. GOLD QUEST ===
+  # ==============================
+  'quest_gold_done':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 22
+    priority: 1
+    view_requirement:
+      requirements:
+        done:
+          type: string equals
+          input: '%skript_quests::{player}::gold_tier%'
+          output: '4'
+    display_name: '&a&lZlatokop'
+    lore:
+      - '&7Úkol: &fVytěžit Gold Ore'
+      - '&7Status: &a&lDOKONČENO ✔'
+  'quest_gold_active':
+    material: GOLD_INGOT
+    slot: 22
+    priority: 2
+    view_requirement:
+      requirements:
+        active:
+          type: regex matches
+          input: '%skript_quests::{player}::gold_tier%'
+          regex: '1|2|3'
+    display_name: '&e&lZlatokop'
+    lore:
+      - '&7Úkol: &fVytěžit Gold Ore'
+      - '&7Úroveň: &f%skript_quests::{player}::gold_tier%/3'
+      - '&7Postup: &f%skript_quests::{player}::gold_progress%'
+      - ''
+      - '&7Cíle:'
+      - '&8- &7Tier 1: &f5 ks'
+      - '&8- &7Tier 2: &f10 ks'
+      - '&8- &7Tier 3: &f15 ks'
+  'quest_gold_claim':
+    material: GOLD_INGOT
+    slot: 22
+    priority: 3
+    display_name: '&c&lZlatokop'
+    lore:
+      - '&7Úkol: &fVytěžit Gold Ore'
+      - '&7Status: &cNepřijato'
+      - ''
+      - '&7Cíl pro start: &f5 ks'
+      - '&aKlikni pro přijetí!'
+    left_click_commands:
+      - '[player] claimquest gold'
+      - '[refresh]'
+
+  # ==============================
+  # === 12. DIAMOND QUEST ===
+  # ==============================
+  'quest_diamond_done':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 23
+    priority: 1
+    view_requirement:
+      requirements:
+        done:
+          type: string equals
+          input: '%skript_quests::{player}::diamond_tier%'
+          output: '4'
+    display_name: '&a&lBoháč'
+    lore:
+      - '&7Úkol: &fVytěžit Diamond Ore'
+      - '&7Status: &a&lDOKONČENO ✔'
+  'quest_diamond_active':
+    material: DIAMOND
+    slot: 23
+    priority: 2
+    view_requirement:
+      requirements:
+        active:
+          type: regex matches
+          input: '%skript_quests::{player}::diamond_tier%'
+          regex: '1|2|3'
+    display_name: '&e&lBoháč'
+    lore:
+      - '&7Úkol: &fVytěžit Diamond Ore'
+      - '&7Úroveň: &f%skript_quests::{player}::diamond_tier%/3'
+      - '&7Postup: &f%skript_quests::{player}::diamond_progress%'
+      - ''
+      - '&7Cíle:'
+      - '&8- &7Tier 1: &f5 ks'
+      - '&8- &7Tier 2: &f10 ks'
+      - '&8- &7Tier 3: &f15 ks'
+  'quest_diamond_claim':
+    material: DIAMOND
+    slot: 23
+    priority: 3
+    display_name: '&c&lBoháč'
+    lore:
+      - '&7Úkol: &fVytěžit Diamond Ore'
+      - '&7Status: &cNepřijato'
+      - ''
+      - '&7Cíl pro start: &f5 ks'
+      - '&aKlikni pro přijetí!'
+    left_click_commands:
+      - '[player] claimquest diamond'
+      - '[refresh]'
+
+  # ==============================
+  # === 13. WOOD QUEST ===
+  # ==============================
+  'quest_wood_done':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 24
+    priority: 1
+    view_requirement:
+      requirements:
+        done:
+          type: string equals
+          input: '%skript_quests::{player}::wood_tier%'
+          output: '4'
+    display_name: '&a&lDřevorubec'
+    lore:
+      - '&7Úkol: &fVytěžit Oak Log'
+      - '&7Status: &a&lDOKONČENO ✔'
+  'quest_wood_active':
+    material: OAK_LOG
+    slot: 24
+    priority: 2
+    view_requirement:
+      requirements:
+        active:
+          type: regex matches
+          input: '%skript_quests::{player}::wood_tier%'
+          regex: '1|2|3'
+    display_name: '&e&lDřevorubec'
+    lore:
+      - '&7Úkol: &fVytěžit Oak Log'
+      - '&7Úroveň: &f%skript_quests::{player}::wood_tier%/3'
+      - '&7Postup: &f%skript_quests::{player}::wood_progress%'
+      - ''
+      - '&7Cíle:'
+      - '&8- &7Tier 1: &f5 ks'
+      - '&8- &7Tier 2: &f10 ks'
+      - '&8- &7Tier 3: &f15 ks'
+  'quest_wood_claim':
+    material: OAK_LOG
+    slot: 24
+    priority: 3
+    display_name: '&c&lDřevorubec'
+    lore:
+      - '&7Úkol: &fVytěžit Oak Log'
+      - '&7Status: &cNepřijato'
+      - ''
+      - '&7Cíl pro start: &f5 ks'
+      - '&aKlikni pro přijetí!'
+    left_click_commands:
+      - '[player] claimquest wood'
+      - '[refresh]'
+
+  # ==============================
+  # === 14. SAND QUEST (MÍSTO RYB) ===
+  # ==============================
+  'quest_sand_done':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 25
+    priority: 1
+    view_requirement:
+      requirements:
+        done:
+          type: string equals
+          input: '%skript_quests::{player}::sand_tier%'
+          output: '4'
+    display_name: '&a&lKopáč Písku'
+    lore:
+      - '&7Úkol: &fVytěžit Písek'
+      - '&7Status: &a&lDOKONČENO ✔'
+  'quest_sand_active':
+    material: SAND
+    slot: 25
+    priority: 2
+    view_requirement:
+      requirements:
+        active:
+          type: regex matches
+          input: '%skript_quests::{player}::sand_tier%'
+          regex: '1|2|3'
+    display_name: '&e&lKopáč Písku'
+    lore:
+      - '&7Úkol: &fVytěžit Písek'
+      - '&7Úroveň: &f%skript_quests::{player}::sand_tier%/3'
+      - '&7Postup: &f%skript_quests::{player}::sand_progress%'
+      - ''
+      - '&7Cíle:'
+      - '&8- &7Tier 1: &f5 ks'
+      - '&8- &7Tier 2: &f10 ks'
+      - '&8- &7Tier 3: &f15 ks'
+  'quest_sand_claim':
+    material: SAND
+    slot: 25
+    priority: 3
+    display_name: '&c&lKopáč Písku'
+    lore:
+      - '&7Úkol: &fVytěžit Písek'
+      - '&7Status: &cNepřijato'
+      - ''
+      - '&7Cíl pro start: &f5 ks'
+      - '&aKlikni pro přijetí!'
+    left_click_commands:
+      - '[player] claimquest sand'
+      - '[refresh]'
+
+  # ==============================
+  # === 15. BREAD QUEST ===
+  # ==============================
+  'quest_bread_done':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 28
+    priority: 1
+    view_requirement:
+      requirements:
+        done:
+          type: string equals
+          input: '%skript_quests::{player}::bread_tier%'
+          output: '4'
+    display_name: '&a&lPekař'
+    lore:
+      - '&7Úkol: &fSníst Chleba'
+      - '&7Status: &a&lDOKONČENO ✔'
+  'quest_bread_active':
+    material: BREAD
+    slot: 28
+    priority: 2
+    view_requirement:
+      requirements:
+        active:
+          type: regex matches
+          input: '%skript_quests::{player}::bread_tier%'
+          regex: '1|2|3'
+    display_name: '&e&lPekař'
+    lore:
+      - '&7Úkol: &fSníst Chleba'
+      - '&7Úroveň: &f%skript_quests::{player}::bread_tier%/3'
+      - '&7Postup: &f%skript_quests::{player}::bread_progress%'
+      - ''
+      - '&7Cíle:'
+      - '&8- &7Tier 1: &f5 ks'
+      - '&8- &7Tier 2: &f10 ks'
+      - '&8- &7Tier 3: &f15 ks'
+  'quest_bread_claim':
+    material: BREAD
+    slot: 28
+    priority: 3
+    display_name: '&c&lPekař'
+    lore:
+      - '&7Úkol: &fSníst Chleba'
+      - '&7Status: &cNepřijato'
+      - ''
+      - '&7Cíl pro start: &f5 ks'
+      - '&aKlikni pro přijetí!'
+    left_click_commands:
+      - '[player] claimquest bread'
+      - '[refresh]'
+
+  # ==============================
+  # === 16. GRAVEL QUEST (MÍSTO VLNY) ===
+  # ==============================
+  'quest_gravel_done':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 29
+    priority: 1
+    view_requirement:
+      requirements:
+        done:
+          type: string equals
+          input: '%skript_quests::{player}::gravel_tier%'
+          output: '4'
+    display_name: '&a&lKopáč Štěrku'
+    lore:
+      - '&7Úkol: &fVytěžit Štěrk (Gravel)'
+      - '&7Status: &a&lDOKONČENO ✔'
+  'quest_gravel_active':
+    material: GRAVEL
+    slot: 29
+    priority: 2
+    view_requirement:
+      requirements:
+        active:
+          type: regex matches
+          input: '%skript_quests::{player}::gravel_tier%'
+          regex: '1|2|3'
+    display_name: '&e&lKopáč Štěrku'
+    lore:
+      - '&7Úkol: &fVytěžit Štěrk (Gravel)'
+      - '&7Úroveň: &f%skript_quests::{player}::gravel_tier%/3'
+      - '&7Postup: &f%skript_quests::{player}::gravel_progress%'
+      - ''
+      - '&7Cíle:'
+      - '&8- &7Tier 1: &f5 ks'
+      - '&8- &7Tier 2: &f10 ks'
+      - '&8- &7Tier 3: &f15 ks'
+  'quest_gravel_claim':
+    material: GRAVEL
+    slot: 29
+    priority: 3
+    display_name: '&c&lKopáč Štěrku'
+    lore:
+      - '&7Úkol: &fVytěžit Štěrk (Gravel)'
+      - '&7Status: &cNepřijato'
+      - ''
+      - '&7Cíl pro start: &f5 ks'
+      - '&aKlikni pro přijetí!'
+    left_click_commands:
+      - '[player] claimquest gravel'
+      - '[refresh]'
+
+  # ==============================
+  # === 17. NETHERRACK QUEST (MÍSTO PŠENICE) ===
+  # ==============================
+  'quest_netherrack_done':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 30
+    priority: 1
+    view_requirement:
+      requirements:
+        done:
+          type: string equals
+          input: '%skript_quests::{player}::netherrack_tier%'
+          output: '4'
+    display_name: '&a&lNether Těžař'
+    lore:
+      - '&7Úkol: &fVytěžit Netherrack'
+      - '&7Status: &a&lDOKONČENO ✔'
+  'quest_netherrack_active':
+    material: NETHERRACK
+    slot: 30
+    priority: 2
+    view_requirement:
+      requirements:
+        active:
+          type: regex matches
+          input: '%skript_quests::{player}::netherrack_tier%'
+          regex: '1|2|3'
+    display_name: '&e&lNether Těžař'
+    lore:
+      - '&7Úkol: &fVytěžit Netherrack'
+      - '&7Úroveň: &f%skript_quests::{player}::netherrack_tier%/3'
+      - '&7Postup: &f%skript_quests::{player}::netherrack_progress%'
+      - ''
+      - '&7Cíle:'
+      - '&8- &7Tier 1: &f5 ks'
+      - '&8- &7Tier 2: &f10 ks'
+      - '&8- &7Tier 3: &f15 ks'
+  'quest_netherrack_claim':
+    material: NETHERRACK
+    slot: 30
+    priority: 3
+    display_name: '&c&lNether Těžař'
+    lore:
+      - '&7Úkol: &fVytěžit Netherrack'
+      - '&7Status: &cNepřijato'
+      - ''
+      - '&7Cíl pro start: &f5 ks'
+      - '&aKlikni pro přijetí!'
+    left_click_commands:
+      - '[player] claimquest netherrack'
+      - '[refresh]'
+
+  # ==============================
+  # === 18. EGG QUEST ===
+  # ==============================
+  'quest_egg_done':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 31
+    priority: 1
+    view_requirement:
+      requirements:
+        done:
+          type: string equals
+          input: '%skript_quests::{player}::egg_tier%'
+          output: '4'
+    display_name: '&a&lSběrač Vajec'
+    lore:
+      - '&7Úkol: &fSebrat Vejce'
+      - '&7Status: &a&lDOKONČENO ✔'
+  'quest_egg_active':
+    material: EGG
+    slot: 31
+    priority: 2
+    view_requirement:
+      requirements:
+        active:
+          type: regex matches
+          input: '%skript_quests::{player}::egg_tier%'
+          regex: '1|2|3'
+    display_name: '&e&lSběrač Vajec'
+    lore:
+      - '&7Úkol: &fSebrat Vejce'
+      - '&7Úroveň: &f%skript_quests::{player}::egg_tier%/3'
+      - '&7Postup: &f%skript_quests::{player}::egg_progress%'
+      - ''
+      - '&7Cíle:'
+      - '&8- &7Tier 1: &f5 ks'
+      - '&8- &7Tier 2: &f10 ks'
+      - '&8- &7Tier 3: &f15 ks'
+  'quest_egg_claim':
+    material: EGG
+    slot: 31
+    priority: 3
+    display_name: '&c&lSběrač Vajec'
+    lore:
+      - '&7Úkol: &fSebrat Vejce'
+      - '&7Status: &cNepřijato'
+      - ''
+      - '&7Cíl pro start: &f5 ks'
+      - '&aKlikni pro přijetí!'
+    left_click_commands:
+      - '[player] claimquest egg'
+      - '[refresh]'
+
+  # ==============================
+  # === DEKORACE A ZAVŘÍT ===
+  # ==============================
+  close:
+    material: BARRIER
+    slot: 40
+    display_name: '&cZavřít'
+    click_commands:
+      - '[close]'
+      
+  filler:
+    material: GRAY_STAINED_GLASS_PANE
+    slots:
+      - 0-9
+      - 17-18
+      - 26-27
+      - 32-44
+    display_name: '&r'

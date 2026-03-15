@@ -1,0 +1,8 @@
+BruteMob:
+  Type: ZOMBIE
+  Display: '&6Brute'
+  Model: brute
+  Health: 10
+  Damage: 10
+  Skills:
+  - skill:melee

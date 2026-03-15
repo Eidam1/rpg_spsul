@@ -1,0 +1,36 @@
+Xaroth:
+  Type: WITHER
+  Display: '&8&l[&5&lXaroth&8&l] &7[HP <mob.hp{f=0}>]'
+  Health: 2500
+  Attributes:
+    max_health: 2500
+    movement_speed: 0.25
+    follow_range: 80
+    attack_damage: 30
+  Options:
+    # Vypnutí vanilla baru a nastavení velikosti
+    ShowBossBar: false
+    Scale: 2.5
+    AlwaysShowName: true
+    PreventOtherDrops: true
+    Silent: true
+  BossBar:
+    Enabled: true
+    Title: '&5&lXaroth &7- &f<mob.hp{f=0}> / <mob.mhp{f=0}>'
+    Color: PURPLE
+    Style: NOTCHED_20
+  # AI nastavení aby stál a pálil skilly
+  AIGoalSelectors:
+  - 0 clear
+  - 1 goal_selector:meleeattack
+  - 2 goal_selector:lookatplayers
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  Skills:
+  # --- ÚTOKY ---
+  - skill{s=XarothMissile} @target ~onTimer:80
+  - skill{s=EventHorizont} @self ~onTimer:20
+  - skill{s=XarothBeam} @target ~onTimer:150
+  # --- FÁZE 2 (Při 750 HP) ---
+  - skill{s=XarothPhase2} @self ~onHealth:750

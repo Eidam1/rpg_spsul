@@ -1,0 +1,11 @@
+# Definice toho, co boss dělá
+GolemVyvolaniMinionu:
+  Skills:
+  - message{msg="&fObří Golem povolává své pomocníky!"} @PlayersInRadius{r=20}
+  - summon{type=MalyGolem;amount=2;radius=4} @self
+  - effect:particles{p=cloud;amount=20;hS=1;vS=1;speed=0.1} @self
+
+GolemOdhozeni:
+  Skills:
+  - throw{velocity=10;vVelocity=5} @target
+  - damage{amount=5} @target

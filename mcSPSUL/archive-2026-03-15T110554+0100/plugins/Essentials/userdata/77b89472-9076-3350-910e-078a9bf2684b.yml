@@ -1,0 +1,30 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 10.40.5.225
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 0
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1761477778180
+  login: 1761477526070
+money: '0'
+last-account-name: Fami6Xx
+logoutlocation:
+  world: b0115cc8-ba4f-4081-b9cc-0fa114119dbc
+  world-name: world
+  x: -50.009260977318654
+  y: 70.0
+  z: -44.69999998807907
+  yaw: 134.550537109375
+  pitch: 17.550025939941406

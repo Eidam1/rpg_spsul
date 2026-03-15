@@ -1,0 +1,29 @@
+# === Skript's variable storage ===
+# Please do not modify this file manually!
+#
+# version: 2.12.2
+
+grassblocks.00b7cdbd-ab77-31d4-bd2a-19fb636831e5, long, 0000000000000001
+grassblocks.15b58a17-7ace-3397-9eaa-b854f8b453f5, long, 000000000000001A
+grassblocks.1c806721-3511-3d92-98db-70d013320243, long, 0000000000000002
+grassblocks.931714ec-f00c-3785-bc02-9daac8cfae49, long, 0000000000000005
+grassblocks.a11f5f4a-4a2d-3185-af32-abbf38788629, long, 0000000000000008
+quests::00b7cdbd-ab77-31d4-bd2a-19fb636831e5::collect_apple, string, 8006616374697665
+quests::00b7cdbd-ab77-31d4-bd2a-19fb636831e5::collect_apple::progress, long, 0000000000000000
+quests::00b7cdbd-ab77-31d4-bd2a-19fb636831e5::kill_zombie, string, 8009636F6D706C65746564
+quests::00b7cdbd-ab77-31d4-bd2a-19fb636831e5::kill_zombie::progress, long, 0000000000000005
+quests::1c806721-3511-3d92-98db-70d013320243::kill_zombie, string, 8006616374697665
+quests::1c806721-3511-3d92-98db-70d013320243::kill_zombie::progress, long, 0000000000000000
+quests::15b58a17-7ace-3397-9eaa-b854f8b453f5::collect_apple, string, 8009636F6D706C65746564
+quests::15b58a17-7ace-3397-9eaa-b854f8b453f5::collect_apple::progress, long, 0000000000000003
+quests::15b58a17-7ace-3397-9eaa-b854f8b453f5::kill_zombie, string, 8009636F6D706C65746564
+quests::15b58a17-7ace-3397-9eaa-b854f8b453f5::kill_zombie::progress, long, 0000000000000005
+quests::a11f5f4a-4a2d-3185-af32-abbf38788629::collect_apple, string, 8006616374697665
+quests::a11f5f4a-4a2d-3185-af32-abbf38788629::collect_apple::progress, long, 0000000000000000
+quests::a11f5f4a-4a2d-3185-af32-abbf38788629::kill_zombie, string, 8006616374697665
+quests::a11f5f4a-4a2d-3185-af32-abbf38788629::kill_zombie::progress, long, 0000000000000000
+"quests.15b58a17-7ace-3397-9eaa-b854f8b453f5.seber jablka", string, 8006616374697665
+"quests.15b58a17-7ace-3397-9eaa-b854f8b453f5.seber jablka.progress", long, 0000000000000000
+"quests.15b58a17-7ace-3397-9eaa-b854f8b453f5.zabij zombie", string, 8006616374697665
+"quests.15b58a17-7ace-3397-9eaa-b854f8b453f5.zabij zombie.progress", long, 0000000000000000
+

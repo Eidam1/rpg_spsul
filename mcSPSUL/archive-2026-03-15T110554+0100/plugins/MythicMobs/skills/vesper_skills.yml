@@ -1,0 +1,59 @@
+# 1. AMBIENTNÍ EFEKT (Vespera neustále obklopují modré duše)
+VesperSoulAura:
+  Skills:
+  - effect:particles{p=soul;a=10;hs=1.5;vs=2;s=0.05} @self
+  - effect:particles{p=soul_fire_flame;a=5;hs=1;vs=1.5;s=0.02} @self
+  - effect:particles{p=dust;color=#00FFFF;a=10;hs=1.2;vs=2} @self
+
+# 2. SOUL RAY (Raycast - dynamické poškození podle vzdálenosti)
+SoulRay:
+  Skills:
+  - effect:sound{s=entity.warden.sonic_boom;v=1.5;p=1.5} @self
+  - raycast{
+      onTick=[
+        - effect:particles{p=soul;a=5;s=0.1}
+        - effect:particles{p=dust;color=#E0FFFF;a=3}
+      ];
+      onHit=[
+        # MATH: Poškození 10 + (vzdálenost / 2) -> čím dál jsi, tím větší pecka
+        - damage{a="10 + (distance / 2)"}
+        - effect:particles{p=flash;a=1}
+      ];
+      maxDistance=30} @target
+
+# 3. SOUL VORTEX (Orbital, který rotuje a přitahuje hráče k bossovi)
+SoulVortex:
+  Skills:
+  - message{msg="&b&oVesper: &fPojďte blíž... vaše duše patří mně!"} @PlayersInRadius{r=30}
+  - orbital{
+      onTick=[
+        - effect:particles{p=sculk_soul;a=20;s=0.1}
+        - pull{v=6} @PlayersInRadius{r=10}
+      ];
+      d=100;i=1;r=5;v=30} @self
+
+# 4. SUMMON LOST SOULS (Vyvolá 3 malé neviditelné Vexy s efekty)
+SummonLostSouls:
+  Skills:
+  - effect:sound{s=entity.evoker.prepare_summon;v=2;p=0.5} @self
+  - summon{type=VEX;amount=3;radius=5} @self
+
+# 5. ENRAGE FÁZE (Při 150 HP se boss rozzáří a zrychlí)
+VesperEnrage:
+  Skills:
+  - message{msg="&3&lVESPER SE STÁVÁ NESTABILNÍM!"} @PlayersInRadius{r=60}
+  - setbossbar{color=WHITE;style=SOLID} @self
+  - potion{type=SPEED;d=99999;l=2} @self
+  - aura{auraName=SoulStorm;d=99999;i=10;
+      onTick=[
+        - effect:particles{p=end_rod;a=20;hs=5;vs=5;s=0.1} @self
+      ]} @self
+
+# 6. VELKOLEPÁ SMRT
+VesperDeath:
+  Skills:
+  - message{msg="&b&lVesper byl pohlcen prázdnotou!"} @PlayersInRadius{r=100}
+  - effect:sound{s=entity.generic.explode;v=2;p=0.5} @self
+  - repeat{i=2;amount=20;onRepeat=[
+      - effect:particles{p=soul;a=50;hs=5;vs=5;s=0.5} @self
+    ]} @self

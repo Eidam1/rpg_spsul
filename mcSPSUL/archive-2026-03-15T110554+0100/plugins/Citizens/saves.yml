@@ -1,0 +1,1670 @@
+# Citizens NPC Storage
+
+last-created-npc-id: 39
+npc:
+  '8':
+    metadata:
+      cached-skin-uuid: 87593cb4-e6ea-482f-94b2-1da841419405
+      cached-skin-uuid-name: vernito
+      nameplate-visible: 'false'
+    name: Quests
+    uuid: d86600ed-4184-4f2d-bb0e-0e7fd5e42352
+    traits:
+      spawned: true
+      location:
+        bodyYaw: 10.196106
+        world: spawn
+        x: -408.518
+        y: 178.0
+        z: -253.3384
+        yaw: 10.1961
+        pitch: 1.2002
+      scoreboardtrait:
+        tags:
+          '0': CITIZENS_NPC
+      owner:
+        uuid: 15b58a17-7ace-3397-9eaa-b854f8b453f5
+      type: PLAYER
+      commandtrait:
+        commands:
+          '0':
+            command: questmenu
+            hand: RIGHT
+            player: true
+            npc: false
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+      skintrait:
+        signature: L2PejkTJ1pUJh/GHv8LAVeN1FiovMelxA1TV1ujKa//5B3XrZmET45odd4CkoIK4G+X/oCNwCgYr9d1DlTC29yK/8ey+5C1xfWv/lkJuTDI+KJxmy1PFqAfe3pRIkhBq2Kje6M6ND4jBz/IQjjZPhjt9VinMeGiztkYrLGHMFZrbk2L7EvrDfMw9/USx09pfshNf/surCk6NkbngF/pLjYGhFyPxu7KyrrkosuDGqkyDULh6F3OsqTUKVl2bsoPf34b1oHN+xLk8sGF3D1cjvvySnXsvrMsu8oQYXCr/ERrDrokcRFpRFEvTXYTZaPd7b9v09NQHcmZnGEDvUBUSDzU7LkpyVfhckTdAhnXBSxCFPAQITjdaNT2XsTV8cLt8vDJ/1qR7n+YdO/sFruSrRPrDdSU7N9ZAN7UucBc4w+4JYgjmFlHstJGNfIi6qe3si3qHWLCaxXjHHGVKeq802ajjFaUPFuOS745WWgGgmFEDp/FBZARlR74nMD1Z7u2bA1WXJXYwiye+N8kBqjE5GzcbddCi9nxSTu/lgKquso1/CoK/vFxECUJ3WzOuqU4TdWv2JNNoKa96n6sTsxI3l1lBfXlVDfdm+kLTSPAw7uv9vFHOyFqqLky7oIID7iUC2qqqL0bmDczT6O+nmU8VExBkFuaxgP4pN2333RBbMwI=
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTc2NDg5NTE3NDYxNiwKICAicHJvZmlsZUlkIiA6ICI4NzU5M2NiNGU2ZWE0ODJmOTRiMjFkYTg0MTQxOTQwNSIsCiAgInByb2ZpbGVOYW1lIiA6ICJWZXJuaXRvIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzJiNzhmODZkNTdhZjQ1ZTA2ODQyN2NlNzUwZGRiYTdmM2ZmYmRiMmZlMTgxM2Y0MTY5NGE4N2NmOWFlZmU3MjYiLAogICAgICAibWV0YWRhdGEiIDogewogICAgICAgICJtb2RlbCIgOiAic2xpbSIKICAgICAgfQogICAgfQogIH0KfQ==
+        skinName: Vernito
+    traitnames: spawned,scoreboardtrait,owner,commandtrait,skintrait,location,type,inventory,targetable
+    navigator:
+      speedmodifier: 1.0
+      avoidwater: false
+      usedefaultstuckaction: false
+  '9':
+    metadata:
+      cached-skin-uuid: fb7b4d19-9eed-4327-b845-850ed0b403ee
+      cached-skin-uuid-name: vxrgxssxn
+      nameplate-visible: 'false'
+    name: Menu
+    uuid: 9ca59f15-d966-483b-bd91-f161b1df363c
+    traits:
+      spawned: true
+      location:
+        bodyYaw: 40.94821
+        world: spawn
+        x: -405.4956
+        y: 178.0
+        z: -251.5221
+        yaw: 40.9482
+        pitch: 0.1501
+      scoreboardtrait:
+        tags:
+          '0': CITIZENS_NPC
+      owner:
+        uuid: 15b58a17-7ace-3397-9eaa-b854f8b453f5
+      type: PLAYER
+      commandtrait:
+        commands:
+          '0':
+            command: npcmenu
+            hand: RIGHT
+            player: true
+            npc: false
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+      skintrait:
+        signature: hlpye3jM47lSizvoaIXkOkGfr9ZCoUeMxomTfk2w3MQAf1542i61mDviSHQvN3hngg7znU3kLHfmuFP/aSsU4wtCXp/6f20QR3o9ISAcpXKLBGa+pAn+eOyxHykJ0BtJ+ULqdHNWIXTA+DGk3HIzxFPEa8QAMZpjhxNWlFPjysN1exjuCYu/U+MbZeP6Rf5H/SQIFtmMCcyJoIzTvQUw5IQEB0Oc53amnVsrNAcJNNnZVzKUDvnsfWBsog51UWxcSa4NxaNPXL8YV+aLkysFWbZ8LE8We5yDdRYGymP3FYzE9wM5fOoh13qcIBOnrELD8jAZ3TBO44MYNVs8lI0/gPuD4+77PKO2Hy7d76npEpLelXZDvW6hjQWXFhW7BUGO7Q9CO/Nl3W7Pm+shMzg6w5uz9NF0Gz4swKAY/HOytIGfbutkGI3QdvsVwJfKWeZabWdYd8oJIHYcXL2emmnG9MDpO2nFtP0Gn3KzJf8ffp1TQtsdY6n1HS4hhpiTFfBe/d2CPLLlnooEUEI7Ef6CG05K6UCXxCLwCWI2ltfyJbd8+4jet//QCyBYKMFsopruVXjXKzmwEmCqRx6pdRBgBkyJZmcXU2mPyuw1BsvmG/Vpbrnz1jCtSPuiPJjY359nFOLeL/niXapp+gheJh0qS5ZgnskVYn3VeSb/CVkV2R4=
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTc2NDg5NTMxMjU2NCwKICAicHJvZmlsZUlkIiA6ICJmYjdiNGQxOTllZWQ0MzI3Yjg0NTg1MGVkMGI0MDNlZSIsCiAgInByb2ZpbGVOYW1lIiA6ICJ2eHJneHNzeG4iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2RjOTg1YTdhNjhjNTc0ZjY4M2MwYjg1OTUyMWZlYjNmYzNkMmZmYTA1ZmEwOWRiMGJhZTQ0YjhhYzI5YjM4NSIKICAgIH0KICB9Cn0=
+        skinName: vxrgxssxn
+    traitnames: spawned,scoreboardtrait,owner,commandtrait,skintrait,location,type,inventory,targetable
+    navigator:
+      speedmodifier: 1.0
+      avoidwater: false
+      usedefaultstuckaction: false
+  '7':
+    metadata:
+      cached-skin-uuid: cde05e27-05ac-4735-badb-0876d2384089
+      cached-skin-uuid-name: struppi
+      nameplate-visible: 'false'
+    name: Kovar
+    uuid: 55511e95-6ec4-4b30-b3a0-479e7b593465
+    traits:
+      spawned: true
+      location:
+        bodyYaw: -34.80252
+        world: spawn
+        x: -414.6314
+        y: 178.0
+        z: -251.7433
+        yaw: -34.8025
+        pitch: 1.8
+      scoreboardtrait:
+        tags:
+          '0': CITIZENS_NPC
+      owner:
+        uuid: 15b58a17-7ace-3397-9eaa-b854f8b453f5
+      type: PLAYER
+      commandtrait:
+        commands:
+          '0':
+            command: kovar
+            hand: RIGHT
+            player: true
+            npc: false
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+      skintrait:
+        signature: LGqau3jvZi5p/iCJKpPwTEOTjAV1BNa6wwnvc8+TlNaCecdr6qY6qI/x+Eqhh1AZHmjUiq17T6OboKzcbn9xP65vcMKlnMtqK/gDzJhIseK1hUb+nfUlxNG7Do4pLbk6NCDRvgt9hzVXwVRit3H+YAvwDD6m0mMA8AYE44UWc77dLZ2rocBS3vnCaVDQBOmbMvJUbqySzf/QwXPPjZSEgaQQfzv0aGyPSKEPVUlu6k/36AG+QQkJG5x+CQT4HTf1+3Pr/aN5WRJ2Ro1K4fcRsQ61WEDMdTccRSx/bXE0TM6S4D4Ew8UQpZepX0H7tEU4YTRhwBAK5F+03XgR3oYnzA9I9BbK5+AoTWrDraHogrjjIu0t9SJF2+MzmCo8zf/dLraJZNCtkvuXJrGpLRvJtYZ4W02NGX2OfBNNI5XIHJZR3oK+vN2EzVCWR3rhA3L1jMFw3Octs4WtTfMRqm9kT0xtDSGFoBnoFPfD4cBBDYqnTRooWwkDMYeeBuU+rdabDJF4RAObLhQvPG8LbD2KG8hBybswNpflUqpnoEgmXJ6der6Q7lyhYrfFxQTeaZSIkIoJAfx2xGXB6Fb+z5NLznHKtOZvNCXO8IOwbCtsk4+DDKZtocsSq+7QzH5GgcqksqRdu170sEhPPqp6TkQglCb2/Ff7+xN/7SqxUb3ahFc=
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTc2NDg5Mjg5MzY0NiwKICAicHJvZmlsZUlkIiA6ICJjZGUwNWUyNzA1YWM0NzM1YmFkYjA4NzZkMjM4NDA4OSIsCiAgInByb2ZpbGVOYW1lIiA6ICJTdHJ1cHBpIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2JjNGMxZGM5MWY1NGRlNjgxZTYzYmZiMmRkYjUwNTAzMDIyN2JhNDVhYjkxZGRmNTc3MTBlZjYxZGVhMDY2ZGMiCiAgICB9LAogICAgIkNBUEUiIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzIzNDBjMGUwM2RkMjRhMTFiMTVhOGIzM2MyYTdlOWUzMmFiYjIwNTFiMjQ4MWQwYmE3ZGVmZDYzNWNhN2E5MzMiCiAgICB9CiAgfQp9
+        skinName: Struppi
+      equipment:
+        cosmetic_body:
+          type: iron_axe
+          amount: 1
+        chestplate:
+          type: iron_chestplate
+          amount: 1
+        hand:
+          type: diamond_axe
+          amount: 1
+        off_hand:
+          type: shield
+          amount: 1
+      inventory:
+        '0':
+          type: diamond_axe
+          amount: 1
+    traitnames: spawned,scoreboardtrait,owner,commandtrait,skintrait,equipment,location,type,inventory,targetable
+    navigator:
+      speedmodifier: 1.0
+      avoidwater: false
+      usedefaultstuckaction: false
+  '10':
+    metadata:
+      cached-skin-uuid: b1c6f436-d521-429c-9f82-4f20dce2ffcc
+      cached-skin-uuid-name: notfarg
+      nameplate-visible: 'false'
+    name: Travel
+    uuid: ed500399-1903-4409-88bd-f4f45d91fad6
+    traits:
+      skintrait:
+        signature: KwWp73gTfj0zl/oCdaI8U+J/aPy0iHrF2ALUwrzUrtUv0F34g2L6s+uLNbCMqOr1WYhhQQLNFwOkMVPMV+em/fbRbegIxN7/vXiQ1cV+k5bqO81pmcfgbLdJ9tLAjJZz8JgCTiNcbUgsH2u7vWFgApg2/2SG62ORYJVbl1mWazgWHyFSYDuW8iplM9wHJ5hWBxrZ/KDspYUazDM0A4F3zYsVxhgE6i3qiZlKaHaLrB2We5/+5UJOCZOmBa0eLAU5ekGoTuc9t0eRfm+8lFdraglFR0YmQZj4HkY2KoGbyHtVVtgAbb+tJmOTr9I/bEtjgBj8+nbQJ7YpgsU8UKV6Y8CrHKt+5ld5n86L8rN8Ehk/OJsfDnjijLoK6jQZxuiailtcFzlERD/OTaQF0S3XPsJKXETqhPtJxqcHod1n6snER5QkQcVvr+POwPUEWTd3sMAm6RO8WS/kGpG00g5bH7QGFxff1Mzm11lxlSVOGY8sJlRI1VV+U72LVHw+z+NkFokQ36B6bulcQm9ob6JpUn7JcXinFMjM8CgYh1L9CP2+WGDGltt5k2UMgbxKB2AJvJkLrMi6ShES9/xm50UWLtz/xIj2hJJQtcCcqZXFAXY4iaEfFqgXOddES7cuz2E8H8S25CLGSDF30tLNsKCc5I8zS3ItGAkvdZ6lYliDUBE=
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTc2NDg5NTIyNDQ0MiwKICAicHJvZmlsZUlkIiA6ICJiMWM2ZjQzNmQ1MjE0MjljOWY4MjRmMjBkY2UyZmZjYyIsCiAgInByb2ZpbGVOYW1lIiA6ICJub3RmYXJnIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2U4MWI2NjQxMTNiNGYzZDc1YmIxYjU3MjQ3YmNmN2QzYWE4ZTgzZDJhODJmYzk0ZDRhYjgzNGMwNWRhY2Y3MjQiCiAgICB9CiAgfQp9
+        skinName: notfarg
+      scoreboardtrait:
+        tags:
+          '0': CITIZENS_NPC
+      commandtrait:
+        commands:
+          '0':
+            command: travel
+            hand: RIGHT
+            player: true
+            npc: false
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+      spawned: true
+      owner:
+        uuid: 15b58a17-7ace-3397-9eaa-b854f8b453f5
+      type: PLAYER
+      location:
+        bodyYaw: -23.849972
+        world: spawn
+        x: -412.5244
+        y: 178.0
+        z: -253.4387
+        yaw: -23.85
+        pitch: 4.1998
+    traitnames: scoreboardtrait,spawned,owner,commandtrait,skintrait,equipment,location,inventory,type
+    navigator:
+      speedmodifier: 1.0
+      avoidwater: false
+      usedefaultstuckaction: false
+  '15':
+    metadata:
+      cached-skin-uuid: cde05e27-05ac-4735-badb-0876d2384089
+      cached-skin-uuid-name: struppi
+      nameplate-visible: 'false'
+    name: Kovar
+    uuid: fca2d2c7-fa1e-4917-9687-1dfe968394ec
+    traits:
+      inventory:
+        '0':
+          type: diamond_axe
+          amount: 1
+      equipment:
+        cosmetic_body:
+          type: iron_axe
+          amount: 1
+        chestplate:
+          type: iron_chestplate
+          amount: 1
+        hand:
+          type: diamond_axe
+          amount: 1
+        off_hand:
+          type: shield
+          amount: 1
+      type: PLAYER
+      skintrait:
+        signature: LGqau3jvZi5p/iCJKpPwTEOTjAV1BNa6wwnvc8+TlNaCecdr6qY6qI/x+Eqhh1AZHmjUiq17T6OboKzcbn9xP65vcMKlnMtqK/gDzJhIseK1hUb+nfUlxNG7Do4pLbk6NCDRvgt9hzVXwVRit3H+YAvwDD6m0mMA8AYE44UWc77dLZ2rocBS3vnCaVDQBOmbMvJUbqySzf/QwXPPjZSEgaQQfzv0aGyPSKEPVUlu6k/36AG+QQkJG5x+CQT4HTf1+3Pr/aN5WRJ2Ro1K4fcRsQ61WEDMdTccRSx/bXE0TM6S4D4Ew8UQpZepX0H7tEU4YTRhwBAK5F+03XgR3oYnzA9I9BbK5+AoTWrDraHogrjjIu0t9SJF2+MzmCo8zf/dLraJZNCtkvuXJrGpLRvJtYZ4W02NGX2OfBNNI5XIHJZR3oK+vN2EzVCWR3rhA3L1jMFw3Octs4WtTfMRqm9kT0xtDSGFoBnoFPfD4cBBDYqnTRooWwkDMYeeBuU+rdabDJF4RAObLhQvPG8LbD2KG8hBybswNpflUqpnoEgmXJ6der6Q7lyhYrfFxQTeaZSIkIoJAfx2xGXB6Fb+z5NLznHKtOZvNCXO8IOwbCtsk4+DDKZtocsSq+7QzH5GgcqksqRdu170sEhPPqp6TkQglCb2/Ff7+xN/7SqxUb3ahFc=
+        skinName: Struppi
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTc2NDg5Mjg5MzY0NiwKICAicHJvZmlsZUlkIiA6ICJjZGUwNWUyNzA1YWM0NzM1YmFkYjA4NzZkMjM4NDA4OSIsCiAgInByb2ZpbGVOYW1lIiA6ICJTdHJ1cHBpIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2JjNGMxZGM5MWY1NGRlNjgxZTYzYmZiMmRkYjUwNTAzMDIyN2JhNDVhYjkxZGRmNTc3MTBlZjYxZGVhMDY2ZGMiCiAgICB9LAogICAgIkNBUEUiIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzIzNDBjMGUwM2RkMjRhMTFiMTVhOGIzM2MyYTdlOWUzMmFiYjIwNTFiMjQ4MWQwYmE3ZGVmZDYzNWNhN2E5MzMiCiAgICB9CiAgfQp9
+      scoreboardtrait:
+        tags:
+          '0': CITIZENS_NPC
+      owner:
+        uuid: 15b58a17-7ace-3397-9eaa-b854f8b453f5
+      spawned: true
+      commandtrait:
+        commands:
+          '0':
+            command: kovar
+            hand: RIGHT
+            player: true
+            npc: false
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+      location:
+        bodyYaw: -83.820114
+        world: SpawnVesnice
+        x: -8.5602
+        y: -59.0
+        z: 17.4575
+        yaw: -83.8201
+        pitch: -0.0191
+      lookclose:
+        range: 10.0
+        enabled: true
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+      text:
+        text:
+          '0': Chceš něco opravit? Doufám, že máš hotovost!
+    traitnames: scoreboardtrait,owner,spawned,rotationtrait,commandtrait,skintrait,lookclose,equipment,inventory,type,targetable,location,text
+    navigator:
+      speedmodifier: 1.0
+      avoidwater: false
+      usedefaultstuckaction: false
+  '17':
+    metadata:
+      cached-skin-uuid: b1c6f436-d521-429c-9f82-4f20dce2ffcc
+      cached-skin-uuid-name: notfarg
+      nameplate-visible: 'false'
+    name: Travel
+    uuid: 07fd013a-6edf-4619-b9fa-e484b02a75f5
+    traits:
+      type: PLAYER
+      skintrait:
+        signature: KwWp73gTfj0zl/oCdaI8U+J/aPy0iHrF2ALUwrzUrtUv0F34g2L6s+uLNbCMqOr1WYhhQQLNFwOkMVPMV+em/fbRbegIxN7/vXiQ1cV+k5bqO81pmcfgbLdJ9tLAjJZz8JgCTiNcbUgsH2u7vWFgApg2/2SG62ORYJVbl1mWazgWHyFSYDuW8iplM9wHJ5hWBxrZ/KDspYUazDM0A4F3zYsVxhgE6i3qiZlKaHaLrB2We5/+5UJOCZOmBa0eLAU5ekGoTuc9t0eRfm+8lFdraglFR0YmQZj4HkY2KoGbyHtVVtgAbb+tJmOTr9I/bEtjgBj8+nbQJ7YpgsU8UKV6Y8CrHKt+5ld5n86L8rN8Ehk/OJsfDnjijLoK6jQZxuiailtcFzlERD/OTaQF0S3XPsJKXETqhPtJxqcHod1n6snER5QkQcVvr+POwPUEWTd3sMAm6RO8WS/kGpG00g5bH7QGFxff1Mzm11lxlSVOGY8sJlRI1VV+U72LVHw+z+NkFokQ36B6bulcQm9ob6JpUn7JcXinFMjM8CgYh1L9CP2+WGDGltt5k2UMgbxKB2AJvJkLrMi6ShES9/xm50UWLtz/xIj2hJJQtcCcqZXFAXY4iaEfFqgXOddES7cuz2E8H8S25CLGSDF30tLNsKCc5I8zS3ItGAkvdZ6lYliDUBE=
+        skinName: notfarg
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTc2NDg5NTIyNDQ0MiwKICAicHJvZmlsZUlkIiA6ICJiMWM2ZjQzNmQ1MjE0MjljOWY4MjRmMjBkY2UyZmZjYyIsCiAgInByb2ZpbGVOYW1lIiA6ICJub3RmYXJnIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2U4MWI2NjQxMTNiNGYzZDc1YmIxYjU3MjQ3YmNmN2QzYWE4ZTgzZDJhODJmYzk0ZDRhYjgzNGMwNWRhY2Y3MjQiCiAgICB9CiAgfQp9
+      scoreboardtrait:
+        tags:
+          '0': CITIZENS_NPC
+      owner:
+        uuid: 15b58a17-7ace-3397-9eaa-b854f8b453f5
+      spawned: true
+      commandtrait:
+        commands:
+          '0':
+            command: travel
+            hand: RIGHT
+            player: true
+            npc: false
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+      location:
+        bodyYaw: 1.3498354
+        world: SpawnVesnice
+        x: 0.5306
+        y: -59.0
+        z: -27.4498
+        yaw: 1.3498
+        pitch: 6.15
+    traitnames: scoreboardtrait,owner,spawned,commandtrait,skintrait,equipment,location,inventory,type
+    navigator:
+      speedmodifier: 1.0
+      avoidwater: false
+      usedefaultstuckaction: false
+  '18':
+    metadata:
+      cached-skin-uuid: 87593cb4-e6ea-482f-94b2-1da841419405
+      cached-skin-uuid-name: vernito
+      nameplate-visible: 'false'
+    name: Quests
+    uuid: 4c6389d9-ba13-4ce5-a973-eca6d99da299
+    traits:
+      scoreboardtrait:
+        tags:
+          '0': CITIZENS_NPC
+      skintrait:
+        signature: L2PejkTJ1pUJh/GHv8LAVeN1FiovMelxA1TV1ujKa//5B3XrZmET45odd4CkoIK4G+X/oCNwCgYr9d1DlTC29yK/8ey+5C1xfWv/lkJuTDI+KJxmy1PFqAfe3pRIkhBq2Kje6M6ND4jBz/IQjjZPhjt9VinMeGiztkYrLGHMFZrbk2L7EvrDfMw9/USx09pfshNf/surCk6NkbngF/pLjYGhFyPxu7KyrrkosuDGqkyDULh6F3OsqTUKVl2bsoPf34b1oHN+xLk8sGF3D1cjvvySnXsvrMsu8oQYXCr/ERrDrokcRFpRFEvTXYTZaPd7b9v09NQHcmZnGEDvUBUSDzU7LkpyVfhckTdAhnXBSxCFPAQITjdaNT2XsTV8cLt8vDJ/1qR7n+YdO/sFruSrRPrDdSU7N9ZAN7UucBc4w+4JYgjmFlHstJGNfIi6qe3si3qHWLCaxXjHHGVKeq802ajjFaUPFuOS745WWgGgmFEDp/FBZARlR74nMD1Z7u2bA1WXJXYwiye+N8kBqjE5GzcbddCi9nxSTu/lgKquso1/CoK/vFxECUJ3WzOuqU4TdWv2JNNoKa96n6sTsxI3l1lBfXlVDfdm+kLTSPAw7uv9vFHOyFqqLky7oIID7iUC2qqqL0bmDczT6O+nmU8VExBkFuaxgP4pN2333RBbMwI=
+        skinName: Vernito
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTc2NDg5NTE3NDYxNiwKICAicHJvZmlsZUlkIiA6ICI4NzU5M2NiNGU2ZWE0ODJmOTRiMjFkYTg0MTQxOTQwNSIsCiAgInByb2ZpbGVOYW1lIiA6ICJWZXJuaXRvIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzJiNzhmODZkNTdhZjQ1ZTA2ODQyN2NlNzUwZGRiYTdmM2ZmYmRiMmZlMTgxM2Y0MTY5NGE4N2NmOWFlZmU3MjYiLAogICAgICAibWV0YWRhdGEiIDogewogICAgICAgICJtb2RlbCIgOiAic2xpbSIKICAgICAgfQogICAgfQogIH0KfQ==
+      type: PLAYER
+      location:
+        bodyYaw: -170.71933
+        world: SpawnVesnice
+        x: 26.3687
+        y: -46.0
+        z: 18.478
+        yaw: -170.7193
+        pitch: -2.8334
+      owner:
+        uuid: 15b58a17-7ace-3397-9eaa-b854f8b453f5
+      spawned: true
+      commandtrait:
+        commands:
+          '0':
+            command: questmenu
+            hand: RIGHT
+            player: true
+            npc: false
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+      lookclose:
+        range: 10.0
+        enabled: true
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+    traitnames: scoreboardtrait,owner,spawned,rotationtrait,commandtrait,skintrait,lookclose,location,type,inventory,targetable
+    navigator:
+      speedmodifier: 1.0
+      avoidwater: false
+      usedefaultstuckaction: false
+  '19':
+    name: '&eStrážce'
+    uuid: cc68e39d-38b5-49eb-91ff-75d5391344de
+    traits:
+      owner:
+        uuid: 15b58a17-7ace-3397-9eaa-b854f8b453f5
+      type: PLAYER
+      spawned: true
+      location:
+        bodyYaw: 89.76965
+        world: SpawnVesnice
+        x: 10.0981
+        y: -60.0
+        z: -44.5024
+        yaw: 89.7697
+        pitch: 0.0
+      scoreboardtrait:
+        tags:
+          '0': CITIZENS_NPC
+      waypoints:
+        linear:
+          points:
+            '0':
+              location:
+                world: SpawnVesnice
+                x: 8.0
+                y: -60.0
+                z: -45.0
+                yaw: 0.0
+                pitch: 0.0
+            '1':
+              location:
+                world: SpawnVesnice
+                x: 13.0
+                y: -60.0
+                z: -45.0
+                yaw: 0.0
+                pitch: 0.0
+        provider: linear
+      skintrait:
+        signature: vi36XnVQZBvqFGqUBmzyqlZMywTKcW4HU8kOxVsyzF12m+NaalWvRvSTksPxYbjYCkiu3LckzoWmVYoWykqoOgCmxPwY6U9NuCcpKAFYrjjWunTqEFA9jH4P5NIXoS9g2zyZdWevW1LOzTX9mD8n5jRJeXR6xpJd+vrsCkArQtlHdb0A9Iqu9dH01clSatdgyncqoO75DZXlf+IjB/5NNoEepiGrFOQYotxvU1FgftygrWsmcaZY2HRmlMqdzm+gp/VO58WN75sYhzDSe5KAPqdc+eXz6uNhWuPwHVUnnP62D4q8bKt3TqaqPmzdkaEt7bHalCLTARN/CRRTzjgyr21gYzibDaSZtD+CJx+NcibHuw8We8YHJctt+pvLC4CJuA2AS07cjITLMcybaOkTzhhqWIU4P2fPOgoOCr6T3o0IaD/PfUR+A0RBjv9sTszg+QuyUJcFHtUOxlluyOxYED+r+T3Icqe7vgifLBEP9CriJXfCKUSYhwqnuE6VnY5kfNqxDYyJ8CMfMAXgB0DvgLyb29FU8YVuUjnTsnnv/4EwwQnEHKQXJeh3tjvklCynOvhuEKt+OHHraCc2haxp9do8yeeyFXpsIEjrEJevvaIiSYn3d5GDqowEzlvLEkkLnxzHwvDPNU2usAqB3zOpJPwB3cP+gzZcnF89AwEeNo0=
+        skinName: doowle
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTc2NTMxMzIzNDA5MCwKICAicHJvZmlsZUlkIiA6ICI5YTc2ZDE3NzYxNDc0MWQzOGYyYmY2YzRlOGE1YjFjOSIsCiAgInByb2ZpbGVOYW1lIiA6ICJkb293bGUiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZGFhZTQ3MDA2YjBlNjYzNzJmYjVhYjg4M2Y0MzY1N2RlMWI5MGY5YjAyMGNjMzQ4YmQ2YjJkOTk0ZDIwNjVjYSIKICAgIH0KICB9Cn0=
+      inventory:
+        '0':
+          type: iron_sword
+          amount: 1
+      lookclose:
+        range: 10.0
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+      equipment:
+        chestplate:
+          type: iron_chestplate
+          amount: 1
+        hand:
+          type: iron_sword
+          amount: 1
+      text:
+        random-talker: true
+        delay: 3
+        text:
+          '0': Chráníme tohle město před nebezpečím
+          '1': Neotravuj!
+    traitnames: owner,spawned,scoreboardtrait,rotationtrait,skintrait,lookclose,equipment,location,text,type,inventory,waypoints
+    navigator:
+      speedmodifier: 0.4000000059604645
+      avoidwater: false
+      usedefaultstuckaction: false
+    metadata:
+      cached-skin-uuid: 9a76d177-6147-41d3-8f2b-f6c4e8a5b1c9
+      cached-skin-uuid-name: doowle
+  '22':
+    metadata:
+      cached-skin-uuid: 0bd30389-8587-452d-86c3-8c985a57fabd
+      cached-skin-uuid-name: jakubcze_
+    name: '&2Pomocník Jakub'
+    uuid: 44c6a399-639e-4d78-bba9-3d61603cfe5d
+    traits:
+      waypoints:
+        linear:
+          points:
+            '0':
+              location:
+                world: SpawnVesnice
+                x: 24.0
+                y: -60.0
+                z: -4.0
+                yaw: 0.0
+                pitch: 0.0
+            '1':
+              location:
+                world: SpawnVesnice
+                x: 14.0
+                y: -60.0
+                z: 7.0
+                yaw: 0.0
+                pitch: 0.0
+            '2':
+              location:
+                world: SpawnVesnice
+                x: 3.0
+                y: -60.0
+                z: 12.0
+                yaw: 0.0
+                pitch: 0.0
+            '3':
+              location:
+                world: SpawnVesnice
+                x: -1.0
+                y: -60.0
+                z: 21.0
+                yaw: 0.0
+                pitch: 0.0
+            '4':
+              location:
+                world: SpawnVesnice
+                x: -2.0
+                y: -60.0
+                z: 8.0
+                yaw: 0.0
+                pitch: 0.0
+            '5':
+              location:
+                world: SpawnVesnice
+                x: -2.0
+                y: -59.0
+                z: -2.0
+                yaw: 0.0
+                pitch: 0.0
+            '6':
+              location:
+                world: SpawnVesnice
+                x: 1.0
+                y: -59.0
+                z: -9.0
+                yaw: 0.0
+                pitch: 0.0
+            '7':
+              location:
+                world: SpawnVesnice
+                x: 3.0
+                y: -60.0
+                z: -14.0
+                yaw: 0.0
+                pitch: 0.0
+            '8':
+              location:
+                world: SpawnVesnice
+                x: 7.0
+                y: -60.0
+                z: -15.0
+                yaw: 0.0
+                pitch: 0.0
+        provider: linear
+      owner:
+        uuid: 15b58a17-7ace-3397-9eaa-b854f8b453f5
+      skintrait:
+        signature: t8/xTK6FWdNfvxM6gu7y5LeU4YaIw2xSX/JTqcLLpmdMHJjVSNlBzR9wV+c0YhOrnqnuDO7S3ynC16YSpHWRogGQpm1ItlZFkgxJAWD2LBvJO77cBVdWtoNXtX+6YSCa3uzPIU+XSQmmONx692ssO6pRmLDYdEbyAcIl/ALmMaWtsNlPs34W9LJ1EKMgkp6r7o0bHBR94zWFXZaZ5XxSPm+yoAMj60Yi3rmDXnhv3sr+BMlAW75ogoFhUd+/KUk1Cz3+uSNAND0fn6HJs51jCENX0F3O+VtiZHkdj3HMWXeKixXYdXoky3kXaIJzUCX+oSNuexVBdTzxWeh955V3eHDmd9Z7Y6LmZCW5+b3RsXTzfkYQ/Ssw4l6Fqpf2TDqtbQ6JV5TVDns020PNx7s7vGl4t7gtNeTfeB46PwAUPedZNt9xC7XLdpAA7NtHex7VUGqRiicra9r4ijroTdPHzES4GvQbnLBFICwa5j0sZiJf+yE9x5DkS/5pNkYraL+KoDBUh53td3Qwjxsj0p2UAjpoWUw/3UORXXkQWctUo5uBJFHWkkpUGe9jYmKJZ5r+C8VlYWvFjo3pT58mxLkIlwkJcMC61jrdEVen7upQ2m1PAO+PchTFSNygGqgtO5P/GfKmPPpYYWMdvF/LRTbvUPq9CvZfOXYzWTmvZQ+7Hlw=
+        skinName: jakubcze_
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTc2NTMxNjI0Nzg0NSwKICAicHJvZmlsZUlkIiA6ICIwYmQzMDM4OTg1ODc0NTJkODZjMzhjOTg1YTU3ZmFiZCIsCiAgInByb2ZpbGVOYW1lIiA6ICJqYWt1YmN6ZV8iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTUwMDM0NDZlYzJlM2IwNGNlMTkwY2NhOTQ1M2YwZjJiYzEyMzJmMDRmMzBhZjAxNWI0MDUwMjdlODMxNDQ0ZCIKICAgIH0sCiAgICAiQ0FQRSIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjM0MGMwZTAzZGQyNGExMWIxNWE4YjMzYzJhN2U5ZTMyYWJiMjA1MWIyNDgxZDBiYTdkZWZkNjM1Y2E3YTkzMyIKICAgIH0KICB9Cn0=
+      type: PLAYER
+      spawned: true
+      location:
+        bodyYaw: 180.49683
+        world: SpawnVesnice
+        x: 0.4944
+        y: -59.0
+        z: -4.8512
+        yaw: -179.5032
+        pitch: 1.1997
+      text:
+        delay: 10
+        speech-bubbles: true
+        text:
+          '0': '&2A máš to písemně?'
+          '1': '&2Nevymlouvej se pořád!'
+          '2': '&2wc?'
+          '3': '&2tak to je bizár'
+          '4': '&2Jedu na Maltu!'
+          '5': '&2mrkmrk, jsem zvědavej'
+          '6': '&2Přestan dělat hysterku'
+          '7': '&2uuuuuu'
+          '8': '&2Ty jsi případ!'
+          '9': '&2Uklidni se ty zelenino!'
+          '10': '&2Kapr nekouše, kapr žužlá'
+          '11': '&2Dáš si čaj? Ale mám jen lipton'
+      scoreboardtrait:
+        tags:
+          '0': CITIZENS_NPC
+      hologramtrait: {}
+    traitnames: owner,spawned,scoreboardtrait,hologramtrait,skintrait,equipment,location,text,type,inventory,waypoints
+    navigator:
+      speedmodifier: 0.6000000238418579
+      avoidwater: false
+      usedefaultstuckaction: false
+  '21':
+    metadata:
+      cached-skin-uuid: 22eff241-3655-4c4c-8501-dc256157261a
+      cached-skin-uuid-name: merubiin
+    name: '&dPrincezna'
+    uuid: 1f348c6b-de18-4e8d-a0a8-4780dd74fb69
+    traits:
+      waypoints:
+        linear:
+          points:
+            '0':
+              location:
+                world: SpawnVesnice
+                x: -39.0
+                y: -60.0
+                z: -43.0
+                yaw: 0.0
+                pitch: 0.0
+            '1':
+              location:
+                world: SpawnVesnice
+                x: -39.0
+                y: -60.0
+                z: 36.0
+                yaw: 0.0
+                pitch: 0.0
+            '2':
+              location:
+                world: SpawnVesnice
+                x: -39.0
+                y: -60.0
+                z: -34.0
+                yaw: 0.0
+                pitch: 0.0
+            '3':
+              location:
+                world: SpawnVesnice
+                x: -39.0
+                y: -60.0
+                z: -26.0
+                yaw: 0.0
+                pitch: 0.0
+            '4':
+              location:
+                world: SpawnVesnice
+                x: -39.0
+                y: -60.0
+                z: -19.0
+                yaw: 0.0
+                pitch: 0.0
+            '5':
+              location:
+                world: SpawnVesnice
+                x: -39.0
+                y: -60.0
+                z: -11.0
+                yaw: 0.0
+                pitch: 0.0
+            '6':
+              location:
+                world: SpawnVesnice
+                x: -39.0
+                y: -60.0
+                z: -4.0
+                yaw: 0.0
+                pitch: 0.0
+            '7':
+              location:
+                world: SpawnVesnice
+                x: -39.0
+                y: -60.0
+                z: 2.0
+                yaw: 0.0
+                pitch: 0.0
+            '8':
+              location:
+                world: SpawnVesnice
+                x: -39.0
+                y: -60.0
+                z: 8.0
+                yaw: 0.0
+                pitch: 0.0
+            '9':
+              location:
+                world: SpawnVesnice
+                x: -39.0
+                y: -60.0
+                z: 13.0
+                yaw: 0.0
+                pitch: 0.0
+            '10':
+              location:
+                world: SpawnVesnice
+                x: -39.0
+                y: -60.0
+                z: 19.0
+                yaw: 0.0
+                pitch: 0.0
+            '11':
+              location:
+                world: SpawnVesnice
+                x: -39.0
+                y: -60.0
+                z: 24.0
+                yaw: 0.0
+                pitch: 0.0
+            '12':
+              location:
+                world: SpawnVesnice
+                x: -39.0
+                y: -60.0
+                z: 30.0
+                yaw: 0.0
+                pitch: 0.0
+        provider: linear
+      owner:
+        uuid: 15b58a17-7ace-3397-9eaa-b854f8b453f5
+      skintrait:
+        signature: KSrR4PnY8EH+zfT/PbosfS8acWXxoXvcWR3zJytZWnlQWlA6NiEEsik2qphKdC8gf+fXUS3cHSlwh0iYvIyVOK4lBrH1rzNNBnZSB0uFy881hQMnpKTkMcjptBS0avOQlddAx8S0oxFaP8dc5TSKb/nk+pl0h9dVdC5UmCNydPlYWSAyv+D0bbjtB3xdvaN6pfekhpcjjjIbnDPuDoB2+/ZDjA/9iLMFf7aXRbag7z2qU59EDVfwW8agj7mesxK/vAWFyGVx1Rqa2WXN9BYzLfbgbyxIx7ejgKwDKME7xWTQBD11f2up/mhtDFdc/shZuZ0nmCIcLrG+NKMnhr5Z/wthj0V3HA5tA09WUp4oqv3b7+BVOdi8RP0RuE7J7qs2BG4HcIhBfforkxTcqEvXsiaUKp/3z49bl9NQ6+KC6V25AlG4Q2otK7CtBO2aYtLy3LDw+EjF90zAZrXWw7QJgWvcuNXvKvAWAQaxOZIOhMG1z4vP+3r6H/CK6AQeDrzYi5ddGUVwD1zPyUtH0e+viI1iVufQO7FOghW0D1YbjHO2EHWKtapgoK5l8BKvTiYkNXhShtj7As4QT/LNSLAB/VHLNBX13HjUjwWrA56MjEg35Vypm43RLsi5q8QLCz+97Cw1CoE/5AstJLeliEMVG02GhPLVFvL9wv/MgXOt3G4=
+        skinName: Merubiin
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTc2NTMxNDU3MzEwNCwKICAicHJvZmlsZUlkIiA6ICIyMmVmZjI0MTM2NTU0YzRjODUwMWRjMjU2MTU3MjYxYSIsCiAgInByb2ZpbGVOYW1lIiA6ICJNZXJ1YmlpbiIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9jY2QzYjliNzkxYjkxODRhODliY2RmMGM4MGVmNGQ4M2E4MzNiNWNkMGQ3ODVkMDg3MjMxODM2MzU1ZmUzM2UzIiwKICAgICAgIm1ldGFkYXRhIiA6IHsKICAgICAgICAibW9kZWwiIDogInNsaW0iCiAgICAgIH0KICAgIH0KICB9Cn0=
+      type: PLAYER
+      lookclose:
+        range: 10.0
+        enabled: true
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+      spawned: true
+      location:
+        bodyYaw: -179.43405
+        world: SpawnVesnice
+        x: -38.5027
+        y: -60.0
+        z: 26.8245
+        yaw: -179.4341
+        pitch: -10.6609
+      text:
+        text:
+          '0': '&dJsem ztracená! Kam mám jít?'
+          '1': '&dTy jsi ten princ, co mě zachrání?'
+          '2': '&dZáchrana! Záchrana!'
+      scoreboardtrait:
+        tags:
+          '0': CITIZENS_NPC
+    traitnames: owner,spawned,scoreboardtrait,rotationtrait,skintrait,lookclose,location,text,type,inventory,waypoints
+    navigator:
+      speedmodifier: 0.699999988079071
+      avoidwater: false
+      usedefaultstuckaction: false
+  '20':
+    metadata:
+      cached-skin-uuid: 9a76d177-6147-41d3-8f2b-f6c4e8a5b1c9
+      cached-skin-uuid-name: doowle
+    name: '&eStrážce'
+    uuid: cbcb08fa-42da-42e9-805f-8e92ff9536cc
+    traits:
+      waypoints:
+        linear:
+          points:
+            '0':
+              location:
+                world: SpawnVesnice
+                x: -12.0
+                y: -60.0
+                z: -45.0
+                yaw: 0.0
+                pitch: 0.0
+            '1':
+              location:
+                world: SpawnVesnice
+                x: -7.0
+                y: -60.0
+                z: -45.0
+                yaw: 0.0
+                pitch: 0.0
+        provider: linear
+      owner:
+        uuid: 15b58a17-7ace-3397-9eaa-b854f8b453f5
+      skintrait:
+        signature: vi36XnVQZBvqFGqUBmzyqlZMywTKcW4HU8kOxVsyzF12m+NaalWvRvSTksPxYbjYCkiu3LckzoWmVYoWykqoOgCmxPwY6U9NuCcpKAFYrjjWunTqEFA9jH4P5NIXoS9g2zyZdWevW1LOzTX9mD8n5jRJeXR6xpJd+vrsCkArQtlHdb0A9Iqu9dH01clSatdgyncqoO75DZXlf+IjB/5NNoEepiGrFOQYotxvU1FgftygrWsmcaZY2HRmlMqdzm+gp/VO58WN75sYhzDSe5KAPqdc+eXz6uNhWuPwHVUnnP62D4q8bKt3TqaqPmzdkaEt7bHalCLTARN/CRRTzjgyr21gYzibDaSZtD+CJx+NcibHuw8We8YHJctt+pvLC4CJuA2AS07cjITLMcybaOkTzhhqWIU4P2fPOgoOCr6T3o0IaD/PfUR+A0RBjv9sTszg+QuyUJcFHtUOxlluyOxYED+r+T3Icqe7vgifLBEP9CriJXfCKUSYhwqnuE6VnY5kfNqxDYyJ8CMfMAXgB0DvgLyb29FU8YVuUjnTsnnv/4EwwQnEHKQXJeh3tjvklCynOvhuEKt+OHHraCc2haxp9do8yeeyFXpsIEjrEJevvaIiSYn3d5GDqowEzlvLEkkLnxzHwvDPNU2usAqB3zOpJPwB3cP+gzZcnF89AwEeNo0=
+        skinName: doowle
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTc2NTMxMzIzNDA5MCwKICAicHJvZmlsZUlkIiA6ICI5YTc2ZDE3NzYxNDc0MWQzOGYyYmY2YzRlOGE1YjFjOSIsCiAgInByb2ZpbGVOYW1lIiA6ICJkb293bGUiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZGFhZTQ3MDA2YjBlNjYzNzJmYjVhYjg4M2Y0MzY1N2RlMWI5MGY5YjAyMGNjMzQ4YmQ2YjJkOTk0ZDIwNjVjYSIKICAgIH0KICB9Cn0=
+      type: PLAYER
+      lookclose:
+        range: 10.0
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+      inventory:
+        '0':
+          type: iron_sword
+          amount: 1
+      spawned: true
+      equipment:
+        chestplate:
+          type: iron_chestplate
+          amount: 1
+        hand:
+          type: iron_sword
+          amount: 1
+      location:
+        bodyYaw: 89.76965
+        world: SpawnVesnice
+        x: -9.9019
+        y: -60.0
+        z: -44.5024
+        yaw: 89.7697
+        pitch: 0.0
+      text:
+        random-talker: true
+        text:
+          '0': Chráníme tohle město před nebezpečím
+          '1': Neotravuj!
+      scoreboardtrait:
+        tags:
+          '0': CITIZENS_NPC
+    traitnames: owner,spawned,scoreboardtrait,rotationtrait,skintrait,lookclose,equipment,location,text,type,inventory,waypoints
+    navigator:
+      speedmodifier: 0.4000000059604645
+      avoidwater: false
+      usedefaultstuckaction: false
+  '24':
+    metadata:
+      cached-skin-uuid: 0af5b307-6b5a-4fe9-b374-63035dfdee8c
+      cached-skin-uuid-name: sabizer
+    name: '&4Farmář Benda'
+    uuid: ab7ca4fa-9e86-4077-b832-18ea1efe96be
+    traits:
+      location:
+        bodyYaw: 151.94879
+        world: SpawnVesnice
+        x: 32.7366
+        y: -60.0
+        z: -27.5013
+        yaw: 151.9488
+        pitch: 30.15
+      spawned: true
+      scoreboardtrait:
+        tags:
+          '0': CITIZENS_NPC
+      type: PLAYER
+      text:
+        text:
+          '0': '&4Nevyplaš mi slepičky!!!!'
+          '1': '&4Přineseš mi krmivo nebo budeš na mě jenom čumět??'
+      owner:
+        uuid: 15b58a17-7ace-3397-9eaa-b854f8b453f5
+      skintrait:
+        signature: Usghz4heGINXIi0h7kEUq6V3Yiwxg/ERxSBh4bu/ZzcdFc9D1TlSKegeXp3LN3+IhqxEnLuA5N3jAsrNpF0f0xKq3JhAXZoqvtzUMozZv6GFqkBSyHZV/qL97MY4QmFYR8CyT092c5IA8p20pweypVSSUzid2rxRCX4hTvJ8sQRVxma6WkHf3ad7YU5xiWGPpqiygJS68VQSU8JnKmg57qpMGMsSmxtqmklSgFNJDIzmmY6dN0mUOAUZ0dK2JoqUcDJNoGRIfBJaYOAKpAs4lPFNV3ftyOabHTcRW/ux7Q8Y3STkc+9I9Z72jvtrfiVuYKzk2QUS5cOc90JTThiBBYEfaT8aD+p/F3yKwrphVVQLbdQWShL1N/pPTcMLS1TNv5iY9+Uy1yoxIqnDbRdoCcivsgRckV1sW7x2Ela65xgKatJ5TLXs3btQ8TCb8A/IASUH/WsllvAaZ3U5zKwNXq2ihl8jhW98fUtvsdaT1hhQEeeNllYQbIzBGTYuPIfiUhDvq7owFaVuJJOp0uSK+RCBJEETtPnuSQ6YdLDuVw2nri2hTgIrIx4OXLTj94nlJ1WTe1KyqqhaBNKDzBgYiEJaiwATJCBZbMiOqOant1AFpDZaVAAy1nOBkVFg7JFQaD7wNXcFouCrsBd5toiwWdq+V1y68H6EAECUXreTM6A=
+        skinName: Sabizer
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTc2NTMxOTg1ODMwMCwKICAicHJvZmlsZUlkIiA6ICIwYWY1YjMwNzZiNWE0ZmU5YjM3NDYzMDM1ZGZkZWU4YyIsCiAgInByb2ZpbGVOYW1lIiA6ICJTYWJpemVyIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2RjZjUzOTdiYTA1NzllMjc0YzFkMmE3YjgzYTEyZTUwNDQ0MGNiNDM5ODM4NmQ1MjgxOTk2ZDQxYzA2Nzc3YzUiCiAgICB9LAogICAgIkNBUEUiIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzI4ZGU0YTgxNjg4YWQxOGI0OWU3MzVhMjczZTA4NmMxOGYxZTM5NjY5NTYxMjNjY2I1NzQwMzRjMDZmNWQzMzYiCiAgICB9CiAgfQp9
+    traitnames: spawned,scoreboardtrait,owner,skintrait,location,text,type,inventory
+    navigator:
+      speedmodifier: 1.0
+      avoidwater: false
+      usedefaultstuckaction: false
+  '26':
+    metadata:
+      nameplate-visible: 'false'
+    name: Dinnerbone
+    uuid: d9ecdf63-a202-4a68-960f-4445b0cad5d4
+    traits:
+      location:
+        bodyYaw: -79.35449
+        world: SpawnVesnice
+        x: 18.7
+        y: -56.0
+        z: 14.4134
+        yaw: -79.3545
+        pitch: 0.0
+      spawned: true
+      scoreboardtrait:
+        tags:
+          '0': CITIZENS_NPC
+      type: SPIDER
+      text:
+        text:
+          '0': '&9Nesahej na mě!'
+      owner:
+        uuid: 15b58a17-7ace-3397-9eaa-b854f8b453f5
+    traitnames: spawned,scoreboardtrait,owner,hologramtrait,location,text,type
+    navigator:
+      speedmodifier: 1.0
+      avoidwater: false
+      usedefaultstuckaction: false
+  '23':
+    name: Joe
+    uuid: cd53a976-eb3a-4e06-9c0c-95c1592b702a
+    traits:
+      location:
+        bodyYaw: -57.81644
+        world: SpawnVesnice
+        x: -21.8188
+        y: -60.0
+        z: 1.8487
+        yaw: -57.8164
+        pitch: 0.0
+      spawned: true
+      lookclose:
+        range: 10.0
+        enabled: true
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+      scoreboardtrait:
+        tags:
+          '0': CITIZENS_NPC
+      type: VILLAGER
+      text:
+        text:
+          '0': Nazdar poutníku!
+          '1': i ty jeden!
+      owner:
+        uuid: 15b58a17-7ace-3397-9eaa-b854f8b453f5
+    traitnames: spawned,scoreboardtrait,owner,rotationtrait,lookclose,location,text,type
+    navigator:
+      speedmodifier: 1.0
+      avoidwater: false
+      usedefaultstuckaction: false
+  '29':
+    metadata:
+      cached-skin-uuid: 1aa9fa4c-a31c-4f33-beb9-273c16e15453
+      cached-skin-uuid-name: adasso12345671
+    name: '&7Otec Martin'
+    uuid: ccb47a2c-23dd-4fa8-886f-71296983ebc0
+    traits:
+      location:
+        bodyYaw: 32.25836
+        world: SpawnVesnice
+        x: 34.2397
+        y: -60.0
+        z: -1.2698
+        yaw: 32.2584
+        pitch: -35.9999
+      spawned: true
+      scoreboardtrait:
+        tags:
+          '0': CITIZENS_NPC
+      type: PLAYER
+      owner:
+        uuid: 15b58a17-7ace-3397-9eaa-b854f8b453f5
+      skintrait:
+        signature: SuQcB6CTnE74/AY3GNivWUnIqCw+bui//Fm7I4nw9Tkc+DCWeu1l2rrLAh1Q2Hp0hoXN3qwraUzd6TbkKYhQF65gJDDORpEFpnOJaXP43CHEgtxqNdedny6i4k2cA4FgOJ+jQQLRQfjZDZTluc1cr/giQF+Fh3ZTM/OmuSnNapFA3S/mIrUo2+1oaPR9VEKm74KOKr6Svg/hdstl4zARzM2XMfn00t6L69IkOz8zxy1fD032+I31yssP5gE847smkX792wDHz9FWYqCu6gcIgP4ZClfdMctM41z0Ybyg0N51sTKhffrL7GStr+VMBG2HenDetCfrsMUZ3mNsgA6UZv0Hqo8OtCsnO69+YNOaKTpYOI66XG8rIvA1vceXQeOSF8tvAQVuLJGi0dyOykXuyFuQj0qe4W9gqfTmHCzVV3v//RQL0lPHR9X/ec7jpRxhUgNth+/ZsWTb6xc09fJWFGp5Vca34STi7urGBry2nRJUlL8zYhQU3rDt40JutMFtRVHW/AqpaA4Z1RqYNWUbwXZ50+2+evyGVuwk3pZcb8K7YMrTY/2eB4XBUHa5O7iRP4attu4goecfGFewoTgQGwurKbXtNziV9Eak6kD3Hhnzy18pNhdOrq99Ue5jS16N9VFJ4fWXBnFdpfxxNdKy+Lc4MGv6KH1MdUw+LXiHkRY=
+        skinName: adasso12345671
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTc2NTM1Njc5ODAyMSwKICAicHJvZmlsZUlkIiA6ICIxYWE5ZmE0Y2EzMWM0ZjMzYmViOTI3M2MxNmUxNTQ1MyIsCiAgInByb2ZpbGVOYW1lIiA6ICJhZGFzc28xMjM0NTY3MSIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9jMTg4MjgzNzBlMDE3MzY5MDRjZmM5ODk4ZmFlZGZjNmJmYTU2MDgyMTVlYTdlOTBmMjc4ZTk3ZGI3MzJmZmMiCiAgICB9CiAgfQp9
+    traitnames: spawned,scoreboardtrait,owner,skintrait,location,type,inventory
+    navigator:
+      speedmodifier: 1.0
+      avoidwater: false
+      usedefaultstuckaction: false
+  '27':
+    metadata:
+      cached-skin-uuid: 652b841e-56a7-484a-becc-ec52e2bf1a9a
+      cached-skin-uuid-name: akrosher
+    name: Justin
+    uuid: 4778acac-5684-471f-b0bd-cd23f0952124
+    traits:
+      location:
+        bodyYaw: 137.98438
+        world: SpawnVesnice
+        x: 4.7
+        y: -60.0
+        z: 0.7
+        yaw: 152.7995
+        pitch: -7.8653
+      spawned: true
+      lookclose:
+        range: 10.0
+        enabled: true
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+      scoreboardtrait:
+        tags:
+          '0': CITIZENS_NPC
+      type: PLAYER
+      text:
+        text:
+          '0': '&6Nemáš dvacku?'
+          '1': '&6Nemáš něco k jídlu?'
+      owner:
+        uuid: 15b58a17-7ace-3397-9eaa-b854f8b453f5
+      skintrait:
+        signature: diESpoEHyOEqarUr08KBGO1+Ml/LnOJ4tvhaj3Qg8ESA7Kgzmz2k2KZS30FqsRqxDOel1Uc1defOpnhjrLjAdJfLlB8vHxYIMuPccAh2eCmDP7Iq2rW6WNJNIqns3ZFDobTX9CH+Bd8zy2wCDOgcEZQFQ7i3OIKSVnIlagdK0alzu62sxRvUDK7sEO9iW5pWCl6aVOtIEq8qaE7XDgpvaGBfCmBX6x+IufoR3HKk5mwSpY7TaW0skWkq0FRZKuTnjhqQ1DZYBj6lQ5Ws/LdtjLt/UAhZcjyzKbAERVcRuPhVf3YgZVGd4VOG8VBkXXCzhrXQ5sRirx0B2kXLAY0oovdgwI/LAB9lJ41sXTe0yEtjQpD1LbjwBQ9UeVZivhyIZq+mVnh/Qn6GSXCj8RwhiKvnFv0KXprVCN5c/jNxhj8jhNshqM/ZBeMN/ajjFnydWsWjKqPyS69LaOaU3QGiekW3i+5ozHCeQXNKZNvTfAv12QNHoPwAaIQHRxlBjCr1roNPpfbasMXhTiQHe6ogcXzLXhp3UO9HZ98uQ+IT7AZ4pNvS75T5wZTe0MvEsO/Lwb1kout7btcLnxIR+0nx61GRXl5HzNulW0W2bZqJ1WuT/G3KW8uy040CBUdQWOsW3tvs3XbKiE3di/rgIv8uDWlPqf/Q8UObHowiPMpkE3U=
+        skinName: Akrosher
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTc2NTM1MzczMDI5NiwKICAicHJvZmlsZUlkIiA6ICI2NTJiODQxZTU2YTc0ODRhYmVjY2VjNTJlMmJmMWE5YSIsCiAgInByb2ZpbGVOYW1lIiA6ICJBa3Jvc2hlciIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS83YzEzZjkxMGFlNmViYjRhMmI3ZmQ0MDRhNTU0MThiZDg3ODQ4NTY2ZjYzMjIxOTE5MWI1MzM2MDVmMWQ4MzZiIgogICAgfQogIH0KfQ==
+    traitnames: spawned,scoreboardtrait,owner,rotationtrait,hologramtrait,skintrait,lookclose,location,text,type,inventory
+    navigator:
+      speedmodifier: 1.0
+      avoidwater: false
+      usedefaultstuckaction: false
+  '28':
+    metadata:
+      cached-skin-uuid: 7d2370d0-019a-4175-b8c0-ba5b913219f1
+      cached-skin-uuid-name: xxxdiablo
+    name: '&4Potulný prodavač'
+    uuid: 71b4816e-1fcf-46f1-8a05-df5815c533a7
+    traits:
+      location:
+        bodyYaw: -0.75219727
+        world: SpawnVesnice
+        x: -23.7274
+        y: -60.0
+        z: -9.3123
+        yaw: -0.7522
+        pitch: 7.65
+      spawned: true
+      scoreboardtrait:
+        tags:
+          '0': CITIZENS_NPC
+      type: PLAYER
+      owner:
+        uuid: 15b58a17-7ace-3397-9eaa-b854f8b453f5
+      skintrait:
+        signature: I4ZCAixrmum5w4VBL2p+2R5j5OWHoge0UesoYKjTM9bRt2RwHLd0fuqpQ3v22CtvZyJxRm2L+yCp5cHbVIIi830VRJWTlN6BbCPuy0Affcjl92rciFRNXUwnxc8oqCU0NNcs0XXkum0uoUHikSPmEiZ0T36+9+p8NAAhhMOSdKcIj5Z5F+r0P0PPiEHXCyOI5TGPpnar5e0ySG11aPA71xKouSCOqw97nVCsf3808Ek5Ea4TtKJno7IbP+Ccl6XmtRUBNJkDuelua9gJLeZSMzNrF4BeezjFLJNmlXARSllrXPda2xe1Z36b8kNPGf1+bMuaprhnc0NcR8gzaMVeWFYJEZz9yI9ymjXNCBLfmOdifhEaj9O6CtmGbP2mdY732mB1Eolq3k/odd9sm03ADYAhzhaib2lhzlp8HAPRQNTeHeqWN/3XG+1ZpkVUFP3BBjRbUa8L0qRmWbO3ZD6CjFOLCUFqJnN5bJnoFCB7yLRj4lLj8sTED1b6TC9nRRAtU8+M7HlVHByxybBY+5p8DkFcpCw6u0ZwKU3upoKbcctQGLNKlBCy9vQcMYmcqHDpF0Bf3MU6FwDKxnNAhCCnUN8M9y1hsKg1zPUPrA6a4tx/JMGVOOFc8EGnO6jJccsT2TH8udhiCOdvKA3z4zoypoMIfY4XQVfA1BsXRh4wQYw=
+        skinName: XXXdiablo
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTc2NTM1NTM0OTA4MiwKICAicHJvZmlsZUlkIiA6ICI3ZDIzNzBkMDAxOWE0MTc1YjhjMGJhNWI5MTMyMTlmMSIsCiAgInByb2ZpbGVOYW1lIiA6ICJYWFhkaWFibG8iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWFiMTZjZjliNWY0MDViNzI0ODBmOTgxOTcxM2M0MzRhOWVkMjUyYzE1NmRiZDJmZWI4ZjI4OGIyYTJhZTE1NCIsCiAgICAgICJtZXRhZGF0YSIgOiB7CiAgICAgICAgIm1vZGVsIiA6ICJzbGltIgogICAgICB9CiAgICB9CiAgfQp9
+      commandtrait:
+        commands:
+          '0':
+            command: obchod
+            hand: RIGHT
+            player: false
+            npc: false
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+          '1':
+            command: /obchod
+            hand: RIGHT
+            player: false
+            npc: false
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+          '2':
+            command: obchod
+            hand: RIGHT
+            player: true
+            npc: false
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+    traitnames: spawned,scoreboardtrait,owner,commandtrait,hologramtrait,skintrait,location,type,inventory
+    navigator:
+      speedmodifier: 1.0
+      avoidwater: false
+      usedefaultstuckaction: false
+  '30':
+    metadata:
+      cached-skin-uuid: 6a6c43fc-4ac4-422e-8b2e-6b27d7b06f1f
+      cached-skin-uuid-name: monochrxmia
+    name: '&4Suoko'
+    uuid: d9024a28-0b43-47aa-9fe1-b5e4cf078a95
+    traits:
+      location:
+        bodyYaw: -140.80281
+        world: SpawnVesnice
+        x: 4.784
+        y: -60.0
+        z: 22.7512
+        yaw: -140.8028
+        pitch: -3.7196
+      spawned: true
+      lookclose:
+        range: 10.0
+        enabled: true
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+      scoreboardtrait:
+        tags:
+          '0': CITIZENS_NPC
+      type: PLAYER
+      inventory:
+        '0':
+          type: wheat
+          amount: 1
+      owner:
+        uuid: 15b58a17-7ace-3397-9eaa-b854f8b453f5
+      skintrait:
+        signature: hxAZrUYES/eJBDXG+FOVjPAfCgYzlKjfo6JcT3ztfV+QIRUUyPXVfgiHdroNuARIYLRCasJ2b3EmhGcTxTbY52lEzvV2OrCkGvvR3zEE0PQR0kLICHHiz7GA2SS9uvGNLKY4/4C/mbSCVUfApEWCW8z69MwiN5MeQatvSPHf7qireusfPbbVei7w7+bHHrqT4/pTj5z7ap6x5ZMv+nYgD5tSReAHNR1gale9PcgIQ2bpl7GHj1HZpO1eh0NRngcS5P01xlHN6GM/4Q5vqzost8ZqHbdyk+n7HJ6zKIpx2oHobJwYBxqXqAT3uwqdovofoGZ87dl0mPW5qf3oXcBxTlBN23SROzAeTYpCp2doDryay4eEwW8w91QxghHQiB1baeFe23IAseskqJ6tDp64zfV0BG4e5mnTveFuw5PhmF6mdjciG2UaPeKXK6JFKLe4SCMCOMcL1GPh97tm+5/Dc7f18PTTjEG2Q18RTCh4yceRERg56Y0LYVhfINyLlh/bbRyWmPU3eh7BMwxf8RhWQ87c7zNaFCU7VYMef7pc3SGFu3IHHOn+ikX2sjQ1knUQ75OFmzF99x4pLiZfAnG4ZvGLQQG5C8w5Z2MU7tLSYVZ7c9JuaxPyM3PXJXfjlk58b4SgY7FBhiVzmSZe1P7Nni/0plZEeTSx35ZkrkBJYMo=
+        skinName: monochrxmia
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTc2NTM4NzAwNTE2MCwKICAicHJvZmlsZUlkIiA6ICI2YTZjNDNmYzRhYzQ0MjJlOGIyZTZiMjdkN2IwNmYxZiIsCiAgInByb2ZpbGVOYW1lIiA6ICJtb25vY2hyeG1pYSIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS83ZWVjN2JjMWU3ZGJlODFhMDgzNzhjMWZlNDAwNDY4ZGRjNTVjNWM5OGIxMTg4YzRmMmFiMzIxMjIxN2U2Y2IyIiwKICAgICAgIm1ldGFkYXRhIiA6IHsKICAgICAgICAibW9kZWwiIDogInNsaW0iCiAgICAgIH0KICAgIH0KICB9Cn0=
+      equipment:
+        hand:
+          type: wheat
+          amount: 1
+        off_hand:
+          type: pale_oak_pressure_plate
+          amount: 1
+        helmet:
+          type: leather_horse_armor
+          amount: 1
+          meta: rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGphdmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAkU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2YWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAABXQAAj09dAAJbWV0YS10eXBldAAJaXRlbS1uYW1ldAARY3VzdG9tLW1vZGVsLWRhdGF0ABJQdWJsaWNCdWtraXRWYWx1ZXN1cQB+AAYAAAAFdAAISXRlbU1ldGF0AA1MRUFUSEVSX0FSTU9SdAAueyJ0ZXh0IjoiRGVlciBIb3JuIENvc21ldGljcyIsImNvbG9yIjoid2hpdGUifXNxAH4AAHNxAH4AA3VxAH4ABgAAAAVxAH4ACHQABmZsb2F0c3QABWZsYWdzdAAHc3RyaW5nc3QABmNvbG9yc3VxAH4ABgAAAAV0AA9DdXN0b21Nb2RlbERhdGFzcgAmamF2YS51dGlsLkNvbGxlY3Rpb25zJFVubW9kaWZpYWJsZUxpc3T8DyUxteyOEAIAAUwABGxpc3R0ABBMamF2YS91dGlsL0xpc3Q7eHIALGphdmEudXRpbC5Db2xsZWN0aW9ucyRVbm1vZGlmaWFibGVDb2xsZWN0aW9uGUIAgMte9x4CAAFMAAFjdAAWTGphdmEvdXRpbC9Db2xsZWN0aW9uO3hwc3IAEWphdmEudXRpbC5Db2xsU2VyV46rtjobqBEDAAFJAAN0YWd4cAAAAAF3BAAAAAFzcgAPamF2YS5sYW5nLkZsb2F02u3Jots88OwCAAFGAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEsXc8t4cQB+ACBzcQB+ABpzcQB+AB8AAAABdwQAAAAAeHEAfgAlc3EAfgAacQB+ACVxAH4AJXNxAH4AHwAAAAR3BAAAAAB4dABBewogICAgIm5leG86aWQiOiAiZXJvX2ZlcmFsX2ZhbnRhc3lfc2V0X3YyX2Nvc21ldGljc19kZWVyX2hvcm4iCn0=
+      text:
+        text:
+          '0': '&7Nespi!'
+          '1': '&7Chceš něco nakreslit? Za 200 :p'
+    traitnames: spawned,scoreboardtrait,owner,rotationtrait,skintrait,lookclose,equipment,location,text,type,inventory
+    navigator:
+      speedmodifier: 1.0
+      avoidwater: false
+      usedefaultstuckaction: false
+  '33':
+    metadata:
+      cached-skin-uuid: 7d2370d0-019a-4175-b8c0-ba5b913219f1
+      cached-skin-uuid-name: xxxdiablo
+    name: '&4Potulný prodavač'
+    uuid: 860f65a0-82a3-40b6-b462-6fe09a31de9d
+    traits:
+      spawned: true
+      scoreboardtrait:
+        tags:
+          '0': CITIZENS_NPC
+      commandtrait:
+        commands:
+          '0':
+            command: obchod
+            hand: RIGHT
+            player: false
+            npc: false
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+          '1':
+            command: /obchod
+            hand: RIGHT
+            player: false
+            npc: false
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+          '2':
+            command: obchod
+            hand: RIGHT
+            player: true
+            npc: false
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+      type: PLAYER
+      location:
+        bodyYaw: -0.75219727
+        world: SpawnVesnice
+        x: -23.7274
+        y: -60.0
+        z: -9.3123
+        yaw: -0.7522
+        pitch: 7.65
+      owner:
+        uuid: 15b58a17-7ace-3397-9eaa-b854f8b453f5
+      skintrait:
+        signature: I4ZCAixrmum5w4VBL2p+2R5j5OWHoge0UesoYKjTM9bRt2RwHLd0fuqpQ3v22CtvZyJxRm2L+yCp5cHbVIIi830VRJWTlN6BbCPuy0Affcjl92rciFRNXUwnxc8oqCU0NNcs0XXkum0uoUHikSPmEiZ0T36+9+p8NAAhhMOSdKcIj5Z5F+r0P0PPiEHXCyOI5TGPpnar5e0ySG11aPA71xKouSCOqw97nVCsf3808Ek5Ea4TtKJno7IbP+Ccl6XmtRUBNJkDuelua9gJLeZSMzNrF4BeezjFLJNmlXARSllrXPda2xe1Z36b8kNPGf1+bMuaprhnc0NcR8gzaMVeWFYJEZz9yI9ymjXNCBLfmOdifhEaj9O6CtmGbP2mdY732mB1Eolq3k/odd9sm03ADYAhzhaib2lhzlp8HAPRQNTeHeqWN/3XG+1ZpkVUFP3BBjRbUa8L0qRmWbO3ZD6CjFOLCUFqJnN5bJnoFCB7yLRj4lLj8sTED1b6TC9nRRAtU8+M7HlVHByxybBY+5p8DkFcpCw6u0ZwKU3upoKbcctQGLNKlBCy9vQcMYmcqHDpF0Bf3MU6FwDKxnNAhCCnUN8M9y1hsKg1zPUPrA6a4tx/JMGVOOFc8EGnO6jJccsT2TH8udhiCOdvKA3z4zoypoMIfY4XQVfA1BsXRh4wQYw=
+        skinName: XXXdiablo
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTc2NTM1NTM0OTA4MiwKICAicHJvZmlsZUlkIiA6ICI3ZDIzNzBkMDAxOWE0MTc1YjhjMGJhNWI5MTMyMTlmMSIsCiAgInByb2ZpbGVOYW1lIiA6ICJYWFhkaWFibG8iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWFiMTZjZjliNWY0MDViNzI0ODBmOTgxOTcxM2M0MzRhOWVkMjUyYzE1NmRiZDJmZWI4ZjI4OGIyYTJhZTE1NCIsCiAgICAgICJtZXRhZGF0YSIgOiB7CiAgICAgICAgIm1vZGVsIiA6ICJzbGltIgogICAgICB9CiAgICB9CiAgfQp9
+    traitnames: spawned,scoreboardtrait,owner,commandtrait,hologramtrait,skintrait,location,type,inventory
+    navigator:
+      speedmodifier: 1.0
+      avoidwater: false
+      usedefaultstuckaction: false
+  '35':
+    metadata:
+      cached-skin-uuid: 7d2370d0-019a-4175-b8c0-ba5b913219f1
+      cached-skin-uuid-name: xxxdiablo
+    name: '&4Potulný prodavač'
+    uuid: 14c006c1-9414-446c-b973-48a079041898
+    traits:
+      spawned: true
+      scoreboardtrait:
+        tags:
+          '0': CITIZENS_NPC
+      commandtrait:
+        commands:
+          '0':
+            command: obchod
+            hand: RIGHT
+            player: false
+            npc: false
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+          '1':
+            command: /obchod
+            hand: RIGHT
+            player: false
+            npc: false
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+          '2':
+            command: obchod
+            hand: RIGHT
+            player: true
+            npc: false
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+      type: PLAYER
+      location:
+        bodyYaw: -0.75219727
+        world: SpawnVesnice
+        x: -23.7274
+        y: -60.0
+        z: -9.3123
+        yaw: -0.7522
+        pitch: 7.65
+      owner:
+        uuid: 15b58a17-7ace-3397-9eaa-b854f8b453f5
+      skintrait:
+        signature: I4ZCAixrmum5w4VBL2p+2R5j5OWHoge0UesoYKjTM9bRt2RwHLd0fuqpQ3v22CtvZyJxRm2L+yCp5cHbVIIi830VRJWTlN6BbCPuy0Affcjl92rciFRNXUwnxc8oqCU0NNcs0XXkum0uoUHikSPmEiZ0T36+9+p8NAAhhMOSdKcIj5Z5F+r0P0PPiEHXCyOI5TGPpnar5e0ySG11aPA71xKouSCOqw97nVCsf3808Ek5Ea4TtKJno7IbP+Ccl6XmtRUBNJkDuelua9gJLeZSMzNrF4BeezjFLJNmlXARSllrXPda2xe1Z36b8kNPGf1+bMuaprhnc0NcR8gzaMVeWFYJEZz9yI9ymjXNCBLfmOdifhEaj9O6CtmGbP2mdY732mB1Eolq3k/odd9sm03ADYAhzhaib2lhzlp8HAPRQNTeHeqWN/3XG+1ZpkVUFP3BBjRbUa8L0qRmWbO3ZD6CjFOLCUFqJnN5bJnoFCB7yLRj4lLj8sTED1b6TC9nRRAtU8+M7HlVHByxybBY+5p8DkFcpCw6u0ZwKU3upoKbcctQGLNKlBCy9vQcMYmcqHDpF0Bf3MU6FwDKxnNAhCCnUN8M9y1hsKg1zPUPrA6a4tx/JMGVOOFc8EGnO6jJccsT2TH8udhiCOdvKA3z4zoypoMIfY4XQVfA1BsXRh4wQYw=
+        skinName: XXXdiablo
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTc2NTM1NTM0OTA4MiwKICAicHJvZmlsZUlkIiA6ICI3ZDIzNzBkMDAxOWE0MTc1YjhjMGJhNWI5MTMyMTlmMSIsCiAgInByb2ZpbGVOYW1lIiA6ICJYWFhkaWFibG8iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWFiMTZjZjliNWY0MDViNzI0ODBmOTgxOTcxM2M0MzRhOWVkMjUyYzE1NmRiZDJmZWI4ZjI4OGIyYTJhZTE1NCIsCiAgICAgICJtZXRhZGF0YSIgOiB7CiAgICAgICAgIm1vZGVsIiA6ICJzbGltIgogICAgICB9CiAgICB9CiAgfQp9
+    traitnames: spawned,scoreboardtrait,owner,commandtrait,hologramtrait,skintrait,location,type,inventory
+    navigator:
+      speedmodifier: 1.0
+      avoidwater: false
+      usedefaultstuckaction: false
+  '34':
+    metadata:
+      cached-skin-uuid: 7d2370d0-019a-4175-b8c0-ba5b913219f1
+      cached-skin-uuid-name: xxxdiablo
+    name: '&4Potulný prodavač'
+    uuid: a3ef393f-87b8-4193-8797-8fd8920395ea
+    traits:
+      spawned: true
+      scoreboardtrait:
+        tags:
+          '0': CITIZENS_NPC
+      commandtrait:
+        commands:
+          '0':
+            command: obchod
+            hand: RIGHT
+            player: false
+            npc: false
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+          '1':
+            command: /obchod
+            hand: RIGHT
+            player: false
+            npc: false
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+          '2':
+            command: obchod
+            hand: RIGHT
+            player: true
+            npc: false
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+      type: PLAYER
+      location:
+        bodyYaw: -0.75219727
+        world: SpawnVesnice
+        x: -23.7274
+        y: -60.0
+        z: -9.3123
+        yaw: -0.7522
+        pitch: 7.65
+      owner:
+        uuid: 15b58a17-7ace-3397-9eaa-b854f8b453f5
+      skintrait:
+        signature: I4ZCAixrmum5w4VBL2p+2R5j5OWHoge0UesoYKjTM9bRt2RwHLd0fuqpQ3v22CtvZyJxRm2L+yCp5cHbVIIi830VRJWTlN6BbCPuy0Affcjl92rciFRNXUwnxc8oqCU0NNcs0XXkum0uoUHikSPmEiZ0T36+9+p8NAAhhMOSdKcIj5Z5F+r0P0PPiEHXCyOI5TGPpnar5e0ySG11aPA71xKouSCOqw97nVCsf3808Ek5Ea4TtKJno7IbP+Ccl6XmtRUBNJkDuelua9gJLeZSMzNrF4BeezjFLJNmlXARSllrXPda2xe1Z36b8kNPGf1+bMuaprhnc0NcR8gzaMVeWFYJEZz9yI9ymjXNCBLfmOdifhEaj9O6CtmGbP2mdY732mB1Eolq3k/odd9sm03ADYAhzhaib2lhzlp8HAPRQNTeHeqWN/3XG+1ZpkVUFP3BBjRbUa8L0qRmWbO3ZD6CjFOLCUFqJnN5bJnoFCB7yLRj4lLj8sTED1b6TC9nRRAtU8+M7HlVHByxybBY+5p8DkFcpCw6u0ZwKU3upoKbcctQGLNKlBCy9vQcMYmcqHDpF0Bf3MU6FwDKxnNAhCCnUN8M9y1hsKg1zPUPrA6a4tx/JMGVOOFc8EGnO6jJccsT2TH8udhiCOdvKA3z4zoypoMIfY4XQVfA1BsXRh4wQYw=
+        skinName: XXXdiablo
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTc2NTM1NTM0OTA4MiwKICAicHJvZmlsZUlkIiA6ICI3ZDIzNzBkMDAxOWE0MTc1YjhjMGJhNWI5MTMyMTlmMSIsCiAgInByb2ZpbGVOYW1lIiA6ICJYWFhkaWFibG8iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWFiMTZjZjliNWY0MDViNzI0ODBmOTgxOTcxM2M0MzRhOWVkMjUyYzE1NmRiZDJmZWI4ZjI4OGIyYTJhZTE1NCIsCiAgICAgICJtZXRhZGF0YSIgOiB7CiAgICAgICAgIm1vZGVsIiA6ICJzbGltIgogICAgICB9CiAgICB9CiAgfQp9
+    traitnames: spawned,scoreboardtrait,owner,commandtrait,hologramtrait,skintrait,location,type,inventory
+    navigator:
+      speedmodifier: 1.0
+      avoidwater: false
+      usedefaultstuckaction: false
+  '31':
+    metadata:
+      cached-skin-uuid: 87593cb4-e6ea-482f-94b2-1da841419405
+      cached-skin-uuid-name: vernito
+      nameplate-visible: 'false'
+    name: Quests
+    uuid: cd793526-bcb7-4965-9fda-a6a066344659
+    traits:
+      spawned: true
+      scoreboardtrait:
+        tags:
+          '0': CITIZENS_NPC
+      commandtrait:
+        commands:
+          '0':
+            command: questmenu
+            hand: RIGHT
+            player: true
+            npc: false
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+      lookclose:
+        range: 10.0
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+      type: PLAYER
+      location:
+        bodyYaw: -179.7358
+        world: Main
+        x: 10.5523
+        y: -59.0
+        z: 11.6864
+        yaw: -179.7358
+        pitch: 22.1911
+      owner:
+        uuid: 15b58a17-7ace-3397-9eaa-b854f8b453f5
+      skintrait:
+        signature: L2PejkTJ1pUJh/GHv8LAVeN1FiovMelxA1TV1ujKa//5B3XrZmET45odd4CkoIK4G+X/oCNwCgYr9d1DlTC29yK/8ey+5C1xfWv/lkJuTDI+KJxmy1PFqAfe3pRIkhBq2Kje6M6ND4jBz/IQjjZPhjt9VinMeGiztkYrLGHMFZrbk2L7EvrDfMw9/USx09pfshNf/surCk6NkbngF/pLjYGhFyPxu7KyrrkosuDGqkyDULh6F3OsqTUKVl2bsoPf34b1oHN+xLk8sGF3D1cjvvySnXsvrMsu8oQYXCr/ERrDrokcRFpRFEvTXYTZaPd7b9v09NQHcmZnGEDvUBUSDzU7LkpyVfhckTdAhnXBSxCFPAQITjdaNT2XsTV8cLt8vDJ/1qR7n+YdO/sFruSrRPrDdSU7N9ZAN7UucBc4w+4JYgjmFlHstJGNfIi6qe3si3qHWLCaxXjHHGVKeq802ajjFaUPFuOS745WWgGgmFEDp/FBZARlR74nMD1Z7u2bA1WXJXYwiye+N8kBqjE5GzcbddCi9nxSTu/lgKquso1/CoK/vFxECUJ3WzOuqU4TdWv2JNNoKa96n6sTsxI3l1lBfXlVDfdm+kLTSPAw7uv9vFHOyFqqLky7oIID7iUC2qqqL0bmDczT6O+nmU8VExBkFuaxgP4pN2333RBbMwI=
+        skinName: Vernito
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTc2NDg5NTE3NDYxNiwKICAicHJvZmlsZUlkIiA6ICI4NzU5M2NiNGU2ZWE0ODJmOTRiMjFkYTg0MTQxOTQwNSIsCiAgInByb2ZpbGVOYW1lIiA6ICJWZXJuaXRvIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzJiNzhmODZkNTdhZjQ1ZTA2ODQyN2NlNzUwZGRiYTdmM2ZmYmRiMmZlMTgxM2Y0MTY5NGE4N2NmOWFlZmU3MjYiLAogICAgICAibWV0YWRhdGEiIDogewogICAgICAgICJtb2RlbCIgOiAic2xpbSIKICAgICAgfQogICAgfQogIH0KfQ==
+    traitnames: spawned,scoreboardtrait,owner,rotationtrait,commandtrait,skintrait,lookclose,location,type,inventory,targetable
+    navigator:
+      speedmodifier: 1.0
+      avoidwater: false
+      usedefaultstuckaction: false
+  '32':
+    metadata:
+      cached-skin-uuid: cde05e27-05ac-4735-badb-0876d2384089
+      cached-skin-uuid-name: struppi
+      nameplate-visible: 'false'
+    name: Kovar
+    uuid: d8820a90-20a4-43c5-8772-d68d99c797e2
+    traits:
+      scoreboardtrait:
+        tags:
+          '0': CITIZENS_NPC
+      type: PLAYER
+      inventory:
+        '0':
+          type: diamond_axe
+          amount: 1
+      spawned: true
+      commandtrait:
+        commands:
+          '0':
+            command: kovar
+            hand: RIGHT
+            player: true
+            npc: false
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+      lookclose:
+        range: 10.0
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+      location:
+        bodyYaw: -172.24344
+        world: Main
+        x: 8.482
+        y: -59.0
+        z: 11.6147
+        yaw: -172.2434
+        pitch: -10.4149
+      equipment:
+        cosmetic_body:
+          type: iron_axe
+          amount: 1
+        chestplate:
+          type: iron_chestplate
+          amount: 1
+        hand:
+          type: diamond_axe
+          amount: 1
+        off_hand:
+          type: shield
+          amount: 1
+      owner:
+        uuid: 15b58a17-7ace-3397-9eaa-b854f8b453f5
+      text:
+        text:
+          '0': Chceš něco opravit? Doufám, že máš hotovost!
+      skintrait:
+        signature: LGqau3jvZi5p/iCJKpPwTEOTjAV1BNa6wwnvc8+TlNaCecdr6qY6qI/x+Eqhh1AZHmjUiq17T6OboKzcbn9xP65vcMKlnMtqK/gDzJhIseK1hUb+nfUlxNG7Do4pLbk6NCDRvgt9hzVXwVRit3H+YAvwDD6m0mMA8AYE44UWc77dLZ2rocBS3vnCaVDQBOmbMvJUbqySzf/QwXPPjZSEgaQQfzv0aGyPSKEPVUlu6k/36AG+QQkJG5x+CQT4HTf1+3Pr/aN5WRJ2Ro1K4fcRsQ61WEDMdTccRSx/bXE0TM6S4D4Ew8UQpZepX0H7tEU4YTRhwBAK5F+03XgR3oYnzA9I9BbK5+AoTWrDraHogrjjIu0t9SJF2+MzmCo8zf/dLraJZNCtkvuXJrGpLRvJtYZ4W02NGX2OfBNNI5XIHJZR3oK+vN2EzVCWR3rhA3L1jMFw3Octs4WtTfMRqm9kT0xtDSGFoBnoFPfD4cBBDYqnTRooWwkDMYeeBuU+rdabDJF4RAObLhQvPG8LbD2KG8hBybswNpflUqpnoEgmXJ6der6Q7lyhYrfFxQTeaZSIkIoJAfx2xGXB6Fb+z5NLznHKtOZvNCXO8IOwbCtsk4+DDKZtocsSq+7QzH5GgcqksqRdu170sEhPPqp6TkQglCb2/Ff7+xN/7SqxUb3ahFc=
+        skinName: Struppi
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTc2NDg5Mjg5MzY0NiwKICAicHJvZmlsZUlkIiA6ICJjZGUwNWUyNzA1YWM0NzM1YmFkYjA4NzZkMjM4NDA4OSIsCiAgInByb2ZpbGVOYW1lIiA6ICJTdHJ1cHBpIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2JjNGMxZGM5MWY1NGRlNjgxZTYzYmZiMmRkYjUwNTAzMDIyN2JhNDVhYjkxZGRmNTc3MTBlZjYxZGVhMDY2ZGMiCiAgICB9LAogICAgIkNBUEUiIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzIzNDBjMGUwM2RkMjRhMTFiMTVhOGIzM2MyYTdlOWUzMmFiYjIwNTFiMjQ4MWQwYmE3ZGVmZDYzNWNhN2E5MzMiCiAgICB9CiAgfQp9
+    traitnames: scoreboardtrait,spawned,owner,rotationtrait,commandtrait,skintrait,lookclose,equipment,type,inventory,targetable,location,text
+    navigator:
+      speedmodifier: 1.0
+      avoidwater: false
+      usedefaultstuckaction: false
+  '36':
+    metadata:
+      cached-skin-uuid: b1c6f436-d521-429c-9f82-4f20dce2ffcc
+      cached-skin-uuid-name: notfarg
+      nameplate-visible: 'false'
+    name: Travel
+    uuid: 3bcb22e0-ea51-496c-b677-8ad4db4576d9
+    traits:
+      spawned: true
+      scoreboardtrait:
+        tags:
+          '0': CITIZENS_NPC
+      commandtrait:
+        commands:
+          '0':
+            command: travel
+            hand: RIGHT
+            player: true
+            npc: false
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+      type: PLAYER
+      location:
+        bodyYaw: 178.80002
+        world: Main
+        x: 6.3832
+        y: -59.0
+        z: 11.4615
+        yaw: 178.8
+        pitch: 25.35
+      owner:
+        uuid: 15b58a17-7ace-3397-9eaa-b854f8b453f5
+      skintrait:
+        signature: KwWp73gTfj0zl/oCdaI8U+J/aPy0iHrF2ALUwrzUrtUv0F34g2L6s+uLNbCMqOr1WYhhQQLNFwOkMVPMV+em/fbRbegIxN7/vXiQ1cV+k5bqO81pmcfgbLdJ9tLAjJZz8JgCTiNcbUgsH2u7vWFgApg2/2SG62ORYJVbl1mWazgWHyFSYDuW8iplM9wHJ5hWBxrZ/KDspYUazDM0A4F3zYsVxhgE6i3qiZlKaHaLrB2We5/+5UJOCZOmBa0eLAU5ekGoTuc9t0eRfm+8lFdraglFR0YmQZj4HkY2KoGbyHtVVtgAbb+tJmOTr9I/bEtjgBj8+nbQJ7YpgsU8UKV6Y8CrHKt+5ld5n86L8rN8Ehk/OJsfDnjijLoK6jQZxuiailtcFzlERD/OTaQF0S3XPsJKXETqhPtJxqcHod1n6snER5QkQcVvr+POwPUEWTd3sMAm6RO8WS/kGpG00g5bH7QGFxff1Mzm11lxlSVOGY8sJlRI1VV+U72LVHw+z+NkFokQ36B6bulcQm9ob6JpUn7JcXinFMjM8CgYh1L9CP2+WGDGltt5k2UMgbxKB2AJvJkLrMi6ShES9/xm50UWLtz/xIj2hJJQtcCcqZXFAXY4iaEfFqgXOddES7cuz2E8H8S25CLGSDF30tLNsKCc5I8zS3ItGAkvdZ6lYliDUBE=
+        skinName: notfarg
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTc2NDg5NTIyNDQ0MiwKICAicHJvZmlsZUlkIiA6ICJiMWM2ZjQzNmQ1MjE0MjljOWY4MjRmMjBkY2UyZmZjYyIsCiAgInByb2ZpbGVOYW1lIiA6ICJub3RmYXJnIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2U4MWI2NjQxMTNiNGYzZDc1YmIxYjU3MjQ3YmNmN2QzYWE4ZTgzZDJhODJmYzk0ZDRhYjgzNGMwNWRhY2Y3MjQiCiAgICB9CiAgfQp9
+    traitnames: spawned,scoreboardtrait,owner,commandtrait,skintrait,equipment,location,type,inventory,targetable
+    navigator:
+      speedmodifier: 1.0
+      avoidwater: false
+      usedefaultstuckaction: false
+  '37':
+    metadata:
+      cached-skin-uuid: 7d2370d0-019a-4175-b8c0-ba5b913219f1
+      cached-skin-uuid-name: xxxdiablo
+    name: '&4Potulný prodavač'
+    uuid: d4b15e8c-5ba7-466a-9c6a-07aec3524450
+    traits:
+      type: PLAYER
+      scoreboardtrait:
+        tags:
+          '0': CITIZENS_NPC
+      location:
+        bodyYaw: -0.75219727
+        world: SpawnVesnice
+        x: -23.7274
+        y: -60.0
+        z: -9.3123
+        yaw: -0.7522
+        pitch: 7.65
+      spawned: true
+      owner:
+        uuid: 15b58a17-7ace-3397-9eaa-b854f8b453f5
+      commandtrait:
+        commands:
+          '0':
+            command: obchod
+            hand: RIGHT
+            player: false
+            npc: false
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+          '1':
+            command: /obchod
+            hand: RIGHT
+            player: false
+            npc: false
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+          '2':
+            command: obchod
+            hand: RIGHT
+            player: true
+            npc: false
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+      skintrait:
+        signature: I4ZCAixrmum5w4VBL2p+2R5j5OWHoge0UesoYKjTM9bRt2RwHLd0fuqpQ3v22CtvZyJxRm2L+yCp5cHbVIIi830VRJWTlN6BbCPuy0Affcjl92rciFRNXUwnxc8oqCU0NNcs0XXkum0uoUHikSPmEiZ0T36+9+p8NAAhhMOSdKcIj5Z5F+r0P0PPiEHXCyOI5TGPpnar5e0ySG11aPA71xKouSCOqw97nVCsf3808Ek5Ea4TtKJno7IbP+Ccl6XmtRUBNJkDuelua9gJLeZSMzNrF4BeezjFLJNmlXARSllrXPda2xe1Z36b8kNPGf1+bMuaprhnc0NcR8gzaMVeWFYJEZz9yI9ymjXNCBLfmOdifhEaj9O6CtmGbP2mdY732mB1Eolq3k/odd9sm03ADYAhzhaib2lhzlp8HAPRQNTeHeqWN/3XG+1ZpkVUFP3BBjRbUa8L0qRmWbO3ZD6CjFOLCUFqJnN5bJnoFCB7yLRj4lLj8sTED1b6TC9nRRAtU8+M7HlVHByxybBY+5p8DkFcpCw6u0ZwKU3upoKbcctQGLNKlBCy9vQcMYmcqHDpF0Bf3MU6FwDKxnNAhCCnUN8M9y1hsKg1zPUPrA6a4tx/JMGVOOFc8EGnO6jJccsT2TH8udhiCOdvKA3z4zoypoMIfY4XQVfA1BsXRh4wQYw=
+        skinName: XXXdiablo
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTc2NTM1NTM0OTA4MiwKICAicHJvZmlsZUlkIiA6ICI3ZDIzNzBkMDAxOWE0MTc1YjhjMGJhNWI5MTMyMTlmMSIsCiAgInByb2ZpbGVOYW1lIiA6ICJYWFhkaWFibG8iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWFiMTZjZjliNWY0MDViNzI0ODBmOTgxOTcxM2M0MzRhOWVkMjUyYzE1NmRiZDJmZWI4ZjI4OGIyYTJhZTE1NCIsCiAgICAgICJtZXRhZGF0YSIgOiB7CiAgICAgICAgIm1vZGVsIiA6ICJzbGltIgogICAgICB9CiAgICB9CiAgfQp9
+    traitnames: scoreboardtrait,spawned,owner,commandtrait,hologramtrait,skintrait,location,inventory,type
+    navigator:
+      speedmodifier: 1.0
+      avoidwater: false
+      usedefaultstuckaction: false
+  '39':
+    name: test_shop
+    uuid: 59d67619-91e2-4593-9a54-d081272e0279
+    traits:
+      type: PLAYER
+      scoreboardtrait:
+        tags:
+          '0': CITIZENS_NPC
+      location:
+        bodyYaw: 177.44997
+        world: Main
+        x: 4.493
+        y: -59.0
+        z: 11.5118
+        yaw: 177.45
+        pitch: 7.65
+      owner:
+        uuid: 15b58a17-7ace-3397-9eaa-b854f8b453f5
+      spawned: true
+      commandtrait:
+        commands:
+          '0':
+            command: obchod
+            hand: RIGHT
+            player: false
+            npc: false
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+    traitnames: scoreboardtrait,owner,spawned,commandtrait,skintrait,location,inventory,type,targetable
+    navigator:
+      speedmodifier: 1.0
+      avoidwater: false
+      usedefaultstuckaction: false
+  '38':
+    metadata:
+      cached-skin-uuid: 7d2370d0-019a-4175-b8c0-ba5b913219f1
+      cached-skin-uuid-name: xxxdiablo
+    name: '&4Potulný prodavač'
+    uuid: d287d34c-b245-4908-8e3f-0e4fdb0b7fca
+    traits:
+      type: PLAYER
+      scoreboardtrait:
+        tags:
+          '0': CITIZENS_NPC
+      location:
+        bodyYaw: -0.75219727
+        world: SpawnVesnice
+        x: -23.7274
+        y: -60.0
+        z: -9.3123
+        yaw: -0.7522
+        pitch: 7.65
+      spawned: true
+      owner:
+        uuid: 15b58a17-7ace-3397-9eaa-b854f8b453f5
+      commandtrait:
+        commands:
+          '0':
+            command: obchod
+            hand: RIGHT
+            player: false
+            npc: false
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+          '1':
+            command: /obchod
+            hand: RIGHT
+            player: false
+            npc: false
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+          '2':
+            command: obchod
+            hand: RIGHT
+            player: true
+            npc: false
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+      skintrait:
+        signature: I4ZCAixrmum5w4VBL2p+2R5j5OWHoge0UesoYKjTM9bRt2RwHLd0fuqpQ3v22CtvZyJxRm2L+yCp5cHbVIIi830VRJWTlN6BbCPuy0Affcjl92rciFRNXUwnxc8oqCU0NNcs0XXkum0uoUHikSPmEiZ0T36+9+p8NAAhhMOSdKcIj5Z5F+r0P0PPiEHXCyOI5TGPpnar5e0ySG11aPA71xKouSCOqw97nVCsf3808Ek5Ea4TtKJno7IbP+Ccl6XmtRUBNJkDuelua9gJLeZSMzNrF4BeezjFLJNmlXARSllrXPda2xe1Z36b8kNPGf1+bMuaprhnc0NcR8gzaMVeWFYJEZz9yI9ymjXNCBLfmOdifhEaj9O6CtmGbP2mdY732mB1Eolq3k/odd9sm03ADYAhzhaib2lhzlp8HAPRQNTeHeqWN/3XG+1ZpkVUFP3BBjRbUa8L0qRmWbO3ZD6CjFOLCUFqJnN5bJnoFCB7yLRj4lLj8sTED1b6TC9nRRAtU8+M7HlVHByxybBY+5p8DkFcpCw6u0ZwKU3upoKbcctQGLNKlBCy9vQcMYmcqHDpF0Bf3MU6FwDKxnNAhCCnUN8M9y1hsKg1zPUPrA6a4tx/JMGVOOFc8EGnO6jJccsT2TH8udhiCOdvKA3z4zoypoMIfY4XQVfA1BsXRh4wQYw=
+        skinName: XXXdiablo
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTc2NTM1NTM0OTA4MiwKICAicHJvZmlsZUlkIiA6ICI3ZDIzNzBkMDAxOWE0MTc1YjhjMGJhNWI5MTMyMTlmMSIsCiAgInByb2ZpbGVOYW1lIiA6ICJYWFhkaWFibG8iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWFiMTZjZjliNWY0MDViNzI0ODBmOTgxOTcxM2M0MzRhOWVkMjUyYzE1NmRiZDJmZWI4ZjI4OGIyYTJhZTE1NCIsCiAgICAgICJtZXRhZGF0YSIgOiB7CiAgICAgICAgIm1vZGVsIiA6ICJzbGltIgogICAgICB9CiAgICB9CiAgfQp9
+    traitnames: scoreboardtrait,spawned,owner,commandtrait,hologramtrait,skintrait,location,inventory,type
+    navigator:
+      speedmodifier: 1.0
+      avoidwater: false
+      usedefaultstuckaction: false

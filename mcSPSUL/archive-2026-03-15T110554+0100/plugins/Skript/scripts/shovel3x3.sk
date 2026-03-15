@@ -1,0 +1,46 @@
+# 1. Příkaz (beze změny)
+command /megashovel <text>:
+    permission: op
+    trigger:
+        set {_nastroj} to air
+        if arg-1 is "wooden" or "wood":
+            set {_nastroj} to wooden shovel
+        else if arg-1 is "stone":
+            set {_nastroj} to stone shovel
+        else if arg-1 is "iron":
+            set {_nastroj} to iron shovel
+        else if arg-1 is "gold" or "golden":
+            set {_nastroj} to golden shovel
+        else if arg-1 is "diamond":
+            set {_nastroj} to diamond shovel
+        else if arg-1 is "netherite":
+            set {_nastroj} to netherite shovel
+        else:
+            send "&cPoužití: /megashovel <wooden|stone|iron|gold|diamond|netherite>" to player
+            stop
+
+        set name of {_nastroj} to "&6Mega Shovel"
+        set lore of {_nastroj} to "&7Těží oblast 3x3x1 (Radius 1.5)"
+        give {_nastroj} to player
+        send "&aZískal jsi &e%arg-1% &aMegaShovel!" to player
+
+# 2. Kopání - Trik s radiusem 1.5
+on break:
+    if gamemode of player is survival:
+        if name of player's tool is "&6Mega Shovel":
+            
+            # Uložíme si výšku kopaného bloku
+            set {_y} to y-coordinate of event-block
+            
+            # TRIK: Radius 1.5 vybere přesně čtverec 3x3 včetně rohů!
+            loop all blocks in radius 1.5 around event-block:
+                
+                # Zkontrolujeme, jestli je blok ve stejné výšce (aby to byla placka)
+                if y-coordinate of loop-block is {_y}:
+                    
+                    if loop-block is not event-block:
+                        
+                        # Seznam materiálů
+                        if loop-block is dirt or grass block or sand or gravel or soul sand or soul soil or clay or mud:
+                            
+                            break loop-block naturally using player's tool

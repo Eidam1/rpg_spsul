@@ -1,0 +1,79 @@
+# Menu items general
+CLOSE: "§cClose"
+CLOSE_DESCRIPTION: "§7Close the menu"
+CLICK_TO_VIEW: "§eClick to view!"
+BACK: "§aBack"
+BACK_TO_MENU: "§7To Menu"
+SWITCH_PAGE: "§aSwitch to page ${nextPage}"
+ENDERCHEST: "§aEnder Chest"
+WORKBENCH: "§aWorkbench"
+ENDERCHEST_DESCRIPTION: "§7Open your ender chest."
+WORKBENCH_DESCRIPTION: "§7Open a crafting field."
+# Commands
+CMD_PLAYER_ONLY: "§cOnly usable by players!"
+PLAYER_NOT_FOUND: "§cPlayer not found!"
+SET_PLAYER_XP: "§b${skillType} XP §cof §b${player} §cwas set to §b${xp}§c."
+RESET_PLAYER_SKILL: "§b${skillType} §cprogress of §b${player} §cwas reset."
+# Chat
+ENDERCHEST_UNLOCK: "§cUnlocked at mining level ${mininglevel}."
+WORKBENCH_UNLOCK: "§cUnlocked at mining level ${mininglevel}."
+LOCKED_TOOL_MESSAGE: "§cLOCKED! §a${skillType} Level ${reqLvl} §crequired to use this item!"
+DOUBLE_DROP_MESSAGE: "§5+${amount} ${item}"
+# Leaderboard
+LEADERBOARD_PLAYER_LEVEL: "§9${skillType} Level §6${level}"
+LEADERBOARD_PLAYER_NAME: "§a${player}"
+# Skill/Level items
+SKILL_MENU_TITLE_ITEM: "§aSkills"
+SKILL_MENU_TITLE_ITEM_DESCRIPTION: |4
+    §7Skill progress and rewards.
+
+    §6Average Level: ${averageLevel}
+SKILL_ULTIMATE_TITLE: "§dUltimate Skills"
+SKILL_ULTIMATE_OVERVIEW: |4
+    §9Farming Level ${replantLvl}: §6Crop Replanting${farmingUnlocked}
+    §7  Replant every crop you harvest automatically.
+    §9Mining Level ${enderchestLvl}/${workbenchLvl}: §6Portable Enderchest/Workbench${miningUnlocked}
+    §7  Access your enderchest/workbench via command or menu.
+    §9Combat Level ${ultimateXpDropsLvl}: §6Increased XP Drops${combatUnlocked}
+    §7  Gain up to ${maxXpMultiplier}x experience from every source.
+    §7  Currently: ${currentXpMultiplier}x XP
+    §9Forestry Level ${multiLogBreakLvl}: §6Multi Log Break${forestryUnlocked}
+    §7  Break up to ${maxMultiLogBreakAmount} logs simultaneously with a ${maxMultiLogBreakChance}% Chance.
+    §7  Currently: ${currentMultiLogBreakAmount} Logs, ${currentMultiLogBreakChance}% Chance
+    §9Fishing Level ${fishCreatureLvl}: §6Mob Fishing${fishingUnlocked}
+    §7  Have up to ${maxFishCreatureChance}% chance to fish a random creature.
+    §7  Currently: ${currentFishCreatureChance}% Chance
+SKILL_ITEM_DESCRIPTION: "§7${description}"
+SKILL_ITEM_PROGRESS_PERCENT: "§7Progress to Level ${nextLevel}: §e${progressPercent}%"
+SKILL_ITEM_PROGRESS_XP: "§e  ${progressXp}§6/§e${goalXp}"
+SKILL_ITEM_REWARD_TITLE: "§7Level ${nextLevel} Rewards:"
+SKILL_ITEM_DOUBLE_DROP_REWARD: "§8   +§51% Chance for 2x Drops §8(${totalChance}% Total)"
+SKILL_ITEM_CRAFTING_UNLOCK: "§b   ${item} §aunlocked"
+SKILL_ITEM_ULTIMATE_SKILL: "§d   Ultimate Skill: §6${ultimateSkill}"
+SKILL_ITEM_MAXED_LEVEL: "§e  ${xpProgress} §6XP"
+SKILL_ITEM_TITLE: "§a${skillType} ${level}"
+SKILL_PATH_REWARD_TITLE: "§7Rewards:"
+SKILL_PATH_UNLOCKED_LEVEL: "§aUNLOCKED"
+SKILL_PATH_NEXT_LVL_PERCENT: "§7Progress to Level ${nextLevel}: §e${progressPercent}%"
+SKILL_PATH_NEXT_LVL_XP: "§e  ${progressXp}§6/§e${goalXp}"
+SKILL_PATH_FUTURE_LVL_PERCENT: "§7Total Progress to Level ${level}: §e${progressPercent}%"
+SKILL_PATH_FUTURE_LVL_XP: "§e  -§6/§e${goalXp}"
+# Crafting Lock
+CRAFTING_LOCKED_ITEM_TITLE: "§cLOCKED"
+CRAFTING_LOCKED_ITEM_REQUIREMENT: "§7Unlocked at §b${skillType} Level ${reqLvl}"
+# Action Bar
+XP_GAIN_ACTION_BAR: "§3+${rewardXp} ${skillType} (${xpProgress}/${goalXp})"
+XP_GAIN_ACTION_BAR_MAXED: "§3+${rewardXp} ${skillType} (${xpProgress})"
+# Level Up
+LEVEL_REWARD_MESSAGE_HEADER: |4
+    §3----------------------------------------
+    §b SKILL LEVEL UP §3${skillType} §8${oldLevel}->§3${newLevel}
+LEVEL_REWARD_MESSAGE_FOOTER: "§3----------------------------------------"
+LEVEL_REWARD_MESSAGE_REWARDS_TITLE: "§a REWARDS"
+LEVEL_REWARD_COMMAND_REWARD: "§7   §2${reward}"
+# Random Event
+EVENT_START_MESSAGE: "§dA ${multiplier}x ${skillType} extra XP Event has started!"
+EVENT_END_MESSAGE: "§dThe extra XP Event has ended!"
+EVENT_BOSSBAR: "§5${skillType} Event ${multiplier}x (${duration} minutes left)"
+# Fish Creature Event
+FISHING_CREATURE_SPAWN: "§6A §a${entity} §6spawned! Defeat this creature to get extra fishing XP!"

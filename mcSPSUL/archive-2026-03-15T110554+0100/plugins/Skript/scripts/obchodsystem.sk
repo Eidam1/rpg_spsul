@@ -1,0 +1,57 @@
+# Nový formát příkazu: /shop_engine <typ> <item> <množství> <cena_za_kus> <heslo>
+command /shop_engine <text> <text> <number> <number> <text>:
+    trigger:
+        # 1. OCHRANA
+        if arg-5 is not "menu123":
+            stop
+
+        set {_typ} to arg-1
+        set {_item} to arg-2 parsed as item
+        set {_amount} to arg-3      # Kolik kusů (1 nebo 64)
+        set {_unit_price} to arg-4  # Cena za 1 kus
+        
+        # Skript si sám spočítá celkovou cenu
+        set {_total_price} to {_amount} * {_unit_price}
+
+        # --- NÁKUP ---
+        if {_typ} is "koupit":
+            
+            # Opět používáme osvědčený trik s proměnnou pro peníze
+            set {_moje_penize} to player's balance
+            
+            if {_moje_penize} >= {_total_price}:
+                # Kontrola, zda má dost místa pro dané množství
+                if player has enough space for {_amount} of {_item}:
+                    remove {_total_price} from player's balance
+                    give {_amount} of {_item} to player
+                    
+                    # Hezká zpráva rozlišující 1 kus a stack
+                    if {_amount} is 1:
+                        send "&a[Obchod] &7Zakoupil jsi &f1x %{_item}% &7za &a$%{_total_price}%"
+                    else:
+                        send "&a[Obchod] &7Zakoupil jsi &fStack %{_item}% &7za &a$%{_total_price}%"
+                    
+                    play sound "ENTITY_EXPERIENCE_ORB_PICKUP" to player
+                else:
+                    send "&c[Obchod] &cNemáš dost místa v inventáři!"
+                    play sound "BLOCK_ANVIL_LAND" to player
+            
+            else:
+                send "&c[Obchod] &cNemáš dost peněz! Potřebuješ $%{_total_price}%."
+                play sound "BLOCK_ANVIL_LAND" to player
+
+        # --- PRODEJ ---
+        else if {_typ} is "prodat":
+            if player has {_amount} of {_item}:
+                remove {_amount} of {_item} from player's inventory
+                add {_total_price} to player's balance
+                
+                if {_amount} is 1:
+                    send "&a[Obchod] &7Prodal jsi &f1x %{_item}% &7za &a$%{_total_price}%"
+                else:
+                    send "&a[Obchod] &7Prodal jsi &fStack %{_item}% &7za &a$%{_total_price}%"
+                
+                play sound "ENTITY_EXPERIENCE_ORB_PICKUP" to player
+            else:
+                send "&c[Obchod] &cNemáš u sebe tolik kusů! (%{_amount}%x)"
+                play sound "BLOCK_ANVIL_LAND" to player

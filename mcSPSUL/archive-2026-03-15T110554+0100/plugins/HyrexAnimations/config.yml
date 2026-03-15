@@ -1,0 +1,9 @@
+# HyrexAnimations - Hyrex Studios (Developed by YoSoyVillaa)
+
+# If the default animations should be added.
+add_default_animations: true
+
+merge_resource_pack:
+  enabled: false
+  # If enabled, pack directory will be copied to the resource pack folder. (https://docs.hyrex.es/hyrex-animations/first-animation#%F0%9F%93%A6-building-the-texture-pack)
+  path: "Oraxen/pack/assets"

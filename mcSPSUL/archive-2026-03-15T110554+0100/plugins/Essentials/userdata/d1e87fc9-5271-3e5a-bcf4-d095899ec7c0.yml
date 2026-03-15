@@ -1,0 +1,38 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 109.81.123.33
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: true
+timestamps:
+  lastteleport: 1765211468413
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1765219462811
+  login: 1765216931081
+money: '1000000000'
+last-account-name: JatrovyMnam
+lastlocation:
+  world: 6101c691-aff4-4389-88b9-01b72106bd28
+  world-name: SpawnVesnice
+  x: 0.589946544556346
+  y: -59.0
+  z: -26.7929259058033
+  yaw: 1.8046875
+  pitch: 29.142759323120117
+logoutlocation:
+  world: 6101c691-aff4-4389-88b9-01b72106bd28
+  world-name: SpawnVesnice
+  x: 1.5016866036725662
+  y: -57.84186072744872
+  z: -27.33692073491058
+  yaw: 22.504791259765625
+  pitch: 40.87089920043945

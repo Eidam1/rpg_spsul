@@ -1,0 +1,16 @@
+location: Main:8.771:-55.969:-1.504
+enabled: true
+display-range: 48
+update-range: 48
+update-interval: 20
+facing: 0.0
+down-origin: false
+pages:
+- lines:
+  - content: '&4Zkouska'
+    height: 0.3
+  - content: '#ICON: DIAMOND_BLOCK'
+    height: 0.6
+  - content: '#ICON: DIAMOND_AXE !ENCHANTED'
+    height: 0.6
+  actions: {}

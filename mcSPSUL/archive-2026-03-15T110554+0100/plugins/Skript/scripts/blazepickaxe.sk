@@ -1,0 +1,76 @@
+# 1. Příkaz pro získání krumpáče
+command /blazepick <text>:
+    permission: op
+    trigger:
+        set {_nastroj} to air
+
+        if arg-1 is "wooden" or "wood":
+            set {_nastroj} to wooden pickaxe
+        else if arg-1 is "stone":
+            set {_nastroj} to stone pickaxe
+        else if arg-1 is "iron":
+            set {_nastroj} to iron pickaxe
+        else if arg-1 is "gold" or "golden":
+            set {_nastroj} to golden pickaxe
+        else if arg-1 is "diamond":
+            set {_nastroj} to diamond pickaxe
+        else if arg-1 is "netherite":
+            set {_nastroj} to netherite pickaxe
+        else:
+            send "&cPoužití: /blazepick <wooden|stone|iron|gold|diamond|netherite>" to player
+            stop
+
+        set name of {_nastroj} to "&cBlaze Pickaxe"
+        set lore of {_nastroj} to "&7Automaticky vypaluje vykopané bloky"
+
+        give {_nastroj} to player
+        send "&eZískal jsi &6%arg-1% &cBlaze Pickaxe!" to player
+
+# 2. Funkce vypalování
+on break:
+    if gamemode of player is survival:
+        
+        if name of player's tool is "&cBlaze Pickaxe":
+            
+            set {_blok} to "%type of event-block%"
+            
+            # --- ŽELEZO ---
+            if {_blok} contains "iron ore":
+                cancel drops
+                drop iron ingot at location of event-block
+                play sound "block.fire.extinguish" with volume 0.5 at event-block
+
+            # --- ZLATO ---
+            else if {_blok} contains "gold ore":
+                cancel drops
+                drop gold ingot at location of event-block
+                play sound "block.fire.extinguish" with volume 0.5 at event-block
+
+            # --- MĚĎ ---
+            else if {_blok} contains "copper ore":
+                cancel drops
+                drop copper ingot at location of event-block
+                play sound "block.fire.extinguish" with volume 0.5 at event-block
+
+            # --- ANCIENT DEBRIS ---
+            else if event-block is ancient debris:
+                cancel drops
+                drop netherite scrap at location of event-block
+                play sound "block.fire.extinguish" with volume 0.5 at event-block
+
+            # --- PÍSEK ---
+            else if event-block is sand or red sand:
+                cancel drops
+                drop glass at location of event-block
+                play sound "block.fire.extinguish" with volume 0.5 at event-block
+
+            # --- KMENY ---
+            else if {_blok} contains "_log":
+                cancel drops
+                drop charcoal at location of event-block
+                play sound "block.fire.extinguish" with volume 0.5 at event-block
+
+            # --- COBBLESTONE ---
+            else if event-block is stone or cobblestone:
+                cancel drops
+                drop stone at location of event-block

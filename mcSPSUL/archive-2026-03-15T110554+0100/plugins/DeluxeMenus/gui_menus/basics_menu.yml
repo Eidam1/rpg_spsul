@@ -1,0 +1,35 @@
+menu_title: "&6Menu NPC"
+size: 27
+register_command: true
+open_command: npcmenu
+
+items:
+  obchod:
+    material: DIAMOND
+    slot: 11
+    display_name: "&aObchod"
+    lore:
+      - "&7Klikni pro otevreni obchodu"
+    commands:
+      - '[player] shop'
+      - '[player] close'
+
+  teleporty:
+    material: COMPASS
+    slot: 13
+    display_name: "&bTeleporty"
+    lore:
+      - "&7Klikni pro seznam teleportu"
+    commands:
+      - '[player] warp menu'
+      - '[player] close'
+
+  predmety:
+    material: CHEST
+    slot: 15
+    display_name: "&cPredmety"
+    lore:
+      - "&7Klikni pro ziskani predmetu"
+    commands:
+      - '[player] kit menu'
+      - '[player] close'

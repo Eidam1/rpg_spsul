@@ -1,0 +1,44 @@
+# 1. RAYCAST LASER - Paprsek, který projde vším a zraní vše v cestě
+AureliusLaser:
+  Skills:
+  - effect:sound{s=entity.warden.sonic_boom;v=2;p=1.5} @self
+  - raycast{
+      onTick=[
+        - effect:particles{p=dust;color=#FF00FF;a=5;s=0.1}
+      ];
+      onHit=[
+        - damage{a=15}
+        - throw{v=5;vv=2}
+      ];
+      maxDistance=30;i=0.5} @target
+
+# 2. TIME LOOP - Uloží lokaci hráče a pak ho tam teleportuje zpět
+TimeLoop:
+  Skills:
+  - message{msg="&d&oAurelius: &7Čas je jen kruh..."} @target
+  - effect:particles{p=portal;a=50;hs=1;vs=2} @target
+  # Uložíme aktuální pozici hráče do proměnné
+  - variable:set{var=target.last_x;value="<target.l.x>"} @target
+  - variable:set{var=target.last_y;value="<target.l.y>"} @target
+  - variable:set{var=target.last_z;value="<target.l.z>"} @target
+  - delay 100
+  # Po 5 sekundách ho hodíme zpět bez ohledu na to, kde je
+  - teleport{location="<target.var.last_x>,<target.var.last_y>,<target.var.last_z>"} @target
+  - effect:sound{s=entity.enderman.teleport;v=2;p=0.5} @target
+
+# 3. GRAVITAČNÍ STUDNA - Orbitaly, které přitahují hráče k bossovi
+# Upravená Gravitační studna pro většího bosse
+Gravitace:
+  Skills:
+  - orbital{
+      onTick=[
+        - effect:particles{p=reverse_portal;a=20;r=1} # Více částic
+        - pull{v=5} @PlayersInRadius{r=8} # Větší dosah přitahování (r=8)
+      ];
+      d=100;i=1;r=6;v=12} @self # Větší poloměr rotace (r=6)
+
+# 4. MATH HEAL - Výpočet léčení: (MaxHP - AktuálníHP) * 0.05
+AureliusHeal:
+  Skills:
+  - heal{amount=" ( mob.mhp - mob.hp ) * 0.05 "} @self
+  - effect:particles{p=happy_villager;a=20;hs=1} @self

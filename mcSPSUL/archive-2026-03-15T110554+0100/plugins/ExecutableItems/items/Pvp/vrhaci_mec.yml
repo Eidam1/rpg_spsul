@@ -1,0 +1,78 @@
+THROWING_SWORD:
+name: '&bVrhací Meč Dávných'
+lore:
+- '&8&m------------------------'
+- '&7'
+- '&7Magický meč, který po vrhu zmizí'
+- '&7a objeví se vám zpět v inventáři.'
+- '&7Cena: &b50 Many'
+- '&7'
+- '&ePravé kliknutí - &9Vrh'
+- '&8&m------------------------'
+material: IRON_SWORD
+glow: false
+disableStack: false
+keepItemOnDeath: false
+canBeUsedOnlyByTheOwner: false
+storeItemInfo: false
+unbreakable: false
+usage: 0
+usageLimit: -1
+activators:
+  THROW:
+    name: '&9Vrhací Schopnost'
+    option: RIGHT_CLICK_AIR
+    usageModification: -1
+    cancelEvent: true
+    silenceOutput: false
+    autoUpdateItem: false
+    cooldownFeatures:
+      cooldown: 5
+      isCooldownInTicks: false
+      cooldownMsg: '&cSchopnost je v cooldownu! &7(&e%time_S%&6S&7)'
+      displayCooldownMessage: true
+      cancelEventIfInCooldown: true
+    globalCooldownFeatures:
+      cooldown: 0
+      isCooldownInTicks: false
+      cooldownMsg: '&cYou are in cooldown ! &7(&e%time_H%&6H &e%time_M%&6M &e%time_S%&6S&7)'
+      displayCooldownMessage: false
+      cancelEventIfInCooldown: false
+    otherEICooldowns: {}
+    requiredItems: {}
+    requiredExecutableItems: {}
+    detailedSlots:
+    - -1
+    
+    # --- POŽADAVEK (Aurelium Mana) ---
+    placeholdersConditions:
+      HAS_MANA:
+        placeholder: '%auraskills_mana%'
+        condition: '> 50'
+        
+    # --- AKCE ---
+    playerCommands:
+      # 1. Odebere 50 many (Příkaz pro Aurelium Skills)
+      - 'RUN_COMMAND as mana remove %player_name% 50'
+      
+      # 2. Vystřelí projektil (Musí být v uvozovkách)
+      - 'SHOOT_PROJECTILE SNOWBALL 1.5 0' 
+      
+      # 3. Odebere meč z ruky (simulace hodu)
+      - 'REMOVE_ITEM THROWING_SWORD 1'
+      
+      # 4. Vrátí meč po 2 sekundách (simulace návratu po hodu)
+      - 'DELAY 40'
+      - 'GIVE_ITEM THROWING_SWORD 1' 
+      
+    playerConditions: {}
+    worldConditions: {}
+    itemConditions: {}
+    customConditions: {}
+    targetCommands: {}
+    targetConditions: {}
+    variablesModification: {}
+recognitions: []
+attributes: {}
+config_5: true
+config_update: true

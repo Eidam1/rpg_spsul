@@ -1,0 +1,24 @@
+on region enter:
+    # Kontrola regionu
+    if "%region%" contains "zona_pro_elitu":
+        
+        # Získání hodnoty přes placeholder (vyžaduje Skript-Placeholders)
+        set {_p} to placeholder "auraskills_power" from player
+        
+        # Převedeme text na číslo
+        set {_level} to {_p} parsed as number
+        
+        # Pokud je level menší než 25...
+        if {_level} is less than 25:
+            
+            # Zrušíme pohyb
+            cancel event
+            
+            # Odstrčíme hráče (aby se nezasekl)
+            push player backwards at speed 0.5
+            
+            # Jednoduchá zpráva do chatu (jak jsi chtěl)
+            send "&c&lSTOP! &7Tato zóna je dostupná až od &eLevelu 25&7." to player
+            
+            # (Volitelné) Zvuk odmítnutí - funguje ve většině verzí
+            play sound "entity.villager.no" with volume 1 and pitch 1 at player

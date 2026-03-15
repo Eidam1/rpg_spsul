@@ -1,0 +1,65 @@
+menu_title: "&6Travel" 
+size: 27
+register_command: true
+open_command: travel
+
+items:
+  # 🌍 Normální Svět (Survival)
+  'world_teleport':
+    material: GRASS_BLOCK
+    display_name: '&a&lSurvival Svět'
+    lore:
+      - '&7Klikněte pro náhodnou teleportaci'
+      - '&7do hlavního Survival světa.'
+      - ''
+      - '&eTeleport do světa: world'
+    slot: 11
+    left_click_commands:
+      - '[close]'
+      # PŘÍKAZ PRO SURVIVAL: /rtp world world
+      - '[player] rtp world world' 
+
+  # 🔥 Nether (Netherrack)
+  'nether_teleport':
+    material: NETHERRACK
+    display_name: '&c&lNáhodný Nether'
+    lore:
+      - '&7Klikněte pro náhodnou teleportaci na'
+      - '&7náhodné místo v Netheru.'
+      - ''
+      - '&4&o(Pozor, náhodné místo je nebezpečné!)'
+    slot: 13
+    left_click_commands:
+      - '[close]'
+      # PŘÍKAZ PRO NETHER: /rtp world world_nether
+      - '[player] rtp world world_nether' 
+
+  # ✨ End (End Stone)
+  'end_teleport':
+    material: END_STONE
+    display_name: '&5&lNáhodný End'
+    lore:
+      - '&7Klikněte pro náhodnou teleportaci na'
+      - '&7náhodné místo v Endu.'
+      - ''
+      - '&4&o(Pozor, teleportuje vás kdekoli v Endu!)'
+    slot: 15
+    left_click_commands:
+      - '[close]'
+      # PŘÍKAZ PRO END: /rtp world world_the_end
+      - '[player] rtp world world_the_end'
+
+  # ❌ Zavřít Menu
+  'close':
+    material: BARRIER
+    slot: 22
+    display_name: "&cZavřít"
+    left_click_commands:
+      - '[close]'
+
+  # 🌑 Pozadí
+  'background':
+    material: BLACK_STAINED_GLASS_PANE
+    slots: [0,1,2,3,4,5,6,7,8,9,10,12,14,16,17,18,19,20,21,23,24,25,26]
+    display_name: " "
+    lore: []

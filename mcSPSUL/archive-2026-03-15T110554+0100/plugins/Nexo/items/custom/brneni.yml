@@ -1,0 +1,13 @@
+ironwatch_plate_armor:
+  material: LEATHER_CHESTPLATE
+  display_name: Ironwatch Plate
+  
+  Pack:
+    # Odkazuje na .../models/model.json
+    model: moje_veci:model
+    custom_model_data: 1000
+  
+  Armor:
+    color: '#FFFFFF'
+    # Odkazuje na .../textures/armor_layer.png
+    layer_1: moje_veci:armor_layer

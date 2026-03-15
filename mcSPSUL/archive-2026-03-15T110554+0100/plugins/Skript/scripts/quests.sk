@@ -1,0 +1,185 @@
+options:
+    prefix: &6&lQUESTY &8»&7
+
+# ===============================================
+# === UNIVERZÁLNÍ PŘÍKAZ PRO CLAIMNUTÍ ===
+# ===============================================
+command /claimquest <text>:
+    trigger:
+        set {_q} to arg-1
+        # Aktualizovaný seznam (odstraněno fish/wool/wheat, přidáno sand/gravel/netherrack)
+        if {_q} is "zombie" or "skeleton" or "spider" or "creeper" or "cow" or "enderman" or "apple" or "stone" or "coal" or "iron" or "gold" or "diamond" or "wood" or "sand" or "bread" or "gravel" or "netherrack" or "egg":
+            
+            if {quests::%player%::%{_q}%_tier} is not set:
+                set {quests::%player%::%{_q}%_tier} to 1
+                set {quests::%player%::%{_q}%_progress} to 0
+                send "{@prefix} &a&lQUEST PŘIJAT!"
+                send "{@prefix} &eCíl: Splň 1. úroveň tohoto úkolu!"
+                play sound "ENTITY_PLAYER_LEVELUP" to player
+            else:
+                if {quests::%player%::%{_q}%_tier} >= 4:
+                    send "{@prefix} &cTento quest už máš kompletně hotový!"
+                else:
+                    send "{@prefix} &eTento quest už máš aktivní. Pokračuj v plnění!"
+        else:
+            send "{@prefix} &cNeznámý quest."
+
+# ===============================================
+# === RESET (Pro testování) ===
+# ===============================================
+command /resetquests [<player>]:
+    permission: op
+    trigger:
+        set {_p} to player
+        if arg-1 is set:
+            set {_p} to arg-1
+        delete {quests::%{_p}%::*}
+        send "{@prefix} &cQuesty resetovány pro hráče %{_p}%!" to player
+
+# ===============================================
+# === FUNKCE PRO PROGRES ===
+# ===============================================
+function questProgress(p: player, quest: text, name: text, amount: number, reward: number):
+    add 1 to {quests::%{_p}%::%{_quest}%_progress}
+    set {_tier} to {quests::%{_p}%::%{_quest}%_tier}
+    set {_prog} to {quests::%{_p}%::%{_quest}%_progress}
+    
+    set {_target} to 5
+    if {_tier} is 2:
+        set {_target} to 10
+    if {_tier} is 3:
+        set {_target} to 15
+
+    send action bar "&6Quest %{_name}%&8: &f%{_prog}%&7/&f%{_target}%" to {_p}
+
+    if {_prog} >= {_target}:
+        set {quests::%{_p}%::%{_quest}%_progress} to 0
+        add 1 to {quests::%{_p}%::%{_quest}%_tier}
+        
+        execute console command "eco give %{_p}% %{_reward}%"
+        execute console command "animation show player %{_p}% good_job subtitle"
+        
+        if {_tier} is 3:
+            send "{@prefix} &a&lQUEST %{_name}% DOKONČEN! &7(+$%{_reward}%)" to {_p}
+            set {quests::%{_p}%::%{_quest}%_tier} to 4
+        else:
+            send "{@prefix} &aDokončena %{_tier}%. část questu %{_name}%! &7(+$%{_reward}%)" to {_p}
+            send "{@prefix} &eOdemčena další úroveň!" to {_p}
+
+# ===============================================
+# === EVENTY - MOBOVÉ (ZABÍJENÍ) ===
+# ===============================================
+on death:
+    attacker is a player
+    
+    if victim is zombie:
+        if {quests::%attacker%::zombie_tier} is set:
+            if {quests::%attacker%::zombie_tier} < 4:
+                questProgress(attacker, "zombie", "Zabiják Zombií", 1, ({quests::%attacker%::zombie_tier} * 500))
+
+    else if victim is skeleton:
+        if {quests::%attacker%::skeleton_tier} is set:
+            if {quests::%attacker%::skeleton_tier} < 4:
+                questProgress(attacker, "skeleton", "Lovec Kostí", 1, ({quests::%attacker%::skeleton_tier} * 500))
+
+    else if victim is spider or cave spider:
+        if {quests::%attacker%::spider_tier} is set:
+            if {quests::%attacker%::spider_tier} < 4:
+                questProgress(attacker, "spider", "Hubitel Pavouků", 1, ({quests::%attacker%::spider_tier} * 500))
+
+    else if victim is creeper:
+        if {quests::%attacker%::creeper_tier} is set:
+            if {quests::%attacker%::creeper_tier} < 4:
+                questProgress(attacker, "creeper", "Pyrotechnik", 1, ({quests::%attacker%::creeper_tier} * 600))
+
+    else if victim is cow:
+        if {quests::%attacker%::cow_tier} is set:
+            if {quests::%attacker%::cow_tier} < 4:
+                questProgress(attacker, "cow", "Řezník", 1, ({quests::%attacker%::cow_tier} * 300))
+
+    else if victim is enderman:
+        if {quests::%attacker%::enderman_tier} is set:
+            if {quests::%attacker%::enderman_tier} < 4:
+                questProgress(attacker, "enderman", "End Hunter", 1, ({quests::%attacker%::enderman_tier} * 800))
+
+# ===============================================
+# === EVENTY - TĚŽBA (BLOCK BREAK) ===
+# ===============================================
+on break:
+    # 1. Stone
+    if event-block is stone:
+        if {quests::%player%::stone_tier} is set:
+            if {quests::%player%::stone_tier} < 4:
+                questProgress(player, "stone", "Horník (Kámen)", 1, ({quests::%player%::stone_tier} * 100))
+    
+    # 2. Coal
+    else if event-block is coal ore or deepslate coal ore:
+        if {quests::%player%::coal_tier} is set:
+            if {quests::%player%::coal_tier} < 4:
+                questProgress(player, "coal", "Uhlokop", 1, ({quests::%player%::coal_tier} * 300))
+
+    # 3. Iron
+    else if event-block is iron ore or deepslate iron ore:
+        if {quests::%player%::iron_tier} is set:
+            if {quests::%player%::iron_tier} < 4:
+                questProgress(player, "iron", "Železář", 1, ({quests::%player%::iron_tier} * 500))
+
+    # 4. Gold
+    else if event-block is gold ore or deepslate gold ore:
+        if {quests::%player%::gold_tier} is set:
+            if {quests::%player%::gold_tier} < 4:
+                questProgress(player, "gold", "Zlatokop", 1, ({quests::%player%::gold_tier} * 600))
+    
+    # 5. Diamond
+    else if event-block is diamond ore or deepslate diamond ore:
+        if {quests::%player%::diamond_tier} is set:
+            if {quests::%player%::diamond_tier} < 4:
+                questProgress(player, "diamond", "Boháč", 1, ({quests::%player%::diamond_tier} * 2000))
+
+    # 6. Wood
+    else if event-block is oak log:
+        if {quests::%player%::wood_tier} is set:
+            if {quests::%player%::wood_tier} < 4:
+                questProgress(player, "wood", "Dřevorubec", 1, ({quests::%player%::wood_tier} * 200))
+
+    # 7. NOVÝ: Sand (Náhrada za Fish)
+    else if event-block is sand:
+        if {quests::%player%::sand_tier} is set:
+            if {quests::%player%::sand_tier} < 4:
+                questProgress(player, "sand", "Kopáč Písku", 1, ({quests::%player%::sand_tier} * 150))
+
+    # 8. NOVÝ: Gravel (Náhrada za Wool)
+    else if event-block is gravel:
+        if {quests::%player%::gravel_tier} is set:
+            if {quests::%player%::gravel_tier} < 4:
+                questProgress(player, "gravel", "Kopáč Štěrku", 1, ({quests::%player%::gravel_tier} * 150))
+
+    # 9. NOVÝ: Netherrack (Náhrada za Wheat)
+    else if event-block is netherrack:
+        if {quests::%player%::netherrack_tier} is set:
+            if {quests::%player%::netherrack_tier} < 4:
+                questProgress(player, "netherrack", "Nether Těžař", 1, ({quests::%player%::netherrack_tier} * 200))
+
+# ===============================================
+# === EVENTY - OSTATNÍ (JÍDLO, RYBY, ATD.) ===
+# ===============================================
+
+on pickup:
+    if event-item is apple:
+        if {quests::%player%::apple_tier} is set:
+            if {quests::%player%::apple_tier} < 4:
+                loop (item amount of event-item) times:
+                    if {quests::%player%::apple_tier} < 4:
+                        questProgress(player, "apple", "Sběrač Jablek", 1, ({quests::%player%::apple_tier} * 200))
+    
+    else if event-item is egg:
+        if {quests::%player%::egg_tier} is set:
+            if {quests::%player%::egg_tier} < 4:
+                loop (item amount of event-item) times:
+                    if {quests::%player%::egg_tier} < 4:
+                        questProgress(player, "egg", "Sběrač Vajec", 1, ({quests::%player%::egg_tier} * 150))
+
+on consume of bread:
+    if {quests::%player%::bread_tier} is set:
+        if {quests::%player%::bread_tier} < 4:
+            questProgress(player, "bread", "Pekař", 1, ({quests::%player%::bread_tier} * 100))

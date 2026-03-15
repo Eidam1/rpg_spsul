@@ -1,0 +1,8 @@
+command /spawn:
+    trigger:
+        set {_spawn} to location(0, -59, -4, world("spawnvesnice"), 180, 0)
+        teleport player to {_spawn}
+        send "&aByl jsi teleportován na spawn!" to player
+        # 4. NOVÝ KROK: Spustí animaci Hyrex Animations pro hráče
+        # DŮLEŽITÉ: Použije název animace, kterou jsme vytvořili: welcome_back
+        execute console command "animation show player %player% welcome_back title"

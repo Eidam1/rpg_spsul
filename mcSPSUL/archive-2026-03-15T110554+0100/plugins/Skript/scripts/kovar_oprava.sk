@@ -1,0 +1,20 @@
+command /kovaropravit:
+  trigger:
+    set {_player} to player
+    set {_item} to player's tool
+    set {_cena_opravy} to 100 # Pouze pro zprávu, platba byla v DeluxeMenus
+    
+    # Skript je volán PO PLATBĚ, takže už jen zkontroluje stav itemu.
+    
+    # Kontrola 1: Má item vůbec opotřebení? (Poslední šance na zastavení)
+    if damage of {_item} is 0:
+      message "&cTento předmět je již plně opravený!" to {_player}
+      play sound "block.note_block.bass" to {_player}
+      stop
+      
+    # Fyzická oprava itemu
+    set damage of {_item} to 0
+    set player's tool to {_item}
+    
+    play sound "block.anvil.use" to {_player}
+    message "&aTvůj item v ruce byl úspěšně opraven za &e%{_cena_opravy}% Money&a!" to {_player}

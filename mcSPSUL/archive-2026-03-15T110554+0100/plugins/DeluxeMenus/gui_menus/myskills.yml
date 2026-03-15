@@ -1,0 +1,109 @@
+menu_title: '&8Skill Tree | Class: &0%rpg_class%'
+open_command: myskills
+register_command: true
+size: 27
+items:
+  'filler':
+    material: GRAY_STAINED_GLASS_PANE
+    slots:
+      - 0-9
+      - 11
+      - 13
+      - 15
+      - 17-26
+    display_name: '&r'
+
+  'info':
+    material: BOOK
+    slot: 4
+    display_name: '&e&lTvůj Profil'
+    lore:
+      - '&7Tvoje Classa: &f%rpg_class%'
+      - '&7Peníze: &a%vault_eco_balance_formatted%'
+      - ''
+      - '&7Vylepšování skillů tvé classy'
+      - '&7stojí normální cenu.'
+      - '&cCizí classy jsou 20x dražší!'
+
+  'ranged_skill':
+    material: BOW
+    slot: 10
+    display_name: '&a&lRanged Skill &7(Archer)'
+    lore:
+      - '&7Zvyšuje damage lukem a kuší.'
+      - ''
+      - '&7Aktuální Level: &f%rpg_lvl_ranged%'
+      - ''
+      - '&7Cena dalšího levelu:'
+      - '&f1000$ &7x &fLevel'
+      - '&c(Pokud nejsi Archer: 20x dražší)'
+      - ''
+      - '&eLevým kliknutím vylepšíš!'
+    left_click_commands:
+      - '[player] buyskill ranged'
+      - '[refresh]'
+
+  'melee_skill':
+    material: IRON_SWORD
+    slot: 12
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&c&lMelee Skill &7(SwordMan)'
+    lore:
+      - '&7Zvyšuje damage mečem.'
+      - ''
+      - '&7Aktuální Level: &f%rpg_lvl_melee%'
+      - ''
+      - '&7Cena dalšího levelu:'
+      - '&f1000$ &7x &fLevel'
+      - '&c(Pokud nejsi SwordMan: 20x dražší)'
+      - ''
+      - '&eLevým kliknutím vylepšíš!'
+    left_click_commands:
+      - '[player] buyskill melee'
+      - '[refresh]'
+
+  'magic_skill':
+    material: POTION
+    slot: 14
+    item_flags:
+      - HIDE_POTION_EFFECTS
+    display_name: '&d&lMagic Skill &7(Magic)'
+    lore:
+      - '&7Zvyšuje damage lektvary a magií.'
+      - ''
+      - '&7Aktuální Level: &f%rpg_lvl_magic%'
+      - ''
+      - '&7Cena dalšího levelu:'
+      - '&f1000$ &7x &fLevel'
+      - '&c(Pokud nejsi Magic: 20x dražší)'
+      - ''
+      - '&eLevým kliknutím vylepšíš!'
+    left_click_commands:
+      - '[player] buyskill magic'
+      - '[refresh]'
+
+  'defense_skill':
+    material: SHIELD
+    slot: 16
+    display_name: '&9&lDefense Skill &7(Tank)'
+    lore:
+      - '&7Zvyšuje HP a redukuje damage.'
+      - ''
+      - '&7Aktuální Level: &f%rpg_lvl_defense%'
+      - ''
+      - '&7Cena dalšího levelu:'
+      - '&f1000$ &7x &fLevel'
+      - '&c(Pokud nejsi Tank: 20x dražší)'
+      - ''
+      - '&eLevým kliknutím vylepšíš!'
+    left_click_commands:
+      - '[player] buyskill defense'
+      - '[refresh]'
+
+  'close':
+    material: BARRIER
+    slot: 22
+    display_name: '&cZavřít menu'
+    left_click_commands:
+      - '[close]'

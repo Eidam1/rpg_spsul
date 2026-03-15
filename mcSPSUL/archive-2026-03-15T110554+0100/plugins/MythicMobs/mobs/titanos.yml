@@ -1,0 +1,32 @@
+Titanos:
+  Type: RAVAGER
+  Display: '&6&l⚡ Titanos, Bůh Rozkladu ⚡ &7[HP <mob.hp{f=0}>]'
+  Health: 3000
+  Attributes:
+    max_health: 3000
+    movement_speed: 0.2
+    knockback_resistance: 1
+    follow_range: 100
+  Options:
+    Scale: 2.2
+    Silent: true
+    AlwaysShowName: true
+    PreventOtherDrops: true
+  BossBar:
+    Enabled: true
+    Title: '&e&lTitanos &7- &f<mob.hp{f=0}> / <mob.mhp{f=0}>'
+    Color: YELLOW
+    Style: NOTCHED_20
+  Skills:
+  # --- TOTÁLNÍ EFEKTY (Běží pořád) ---
+  - skill{s=TitanosAmbientVisual} @self ~onTimer:5
+  - skill{s=TitanosGroundPulse} @self ~onTimer:40
+  
+  # --- AKTIVNÍ ÚTOKY ---
+  - skill{s=TitanosRay} @target ~onTimer:100
+  - skill{s=TitanosQuake} @self ~onTimer:200
+  - skill{s=TitanosLightningStorm} @self ~onTimer:300
+  - skill{s=TitanosMeteors} @self ~onTimer:400
+  
+  # --- FÁZE ---
+  - skill{s=TitanosEnrage} @self ~onHealth:1500

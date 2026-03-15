@@ -1,0 +1,16 @@
+location: Main:7.283:-56.383:5.524
+enabled: true
+display-range: 48
+update-range: 48
+update-interval: 20
+facing: 0.0
+down-origin: false
+pages:
+- lines:
+  - content: '&6Vítej, zkouska'
+    height: 0.3
+  - content: Vítej podruhe
+    height: 0.3
+  - content: k
+    height: 0.3
+  actions: {}

@@ -1,0 +1,30 @@
+menu_title: '&8&lHlavní Obchod'
+open_command: obchod
+size: 27
+items:
+  '1':
+    material: LIME_CONCRETE
+    slot: 11
+    display_name: '&a&lKoupit věci'
+    lore:
+      - '&7Klikni pro nákup bloků.'
+    left_click_commands:
+      - '[openguimenu] obchod_nakup'
+      
+  '2':
+    material: RED_CONCRETE
+    slot: 15
+    display_name: '&c&lProdat věci'
+    lore:
+      - '&7Klikni pro prodej bloků.'
+    left_click_commands:
+      - '[openguimenu] obchod_prodej'
+  
+  # Výplň (volitelné, pro hezčí vzhled)
+  filler:
+    material: GRAY_STAINED_GLASS_PANE
+    slots:
+      - 0-10
+      - 12-14
+      - 16-26
+    display_name: '&r'

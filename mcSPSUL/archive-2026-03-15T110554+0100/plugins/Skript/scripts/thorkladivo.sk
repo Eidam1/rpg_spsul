@@ -1,0 +1,35 @@
+# 1. Příkaz, kterým si admin (ty) dá tu zbraň
+command /thor:
+    permission: op
+    trigger:
+        give player iron axe named "&e&lThorova Sekera" with lore "&7Pravým kliknutím sešli blesk!"
+        send "&eDostal jsi božskou moc!" to player
+
+# 2. Samotná funkčnost zbraně
+on right click:
+    # Kontrola jména předmětu
+    if name of player's tool is "&e&lThorova Sekera":
+        
+        cancel event
+        
+        # --- COOLDOWN ---
+        if {thor_cooldown::%player%} is set:
+            if difference between {thor_cooldown::%player%} and now is less than 5 seconds:
+                # ZDE BYLA CHYBA: Přidáno "to player"
+                send "&cMusíš si odpočinout! (Ještě čekej %difference between 5 seconds and (difference between {thor_cooldown::%player%} and now)%)" to player
+                stop
+
+        # --- EFEKT ---
+        set {_target} to target block of player
+        
+        if {_target} is set:
+            set {thor_cooldown::%player%} to now
+            
+            strike lightning at {_target}
+            create safe explosion of force 2 at {_target}
+            
+            # ZDE BYLA CHYBA: Přidáno "to player"
+            send "&e&lPRÁSK! &7Sehnal jsi hněv bohů!" to player
+        else:
+            # ZDE BYLA CHYBA: Přidáno "to player"
+            send "&cMíříš moc daleko nebo do vzduchu!" to player

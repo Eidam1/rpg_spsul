@@ -1,0 +1,17 @@
+animation:
+  fps: 24.0
+  use-minimessage: false
+  use-papi: false
+  sounds:
+    0:
+      - namespace: hyrex_animations
+        value: good_job.sound
+        source: PLAYER
+        pitch: 1.0
+  commands: {}
+  frame-modifiers: {}
+  texture:
+    ascent: 25
+    height: 50
+  offset:
+    x: 0

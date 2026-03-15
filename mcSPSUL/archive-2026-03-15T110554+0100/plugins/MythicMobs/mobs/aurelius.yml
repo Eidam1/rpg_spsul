@@ -1,0 +1,27 @@
+Aurelius:
+  Type: ENDERMAN
+  # Tady jsem přidal {f=0}, aby i nad hlavou bylo celé číslo
+  Display: '&d&lAurelius &7[HP <mob.hp{f=0}>]'
+  Health: 1200
+  Attributes:
+    max_health: 1200
+    movement_speed: 0.35
+    knockback_resistance: 1
+    attack_damage: 20
+  Options:
+    Scale: 2
+    PreventTeleport: true
+    AlwaysShowName: true
+    PreventOtherDrops: true
+    Collidable: true 
+  BossBar:
+    Enabled: true
+    # TADY JE TA OPRAVA: {f=0} ořízne desetinná místa
+    Title: '&d&lAurelius &7- &f<mob.hp{f=0}> / <mob.mhp{f=0}>'
+    Color: PINK
+    Style: NOTCHED_20
+  Skills:
+  - skill{s=AureliusLaser} @target ~onTimer:80
+  - skill{s=TimeLoop} @target ~onTimer:300
+  - skill{s=Gravitace} @self ~onTimer:200
+  - skill{s=AureliusHeal} @self ~onTimer:100

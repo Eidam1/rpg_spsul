@@ -1,0 +1,15 @@
+[
+  {
+    "user": {
+      "type": "player",
+      "name": "Kohlizacek",
+      "uniqueId": "15b58a17-7ace-3397-9eaa-b854f8b453f5"
+    },
+    "time": 1765824259494,
+    "type": "Heap dump",
+    "data": {
+      "type": "file",
+      "value": "plugins/spark/heap-2025-12-15_18.44.13.hprof"
+    }
+  }
+]

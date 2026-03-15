@@ -1,0 +1,49 @@
+# ##################################################################
+# --- TYČ BAREVNÉ NÁHODY (COLOR WAND) - ČISTÁ VERZE BEZ MANY ---
+# ##################################################################
+
+# --- NAČÍTÁNÍ SEZNAMU BAREV A PŘEDMĚTŮ ---
+on load:
+    # Seznam barev VLNY (Funkční syntaxe)
+    set {barvyVlny::*} to white wool, orange wool, magenta wool, light blue wool, yellow wool, lime wool, pink wool, gray wool, light gray wool, cyan wool, purple wool, blue wool, brown wool, green wool, red wool, black wool
+    
+    # Vytvoření unikátního předmětu (Blaze Rod)
+    set {_wand} to blaze rod named "&5&lTyč Barevné Náhody"
+    # Popis bez ceny many
+    set lore of {_wand} to "&7Kliknutí na blok ho přebarví!" and "&ePravé kliknutí - Náhodná barva"
+    enchant {_wand} with fire aspect 1
+    set {ColorWand} to {_wand}
+
+# --- PŘÍKAZ PRO ZÍSKÁNÍ PŘEDMĚTU ---
+command /getwand:
+    permission: op
+    trigger:
+        give {ColorWand} to player
+
+# --- LOGIKA BARVENÍ BLOKU (PŘÍMÉ KLIKNUTÍ) ---
+on right click:
+    if player's tool is enchanted with fire aspect 1:
+        if clicked block is set:
+            
+            # --- 1. KONTROLA BEDROCKU A BARIÉRY (Opraveno rozdělením podmínek) ---
+            if clicked block is bedrock:
+                send action bar "&cTento blok nemůžeš změnit (Chráněný blok)!" to player
+                cancel event
+                stop
+                
+            if clicked block is barrier:
+                send action bar "&cTento blok nemůžeš změnit (Chráněný blok)!" to player
+                cancel event
+                stop
+            
+            cancel event # Zastaví defaultní akci (např. oheň)
+            
+            # 2. Výběr náhodné barvy
+            set {_randomColor} to random element of {barvyVlny::*}
+            
+            # 3. Změna bloku na náhodnou vlnu
+            set clicked block to {_randomColor}
+            
+            # 4. Zvuk a zpětná vazba
+            play sound "ENTITY_ITEM_FRAME_ADD_ITEM" to player
+            send action bar "&aBlok přebarven na náhodnou barvu!" to player

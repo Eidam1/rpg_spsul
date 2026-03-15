@@ -1,0 +1,301 @@
+menu_title: '&c&lProdej Bloků'
+open_command: prodej
+size: 36
+items:
+  # --- 1. ŘÁDEK ---
+  '1':
+    material: COBBLESTONE
+    slot: 0
+    display_name: '&fCobblestone'
+    lore:
+      - '&7Výkup za kus: &a$0.1'
+      - ''
+      - '&bLevé kliknutí &7- Prodat &f1 ks'
+      - '&bPravé kliknutí &7- Prodat &f64 ks'
+    left_click_commands:
+      - '[player] shop_engine prodat cobblestone 1 0.1 menu123'
+      - '[refresh]'
+    right_click_commands:
+      - '[player] shop_engine prodat cobblestone 64 0.1 menu123'
+      - '[refresh]'
+
+  '2':
+    material: STONE
+    slot: 1
+    display_name: '&fStone'
+    lore:
+      - '&7Výkup za kus: &a$0.2'
+      - ''
+      - '&bLevé kliknutí &7- Prodat &f1 ks'
+      - '&bPravé kliknutí &7- Prodat &f64 ks'
+    left_click_commands:
+      - '[player] shop_engine prodat stone 1 0.2 menu123'
+      - '[refresh]'
+    right_click_commands:
+      - '[player] shop_engine prodat stone 64 0.2 menu123'
+      - '[refresh]'
+
+  '3':
+    material: DIRT
+    slot: 2
+    display_name: '&fDirt'
+    lore:
+      - '&7Výkup za kus: &a$0.05'
+      - ''
+      - '&bLevé kliknutí &7- Prodat &f1 ks'
+      - '&bPravé kliknutí &7- Prodat &f64 ks'
+    left_click_commands:
+      - '[player] shop_engine prodat dirt 1 0.05 menu123'
+      - '[refresh]'
+    right_click_commands:
+      - '[player] shop_engine prodat dirt 64 0.05 menu123'
+      - '[refresh]'
+
+  '4':
+    material: GRASS_BLOCK
+    slot: 3
+    display_name: '&aGrass Block'
+    lore:
+      - '&7Výkup za kus: &a$0.3'
+      - ''
+      - '&bLevé kliknutí &7- Prodat &f1 ks'
+      - '&bPravé kliknutí &7- Prodat &f64 ks'
+    left_click_commands:
+      - '[player] shop_engine prodat grass_block 1 0.3 menu123'
+      - '[refresh]'
+    right_click_commands:
+      - '[player] shop_engine prodat grass_block 64 0.3 menu123'
+      - '[refresh]'
+
+  '5':
+    material: OAK_LOG
+    slot: 4
+    display_name: '&eOak Log'
+    lore:
+      - '&7Výkup za kus: &a$0.5'
+      - ''
+      - '&bLevé kliknutí &7- Prodat &f1 ks'
+      - '&bPravé kliknutí &7- Prodat &f64 ks'
+    left_click_commands:
+      - '[player] shop_engine prodat oak_log 1 0.5 menu123'
+      - '[refresh]'
+    right_click_commands:
+      - '[player] shop_engine prodat oak_log 64 0.5 menu123'
+      - '[refresh]'
+
+  '6':
+    material: SPRUCE_LOG
+    slot: 5
+    display_name: '&eSpruce Log'
+    lore:
+      - '&7Výkup za kus: &a$0.5'
+      - ''
+      - '&bLevé kliknutí &7- Prodat &f1 ks'
+      - '&bPravé kliknutí &7- Prodat &f64 ks'
+    left_click_commands:
+      - '[player] shop_engine prodat spruce_log 1 0.5 menu123'
+      - '[refresh]'
+    right_click_commands:
+      - '[player] shop_engine prodat spruce_log 64 0.5 menu123'
+      - '[refresh]'
+
+  '7':
+    material: BIRCH_LOG
+    slot: 6
+    display_name: '&eBirch Log'
+    lore:
+      - '&7Výkup za kus: &a$0.5'
+      - ''
+      - '&bLevé kliknutí &7- Prodat &f1 ks'
+      - '&bPravé kliknutí &7- Prodat &f64 ks'
+    left_click_commands:
+      - '[player] shop_engine prodat birch_log 1 0.5 menu123'
+      - '[refresh]'
+    right_click_commands:
+      - '[player] shop_engine prodat birch_log 64 0.5 menu123'
+      - '[refresh]'
+
+  '8':
+    material: OAK_PLANKS
+    slot: 7
+    display_name: '&eOak Planks'
+    lore:
+      - '&7Výkup za kus: &a$0.1'
+      - ''
+      - '&bLevé kliknutí &7- Prodat &f1 ks'
+      - '&bPravé kliknutí &7- Prodat &f64 ks'
+    left_click_commands:
+      - '[player] shop_engine prodat oak_planks 1 0.1 menu123'
+      - '[refresh]'
+    right_click_commands:
+      - '[player] shop_engine prodat oak_planks 64 0.1 menu123'
+      - '[refresh]'
+
+  '9':
+    material: SAND
+    slot: 8
+    display_name: '&eSand'
+    lore:
+      - '&7Výkup za kus: &a$0.2'
+      - ''
+      - '&bLevé kliknutí &7- Prodat &f1 ks'
+      - '&bPravé kliknutí &7- Prodat &f64 ks'
+    left_click_commands:
+      - '[player] shop_engine prodat sand 1 0.2 menu123'
+      - '[refresh]'
+    right_click_commands:
+      - '[player] shop_engine prodat sand 64 0.2 menu123'
+      - '[refresh]'
+
+  # --- 2. ŘÁDEK ---
+  '10':
+    material: GLASS
+    slot: 9
+    display_name: '&fGlass'
+    lore:
+      - '&7Výkup za kus: &a$0.5'
+      - ''
+      - '&bLevé kliknutí &7- Prodat &f1 ks'
+      - '&bPravé kliknutí &7- Prodat &f64 ks'
+    left_click_commands:
+      - '[player] shop_engine prodat glass 1 0.5 menu123'
+      - '[refresh]'
+    right_click_commands:
+      - '[player] shop_engine prodat glass 64 0.5 menu123'
+      - '[refresh]'
+
+  '11':
+    material: WHITE_WOOL
+    slot: 10
+    display_name: '&fWhite Wool'
+    lore:
+      - '&7Výkup za kus: &a$0.8'
+      - ''
+      - '&bLevé kliknutí &7- Prodat &f1 ks'
+      - '&bPravé kliknutí &7- Prodat &f64 ks'
+    left_click_commands:
+      - '[player] shop_engine prodat white_wool 1 0.8 menu123'
+      - '[refresh]'
+    right_click_commands:
+      - '[player] shop_engine prodat white_wool 64 0.8 menu123'
+      - '[refresh]'
+
+  '12':
+    material: BRICKS
+    slot: 11
+    display_name: '&cBricks'
+    lore:
+      - '&7Výkup za kus: &a$1.0'
+      - ''
+      - '&bLevé kliknutí &7- Prodat &f1 ks'
+      - '&bPravé kliknutí &7- Prodat &f64 ks'
+    left_click_commands:
+      - '[player] shop_engine prodat bricks 1 1.0 menu123'
+      - '[refresh]'
+    right_click_commands:
+      - '[player] shop_engine prodat bricks 64 1.0 menu123'
+      - '[refresh]'
+
+  '13':
+    material: STONE_BRICKS
+    slot: 12
+    display_name: '&7Stone Bricks'
+    lore:
+      - '&7Výkup za kus: &a$0.5'
+      - ''
+      - '&bLevé kliknutí &7- Prodat &f1 ks'
+      - '&bPravé kliknutí &7- Prodat &f64 ks'
+    left_click_commands:
+      - '[player] shop_engine prodat stone_bricks 1 0.5 menu123'
+      - '[refresh]'
+    right_click_commands:
+      - '[player] shop_engine prodat stone_bricks 64 0.5 menu123'
+      - '[refresh]'
+
+  '14':
+    material: TERRACOTTA
+    slot: 13
+    display_name: '&6Terracotta'
+    lore:
+      - '&7Výkup za kus: &a$1.0'
+      - ''
+      - '&bLevé kliknutí &7- Prodat &f1 ks'
+      - '&bPravé kliknutí &7- Prodat &f64 ks'
+    left_click_commands:
+      - '[player] shop_engine prodat terracotta 1 1.0 menu123'
+      - '[refresh]'
+    right_click_commands:
+      - '[player] shop_engine prodat terracotta 64 1.0 menu123'
+      - '[refresh]'
+
+  '15':
+    material: QUARTZ_BLOCK
+    slot: 14
+    display_name: '&fQuartz Block'
+    lore:
+      - '&7Výkup za kus: &a$2.0'
+      - ''
+      - '&bLevé kliknutí &7- Prodat &f1 ks'
+      - '&bPravé kliknutí &7- Prodat &f64 ks'
+    left_click_commands:
+      - '[player] shop_engine prodat quartz_block 1 2.0 menu123'
+      - '[refresh]'
+    right_click_commands:
+      - '[player] shop_engine prodat quartz_block 64 2.0 menu123'
+      - '[refresh]'
+
+  '16':
+    material: OBSIDIAN
+    slot: 15
+    display_name: '&5Obsidian'
+    lore:
+      - '&7Výkup za kus: &a$5.0'
+      - ''
+      - '&bLevé kliknutí &7- Prodat &f1 ks'
+      - '&bPravé kliknutí &7- Prodat &f64 ks'
+    left_click_commands:
+      - '[player] shop_engine prodat obsidian 1 5.0 menu123'
+      - '[refresh]'
+    right_click_commands:
+      - '[player] shop_engine prodat obsidian 64 5.0 menu123'
+      - '[refresh]'
+
+  '17':
+    material: GRAVEL
+    slot: 16
+    display_name: '&7Gravel'
+    lore:
+      - '&7Výkup za kus: &a$0.1'
+      - ''
+      - '&bLevé kliknutí &7- Prodat &f1 ks'
+      - '&bPravé kliknutí &7- Prodat &f64 ks'
+    left_click_commands:
+      - '[player] shop_engine prodat gravel 1 0.1 menu123'
+      - '[refresh]'
+    right_click_commands:
+      - '[player] shop_engine prodat gravel 64 0.1 menu123'
+      - '[refresh]'
+
+  '18':
+    material: ICE
+    slot: 17
+    display_name: '&bIce'
+    lore:
+      - '&7Výkup za kus: &a$0.5'
+      - ''
+      - '&bLevé kliknutí &7- Prodat &f1 ks'
+      - '&bPravé kliknutí &7- Prodat &f64 ks'
+    left_click_commands:
+      - '[player] shop_engine prodat ice 1 0.5 menu123'
+      - '[refresh]'
+    right_click_commands:
+      - '[player] shop_engine prodat ice 64 0.5 menu123'
+      - '[refresh]'
+
+  # Tlačítko zpět
+  back:
+    material: BARRIER
+    slot: 31
+    display_name: '&cZpět'
+    click_commands:
+      - '[openguimenu] obchod_hlavni'

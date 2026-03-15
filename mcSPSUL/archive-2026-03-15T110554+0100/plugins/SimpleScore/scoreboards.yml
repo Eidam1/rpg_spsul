@@ -1,0 +1,83 @@
+default:
+  titles: 'RPG Minecraft'
+  scores:
+    14: '&7&m●                                ●'
+    13: '   &9&lᴘʟᴀʏᴇʀ'
+    12: '     &7▪ &bɴᴀᴍᴇ &f%player_name%'
+    11: '     &7▪ &bRANK &f%luckperms_primary_group_name%'
+    10: '     &7▪ &bMoney &f%vault_eco_balance%' # <<< ZOBRAZUJE ESSENTIALSX/VAULT ZŮSTATEK
+    9: ''
+    8: '   &9&lꜱᴛᴀᴛꜱ'
+    7: '     &7▪ &bʜᴇᴀʟᴛʜ &f%player_health%&7/&f%player_maxhealth%'
+    6: '     &7▪ &bʟᴇᴠᴇʟ &f%auraskills_power%'
+    5: '     &7▪ &bᴛɪᴍᴇ &f%statistic_time_played%'
+    4: ''
+    3: '   &9&lꜱᴇʀᴠᴇʀ'
+    2: '     &7▪ &bᴡᴏʀʟᴅ &f%player_world%'
+    1: '     &7▪ &bᴏɴʟɪɴᴇ &f%server_online%&7/&f%server_maxplayers%'
+    0: '&7&m●                                ●'
+  defaultHideNumber: true
+  defaultRenderEvery: 20
+  conditions: [ ]
+
+worldTheEnd:
+  titles:
+    - conditions: [ '!inCreativeMode', 'isLowHealth' ]
+      text: '&c&l&oLow on Health'
+    - frames:
+        - text: '&eVisible For 20 ticks/1 second'
+          visibleFor: 20
+        - text: '&aVisible For 60 ticks/3 seconds'
+          visibleFor: 60
+  scores:
+    - score: 100
+      lines: ''
+      hideNumber: true
+    - conditions: [ 'inCreativeMode' ]
+      score: 1
+      lines: '&7You are in Creative Mode'
+    - conditions: [ '!inCreativeMode' ]
+      score: '%player_health%'
+      lines:
+        - conditions: [ 'isLowHealth' ]
+          frames:
+            - text: '&7You are not in Creative Mode'
+              visibleFor: 5
+            - text: '&cYou are not in Creative Mode'
+              visibleFor: 5
+        - '&7You are not in Creative Mode'
+    - score: 0
+      lines: ''
+      hideNumber: true
+  defaultHideNumber: false
+  conditions: [ ]
+
+pvp:
+  titles:
+    - 'PvP Scoreboard'
+    - 'Leaderboard'
+  scores:
+    - score: 0
+      lines: ''
+    - score: 0
+      lines:
+        - 'Player Stats:'
+        - 'Top Player 1'
+    - score: 0
+      lines:
+        - '  Kills: xx'
+        - 'Top Player 2'
+    - score: 0
+      lines:
+        - '  Deaths: xx'
+        - 'Top Player 3'
+    - score: 0
+      lines:
+        - '  K/D: xx'
+        - 'Top Player 4'
+    - score: 0
+      lines: ''
+  defaultHideNumber: true
+  defaultVisibleFor: 200
+  defaultRenderEvery: 20
+  conditions: [ ]

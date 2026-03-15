@@ -1,0 +1,19 @@
+on chat:
+    # --- ČÁST 1: Nadávky (hledáme i uvnitř slov) ---
+    set {_nadavky::*} to "negr", "nigga", "debil", "kokot"
+    
+    loop {_nadavky::*}:
+        if message contains loop-value:
+            cancel event
+            send "&c&l! &7Tato zpráva obsahuje zakázané slovo: &n%loop-value%" to player
+            stop # Zastavíme skript, aby nehledal dál
+
+    # --- ČÁST 2: Číslo 67 (hledáme jen jako samostatné slovo) ---
+    # Rozdělíme zprávu na seznam slov podle mezer
+    set {_slova_ve_zprave::*} to message split at " "
+    
+    # Zkontrolujeme, zda seznam obsahuje přesně "67"
+    if {_slova_ve_zprave::*} contains "67":
+        cancel event
+        send "&c&l! &7Číslo 67 je zde zakázané!" to player
+        stop

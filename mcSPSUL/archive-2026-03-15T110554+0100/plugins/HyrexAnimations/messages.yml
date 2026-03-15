@@ -1,0 +1,80 @@
+errors:
+  source_not_found: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset><red> Source <aqua>%s<red> doesn't exists.<reset>"
+  animation_not_found: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset><red> Animation <aqua>%s<red> doesn't exists.<reset>"
+  condition_not_found: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset><red> Condition <aqua>%s<red> doesn't exists.<reset>"
+  condition_empty: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset><red> Conditions must not be empty or null.<reset>"
+  player_not_found: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset><red> Player <aqua>%s<red> is not online.<reset>"
+  world_not_found: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset><red> World <aqua>%s<red> doesn't exists.<reset>"
+  invalid_number: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset><red> <aqua>%s<red> is not a valid number.<reset>"
+  invalid_option: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset><red> <aqua>%s<red> is not a valid option.<reset>"
+
+commands:
+  no_permission: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset><red> Insufficient permissions!<reset>"
+  animation:
+    help: "<newline>                <bold><gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <dark_gray>| <white>Help message<reset><newline><gray><italic>                     (Developed by YoSoyVillaa)<reset><newline><newline>  <white><bold>+</bold> <aqua>/animation reload<reset>  -  <gray>Reloads config file<reset><newline>  <white><bold>+</bold> <aqua>/animation create<reset>  -  <gray>Creates new animations<reset><newline>  <white><bold>+</bold> <aqua>/animation delete<reset>  -  <gray>Deletes an animation<reset><newline>  <white><bold>+</bold> <aqua>/animation show<reset>  -  <gray>Shows an animation to players<reset><newline>  <white><bold>+</bold> <aqua>/animation condition<reset>  -  <gray>Manages conditions<reset><newline>  <white><bold>+</bold> <aqua>/animation command<reset>  -  <gray>Manages animation commands<reset><newline>  <white><bold>+</bold> <aqua>/animation sound<reset>  -  <gray>Manages animation sounds<reset>"
+    reload: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset> Config reloaded.<reset>"
+    create:
+      usage: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset> Usage: <aqua>/animation create <texture/plain> <name> <fps><reset>"
+      already_exists: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset><red> Animation <aqua>%id%<red> already exists.<reset>"
+      invalid_fps: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset><red> FPS must be greater than 0.<reset>"
+      created_plain: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset> Animation <aqua>%id%<reset> has been created <gray><italic>(%fps% FPS)<reset>.<reset>"
+      created_texture: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset> Animation <aqua>%id%<reset> has been created <gray><italic>(%fps% FPS)<reset>. Now you can go to <aqua>HyrexAnimations/animations/%id%<reset> and start configuring your animation.<reset>"
+    delete:
+      usage: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset> Usage: <aqua>/animation delete <name><reset>"
+      deleted_plain: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset> Animation <aqua>%id%<reset> has been deleted.<reset>"
+      deleted_texture: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset> Animation <aqua>%id%<reset> has been deleted. Remember tu update your resource-pack and delete the necessary files.<reset>"
+    show:
+      usage: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset> Usage: <aqua>/animation show <all/player/world><reset>"
+      cancelled_by_plugin: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset><red> The animation start was cancelled by another plugin.<reset>"
+      condition_not_passed: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset><red> No player passed the condition.<reset>"
+      all:
+        usage: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset> Usage: <aqua>/animation show all <animation> <displayType> (condition)<reset>"
+        showing: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset> Showing animation <aqua>%animation%<reset> to online players.<reset>"
+        showing_condition: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset> Showing animation <aqua>%animation%<reset> to players who pass the <aqua>%condition%<reset> condition.<reset>"
+      player:
+        usage: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset> Usage: <aqua>/animation show player <player> <animation> <displayType> (condition)<reset>"
+        showing: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset> Showing animation <aqua>%animation%<reset> to player <aqua>%player%<reset>.<reset>"
+        condition_not_passed: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset><red> Player <aqua>%player%<red> doesn't pass <aqua>%condition%<red> condition.<reset>"
+      world:
+        usage: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset> Usage: <aqua>/animation show world <world> <animation> <displayType> (condition)<reset>"
+        no_players: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset><red> World <aqua>%world<red> is empty.<reset>"
+        showing: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset> Showing animation <aqua>%animation%<reset> to players in <aqua>%world%<reset> world.<reset>"
+        showing_condition: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset> Showing animation <aqua>%animation%<reset> to players in <aqua>%world%<reset> world who pass the <aqua>%condition%<reset> condition.<reset>"
+    command:
+      usage: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset> Usage: <aqua>/animation command <add/remove>"
+      add:
+        usage: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset> Usage: <aqua>/animation command add <animation> <frame> <type> <command><reset>"
+        invalid_frame: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset><red> Frame <aqua>%frame%<red> is invalid, must be greater than 0.<reset>"
+        added: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset> Command <aqua>'%command%<reset><aqua>'<reset> has been added to animation <aqua>%animation% <gray><italic>(Frame: %frame%, Type: %command_type%)<reset>.<reset>"
+      remove:
+        usage: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset> Usage: <aqua>/animation command remove <animation> <frame> (index)<reset>"
+        frame_not_exists: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset><red> Animation <aqua>%animation%<red> doesn't have commands asigned to frame <aqua>%frame%<red>.<reset>"
+        index_not_exists: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset><red> Animation <aqua>%animation%<red> doesn't have commands asigned to frame <aqua>%frame%<red> at index <aqua>%index%<red>.<reset>"
+        removed_frame: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset> Commands of frame <aqua>%frame%<reset> from the animation <aqua>%animation%<reset> has been deleted.<reset>"
+        removed_index: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset> Command <aqua>'%command%<reset><aqua>'<reset> has been deleted from animation <aqua>%animation% <gray><italic>(Frame: %frame%, Index: %index%, Type: %command_type%)<reset>.<reset>"
+    sound:
+      usage: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset> Usage: <aqua>/animation sound <add/remove>"
+      add:
+        usage: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset> Usage: <aqua>/animation sound add <animation> <frame> <sound> <source> <pitch><reset>"
+        invalid_frame: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset><red> Frame <aqua>%frame%<red> is invalid, must be greater than 0.<reset>"
+        added: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset> Sound has been added to animation <aqua>%animation% <gray><italic>(Frame: %frame%)<reset>.<reset>"
+      remove:
+        usage: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset> Usage: <aqua>/animation sound remove <animation> <frame> (index)<reset>"
+        frame_not_exists: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset><red> Animation <aqua>%animation%<red> doesn't have sounds asigned to frame <aqua>%frame%<red>.<reset>"
+        index_not_exists: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset><red> Animation <aqua>%animation%<red> doesn't have sounds asigned to frame <aqua>%frame%<red> at index <aqua>%index%<red>.<reset>"
+        removed_frame: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset> Sounds of frame <aqua>%frame%<reset> from the animation <aqua>%animation%<reset> has been deleted.<reset>"
+        removed_index: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset> The sound has been removed from the animation <aqua>%animation% <gray><italic>(Frame: %frame%, Índice: %index%)<reset>.<reset>"
+  condition:
+    usage: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset> Usage: <aqua>/animation condition <create/delete/parse>"
+    create:
+      usage: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset> Usage: <aqua>/animation condition create <name> <type> <condition><reset>"
+      already_exists: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset><red> Condition <aqua>%id%<red> already exists.<reset>"
+      invalid_name: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset><red> Condition name is invalid.<reset>"
+      created: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset> Condition <aqua>%id%<reset> has been created <gray><italic>(Type: %type%) (Value: %value%)<reset>.<reset>"
+    delete:
+      usage: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset> Usage: <aqua>/animation condition delete <name><reset>"
+      deleted: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset> Condition <aqua>%id%<reset> has been deleted.<reset>"
+    parse:
+      usage: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset> Usage: <aqua>/animation condition parse <name> <condition><reset>"
+      passed: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset> <aqua>%player%<reset> passed the <aqua>%id%<reset> condition."
+      not_pass: "<white><bold>☁ <gradient:#0EECFF:#008AE0>HyrexAnimations</gradient></bold> <white><bold>☁ <gray>»<reset> <aqua>%player%<reset> didn't pass the <aqua>%id%<reset> condition."

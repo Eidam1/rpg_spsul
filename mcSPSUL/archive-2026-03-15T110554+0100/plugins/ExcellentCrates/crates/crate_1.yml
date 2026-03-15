@@ -1,0 +1,35 @@
+Name: <lang:"block.minecraft.iron_block">
+Description: []
+ItemProvider:
+  Type: VANILLA
+  Tag:
+    Value: '{count:1,id:"minecraft:iron_block"}'
+    DataVersion: 4189
+ItemStackable: false
+Permission_Required: false
+Preview:
+  Enabled: true
+  Id: default
+Animation:
+  Enabled: true
+  Id: default
+Opening:
+  Cooldown: 0
+Key:
+  Required: false
+  Ids: []
+Block:
+  Positions: []
+  Pushback:
+    Enabled: true
+  Hologram:
+    Enabled: true
+    Template: default
+    Y_Offset: 1.0
+  Effect:
+    Model: helix
+    Particle:
+      Name: CLOUD
+Milestones:
+  Repeatable: false
+_dataver: 600

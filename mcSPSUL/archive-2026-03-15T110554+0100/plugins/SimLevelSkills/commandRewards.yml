@@ -1,0 +1,14 @@
+# Trigger commands at level ups from skills by defining the command (w/o slash) and the reward name
+# e.g.:
+# farming:
+#   10:
+#     cmd: give @p diamond
+#     name: Super Diamond
+#   20:
+#     cmd: give @p iron_ore
+#     name: Perfect Iron
+farming:
+mining:
+combat:
+forestry:
+fishing:

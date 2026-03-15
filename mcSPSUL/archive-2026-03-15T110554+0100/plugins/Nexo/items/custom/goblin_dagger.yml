@@ -1,0 +1,7 @@
+goblin_dagger:
+  material: IRON_SWORD
+  Pack:
+    # Tady je ta změna - odkazujeme na Namespace:NazevModelu
+    model: custom_goblin:goblin_dagger
+    custom_model_data: 1026
+  itemname: <gray>Goblin Dagger

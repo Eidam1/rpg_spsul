@@ -1,0 +1,37 @@
+command /hook:
+    permission: op
+    trigger:
+        give player fishing rod named "&6&lGrappling Hook" with lore "&7Vystřel se do vzduchu!"
+        send "&6Získal jsi Vystřelovací hák!" to player
+
+on fishing state change:
+    # DEBUG: Necháme ho tu ještě chvíli, abys viděl, co se děje.
+    # send "&8[Debug] &7Stav: %fishing state%" to player
+
+    if name of player's tool is "&6&lGrappling Hook":
+        
+        # OPRAVA: Místo přesných názvů hledáme klíčová slova.
+        # "ground" = když se zabodne do země
+        # "reel" nebo "failed" = když ho přitahuješ (klikneš pravým)
+        if "%fishing state%" contains "ground" or "reel" or "failed" or "bobber":
+            
+            # --- COOLDOWN ---
+            if {hook_cooldown::%player%} is set:
+                if difference between {hook_cooldown::%player%} and now is less than 1 seconds:
+                    stop
+            set {hook_cooldown::%player%} to now
+            
+            # --- FYZIKA ---
+            set {_playerLoc} to location of player
+            set {_hookLoc} to location of fish hook
+            
+            # Pokud hák ještě nikde není (hráč jen klikl), nic neděláme
+            if {_hookLoc} is not set:
+                stop
+
+            set {_vector} to vector between {_playerLoc} and {_hookLoc}
+            set vector length of {_vector} to 1.5
+            set y component of {_vector} to (y component of {_vector} + 0.4)
+            
+            push player {_vector}
+            play sound "entity.firework_rocket.launch" at player

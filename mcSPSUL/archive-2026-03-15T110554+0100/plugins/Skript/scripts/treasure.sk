@@ -1,0 +1,123 @@
+# ==========================================================
+#  TREASURE HUNTER - FINAL VERSION (No Errors)
+# ==========================================================
+
+options:
+    prefix: &6&lPOKLAD &8»&7
+
+# --- 1. FUNKCE PRO ZÍSKÁNÍ ITEMŮ ---
+
+function getTreasureItem(tier: text) :: item:
+    if {_tier} is "common":
+        set {_i} to bundle named "&f&lBěžný Vak s pokladem"
+        set lore of {_i} to "&7Tento vak je špinavý od hlíny." and "&eKlikni pravým pro otevření!"
+        return {_i}
+    
+    else if {_tier} is "rare":
+        set {_i} to chest named "&b&lVzácná Truhla"
+        set lore of {_i} to "&7Těžká okovaná truhla." and "&eKlikni pravým pro otevření!"
+        return {_i}
+    
+    else if {_tier} is "legendary":
+        set {_i} to ender chest named "&5&lLegendární Artefakt"
+        set lore of {_i} to "&7Sálá z toho temná energie..." and "&k&5ULTRA RARE" and "&eKlikni pravým pro otevření!"
+        return {_i}
+    
+    return stone named "&cChyba"
+
+# --- 2. DROP PŘI TĚŽBĚ (Bez kontroly nástroje) ---
+
+on break of stone or deepslate or netherrack or tuff:
+    if gamemode of player is survival:
+        
+        # --- COMMON (1.5% šance) ---
+        chance of 1.5%:
+            set {_drop} to getTreasureItem("common")
+            drop {_drop} at event-location
+            play sound "entity.item.pickup" to player
+            stop
+
+        # --- RARE (0.5% šance) ---
+        chance of 0.5%:
+            set {_drop} to getTreasureItem("rare")
+            drop {_drop} at event-location
+            play sound "entity.experience_orb.pickup" to player
+            send "{@prefix} &bNašel jsi Vzácnou truhlu!" to player
+            stop
+
+        # --- LEGENDARY (0.05% šance) ---
+        chance of 0.05%:
+            set {_drop} to getTreasureItem("legendary")
+            drop {_drop} at event-location
+            play sound "ui.toast.challenge_complete" to player
+            send "{@prefix} &5&lNašel jsi Legendární Artefakt!" to player
+            strike lightning effect at event-location
+            stop
+
+# --- 3. OTEVÍRÁNÍ POKLADŮ ---
+
+on right click:
+    # --- COMMON ---
+    if name of player's tool is "&f&lBěžný Vak s pokladem":
+        cancel event
+        remove 1 of player's tool from player
+        play sound "item.bundle.drop_contents" to player
+        
+        set {_r} to random integer between 1 and 3
+        if {_r} is 1:
+            give player 3 raw iron
+            send "{@prefix} Našel jsi &fŽelezo&7." to player
+        else if {_r} is 2:
+            give player 5 coal
+            send "{@prefix} Našel jsi &8Uhlí&7." to player
+        else:
+            give player 2 gold nugget
+            send "{@prefix} Našel jsi &6Zlaté nugety&7." to player
+
+    # --- RARE ---
+    else if name of player's tool is "&b&lVzácná Truhla":
+        cancel event
+        remove 1 of player's tool from player
+        play sound "block.chest.open" to player
+        
+        set {_r} to random integer between 1 and 4
+        if {_r} is 1:
+            give player 1 diamond
+            send "{@prefix} &bDiamant!" to player
+        else if {_r} is 2:
+            give player 4 gold ingot
+            send "{@prefix} &6Zlato!" to player
+        else if {_r} is 3:
+            give player 8 lapis lazuli
+            send "{@prefix} &9Lapis Lazuli." to player
+        else:
+            give player 1 name tag
+            send "{@prefix} &fName Tag." to player
+
+    # --- LEGENDARY ---
+    else if name of player's tool is "&5&lLegendární Artefakt":
+        cancel event
+        remove 1 of player's tool from player
+        play sound "block.end_portal.spawn" to player
+        
+        set {_r} to random integer between 1 and 3
+        if {_r} is 1:
+            give player 1 netherite scrap
+            broadcast "{@prefix} &d%player% &7našel &4Netherite Scrap&7!"
+        else if {_r} is 2:
+            give player 1 enchanted golden apple
+            broadcast "{@prefix} &d%player% &7našel &dEnchanted Golden Apple&7!"
+        else:
+            give player 16 diamond
+            send "{@prefix} &b16 Diamantů!" to player
+
+# --- 4. ADMIN PŘÍKAZ ---
+
+command /treasure [<text>]:
+    permission: op
+    trigger:
+        if arg-1 is not set:
+            send "&cPoužij: /treasure <common|rare|legendary>" to player
+        else:
+            give getTreasureItem(arg-1) to player
+            send "{@prefix} Dáno." to player

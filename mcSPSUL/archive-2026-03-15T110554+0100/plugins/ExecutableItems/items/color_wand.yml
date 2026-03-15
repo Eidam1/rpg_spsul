@@ -1,0 +1,84 @@
+COLOR_WAND:
+name: '&8(()) &fHůlka Barevného Mistra &8(())'
+lore:
+- '&8&m------------------------'
+- '&7'
+- '&7Pravé kliknutí - Střílí barevný projektil'
+- '&7Mění bloky na modrou vlnu!'
+- '&7'
+- '&8&m------------------------'
+material: BLAZE_ROD
+glow: false
+disableStack: false
+keepItemOnDeath: false
+canBeUsedOnlyByTheOwner: false
+storeItemInfo: false
+unbreakable: false
+usage: 0
+usageLimit: -1
+activators:
+  CAST:
+    name: '&eBarevné kouzlo'
+    option: RIGHT_CLICK_AIR
+    usageModification: -1
+    cancelEvent: true
+    silenceOutput: false
+    autoUpdateItem: false
+    
+    cooldownFeatures:
+      cooldown: 5
+      isCooldownInTicks: false
+      cooldownMsg: '&cKouzlo je v cooldownu! &7(&e%time_S%&6S&7)'
+      displayCooldownMessage: true
+      cancelEventIfInCooldown: true
+      
+    # --- AKCE PŘI SESLÁNÍ KOUZLA ---
+    playerCommands:
+      # 1. Vystřelí projektil (používáme SNOWBALL, nejjistější)
+      - 'SHOOT_PROJECTILE SNOWBALL 1.5 0' 
+      # 2. Přidá k vystřelenému projektilu aktivátor pro změnu bloku
+      - 'ADD_ACTIVATORS COLOR_ON_HIT'
+      - 'PLAYSOUND ENTITY_EXPERIENCE_ORB_PICKUP 1 1'
+      
+    # --- DEFINICE AKTIVÁTORU PŘI DOPADU ---
+    additionalActivators:
+      COLOR_ON_HIT:
+        option: PROJECTILE_HIT_BLOCK 
+        
+        targetCommands:
+          # Akce 1: Změní zasažený blok na modrou vlnu (BLUE_WOOL)
+          # %target_block_loc% je souřadnice bloku, do kterého projektil narazil
+          - 'RUN_COMMAND setblock %target_block_loc% BLUE_WOOL'
+          
+          # 2. Odebere aktivátor (aby se neopakovalo)
+          - 'REMOVE_ITEM_ACTIVATORS COLOR_ON_HIT'
+        
+        targetConditions: {} 
+          
+        playerCommands:
+          - 'PLAYSOUND ENTITY_TARGET_BLOCK_HIT 1 1'
+          - 'SENDMESSAGE &aBlok úspěšně přebarven na modro!'
+          - 'DELAY 5'
+          - 'REMOVE_ITEM_ACTIVATORS COLOR_ON_HIT'
+          
+    playerConditions: {}
+    worldConditions: {}
+    itemConditions: {}
+    customConditions: {}
+    targetCommands: {}
+    targetConditions: {}
+    variablesModification: {}
+
+dropFeatures: {}
+hiders: {}
+enchantments: {}
+giveFirstJoinFeatures: {}
+restrictions: {}
+cancelEventIfNoPerm: false
+cancelEventIfNotOwner: false
+disabledWorlds: []
+variables: {}
+recognitions: []
+attributes: {}
+config_5: true
+config_update: true

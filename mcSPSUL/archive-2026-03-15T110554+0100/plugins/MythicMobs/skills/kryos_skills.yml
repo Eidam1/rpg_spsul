@@ -1,0 +1,27 @@
+MrazivaAura:
+  Skills:
+  - aura{auraName=Frost_Slow;d=40;i=20;
+      onTick=[
+        - effect:particles{p=snowflake;a=5;hs=2;vs=0.5;s=0.1}
+        - potion{type=SLOW;d=40;l=1} @PlayersInRadius{r=5}
+      ]} @self
+
+LedoveStřepiny:
+  Skills:
+  - message{msg="&bKryos: &7Zmrzněte v prachu!"} @PlayersInRadius{r=20}
+  # Orbital - střepiny kroužící kolem bosse, které pak vystřelí
+  - orbital{onTick=[
+        - effect:particles{p=block;material=ICE;a=1}
+      ];onHit=[
+        - damage{a=10}
+        - potion{type=SLOW;d=100;l=2}
+      ];i=1;d=100;r=3;v=10} @target
+
+LedovySkok:
+  Skills:
+  - leap{v=300} @target
+  - delay 20
+  # Math mechanika pro výpočet poškození podle vzdálenosti
+  - damage{a="20 - (distance / 2)"} @PlayersInRadius{r=8}
+  - effect:particles{p=explosion;a=10;hs=3} @self
+  - effect:sound{s=block.glass.break;v=2;p=0.5} @self

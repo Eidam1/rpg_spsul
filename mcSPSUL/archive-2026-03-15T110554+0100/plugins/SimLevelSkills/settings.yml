@@ -1,0 +1,22 @@
+leaderboard: true
+randomEvents: false
+randomEventsBossBarColor: GREEN
+randomEventsDurations:
+  - 10
+  - 20
+  - 30
+randomEventsMultipliers:
+  - 1.5
+  - 1.8
+  - 2.0
+  - 2.2
+  - 2.5
+restrictLockedToolUsage: false
+doubleDrops:
+  mining: true
+  farming: true
+  forestry: true
+  combat: true
+  fishing: true
+doubleDropsPercentChancePerLevel: 1.0
+levelUpSound: ENTITY_PLAYER_LEVELUP

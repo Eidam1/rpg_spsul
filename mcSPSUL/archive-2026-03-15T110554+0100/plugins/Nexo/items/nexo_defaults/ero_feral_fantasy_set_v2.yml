@@ -1,0 +1,407 @@
+ero_feral_fantasy_set_v2_cow_ears:
+  AttributeModifiers:
+  - amount: 2
+    attribute: GENERIC_ARMOR
+    operation: 0
+    slot: HEAD
+  Components:
+    equippable:
+      slot: HEAD
+    max_damage: 165
+  Pack:
+    model: ero_feral_fantasy_set_v2:cow_ears_hat
+    custom_model_data: 1011
+  itemname: <white>Cow Ears
+  material: PAPER
+  permission: ero_feral_fantasy_set_v2.cow_ears
+ero_feral_fantasy_set_v2_cow_horn:
+  AttributeModifiers:
+  - amount: 2
+    attribute: GENERIC_ARMOR
+    operation: 0
+    slot: HEAD
+  Components:
+    equippable:
+      slot: HEAD
+    max_damage: 165
+  Pack:
+    model: ero_feral_fantasy_set_v2:cow_horn_hat
+    custom_model_data: 1012
+  itemname: <white>Cow Horn
+  material: PAPER
+  permission: ero_feral_fantasy_set_v2.cow_horn
+ero_feral_fantasy_set_v2_cow_tail:
+  Pack:
+    model: ero_feral_fantasy_set_v2:cow_tail_backpack
+    custom_model_data: 1013
+  itemname: <white>Cow Tail
+  material: PAPER
+  permission: ero_feral_fantasy_set_v2.cow_tail
+ero_feral_fantasy_set_v2_deer_ears:
+  AttributeModifiers:
+  - amount: 2
+    attribute: GENERIC_ARMOR
+    operation: 0
+    slot: HEAD
+  Components:
+    equippable:
+      slot: HEAD
+    max_damage: 165
+  Pack:
+    model: ero_feral_fantasy_set_v2:deer_ears_hat
+    custom_model_data: 1014
+  itemname: <white>Deer Ears
+  material: PAPER
+  permission: ero_feral_fantasy_set_v2.deer_ears
+ero_feral_fantasy_set_v2_deer_horn:
+  AttributeModifiers:
+  - amount: 2
+    attribute: GENERIC_ARMOR
+    operation: 0
+    slot: HEAD
+  Components:
+    equippable:
+      slot: HEAD
+    max_damage: 165
+  Pack:
+    model: ero_feral_fantasy_set_v2:deer_horn_hat
+    custom_model_data: 1015
+  itemname: <white>Deer Horn
+  material: PAPER
+  permission: ero_feral_fantasy_set_v2.deer_horn
+ero_feral_fantasy_set_v2_deer_tail:
+  Pack:
+    model: ero_feral_fantasy_set_v2:deer_tail_backpack
+    custom_model_data: 1016
+  itemname: <white>Deer Tail
+  material: PAPER
+  permission: ero_feral_fantasy_set_v2.deer_tail
+ero_feral_fantasy_set_v2_goat_ears:
+  AttributeModifiers:
+  - amount: 2
+    attribute: GENERIC_ARMOR
+    operation: 0
+    slot: HEAD
+  Components:
+    equippable:
+      slot: HEAD
+    max_damage: 165
+  Pack:
+    model: ero_feral_fantasy_set_v2:goat_ears_hat
+    custom_model_data: 1017
+  itemname: <white>Goat Ears
+  material: PAPER
+  permission: ero_feral_fantasy_set_v2.goat_ears
+ero_feral_fantasy_set_v2_goat_horn:
+  AttributeModifiers:
+  - amount: 2
+    attribute: GENERIC_ARMOR
+    operation: 0
+    slot: HEAD
+  Components:
+    equippable:
+      slot: HEAD
+    max_damage: 165
+  Pack:
+    model: ero_feral_fantasy_set_v2:goat_horn_hat
+    custom_model_data: 1018
+  itemname: <white>Goat Horn
+  material: PAPER
+  permission: ero_feral_fantasy_set_v2.goat_horn
+ero_feral_fantasy_set_v2_goat_tail:
+  Pack:
+    model: ero_feral_fantasy_set_v2:goat_tail_backpack
+    custom_model_data: 1019
+  itemname: <white>Goat Tail
+  material: PAPER
+  permission: ero_feral_fantasy_set_v2.goat_tail
+ero_feral_fantasy_set_v2_horse_ears:
+  AttributeModifiers:
+  - amount: 2
+    attribute: GENERIC_ARMOR
+    operation: 0
+    slot: HEAD
+  Components:
+    equippable:
+      slot: HEAD
+    max_damage: 165
+  Pack:
+    model: ero_feral_fantasy_set_v2:horse_ears_hat
+    custom_model_data: 1020
+  itemname: <white>Horse Ears
+  material: PAPER
+  permission: ero_feral_fantasy_set_v2.horse_ears
+ero_feral_fantasy_set_v2_horse_horn:
+  AttributeModifiers:
+  - amount: 2
+    attribute: GENERIC_ARMOR
+    operation: 0
+    slot: HEAD
+  Components:
+    equippable:
+      slot: HEAD
+    max_damage: 165
+  Pack:
+    model: ero_feral_fantasy_set_v2:horse_horn_hat
+    custom_model_data: 1021
+  itemname: <white>Horse Horn
+  material: PAPER
+  permission: ero_feral_fantasy_set_v2.horse_horn
+ero_feral_fantasy_set_v2_horse_tail:
+  Pack:
+    model: ero_feral_fantasy_set_v2:horse_tail_backpack
+    custom_model_data: 1022
+  itemname: <white>Horse Tail
+  material: PAPER
+  permission: ero_feral_fantasy_set_v2.horse_tail
+ero_feral_fantasy_set_v2_sheep_ears:
+  AttributeModifiers:
+  - amount: 2
+    attribute: GENERIC_ARMOR
+    operation: 0
+    slot: HEAD
+  Components:
+    equippable:
+      slot: HEAD
+    max_damage: 165
+  Pack:
+    model: ero_feral_fantasy_set_v2:sheep_ears_hat
+    custom_model_data: 1023
+  itemname: <white>Sheep Ears
+  material: PAPER
+  permission: ero_feral_fantasy_set_v2.sheep_ears
+ero_feral_fantasy_set_v2_sheep_horn:
+  AttributeModifiers:
+  - amount: 2
+    attribute: GENERIC_ARMOR
+    operation: 0
+    slot: HEAD
+  Components:
+    equippable:
+      slot: HEAD
+    max_damage: 165
+  Pack:
+    model: ero_feral_fantasy_set_v2:sheep_horn_hat
+    custom_model_data: 1024
+  itemname: <white>Sheep Horn
+  material: PAPER
+  permission: ero_feral_fantasy_set_v2.sheep_horn
+ero_feral_fantasy_set_v2_sheep_tail:
+  Pack:
+    model: ero_feral_fantasy_set_v2:sheep_tail_backpack
+    custom_model_data: 1025
+  itemname: <white>Sheep Tail
+  material: PAPER
+  permission: ero_feral_fantasy_set_v2.sheep_tail
+ero_feral_fantasy_set_v2_cosmetics_cow_ears:
+  Pack:
+    custom_model_data: 9925572
+    model: ero_feral_fantasy_set_v2:cow_ears_hat
+  itemname: <white>Cow Ears Cosmetics
+  material: LEATHER_HORSE_ARMOR
+  permission: ero_feral_fantasy_set_v2.ero_feral_fantasy_set_v2_cosmetics_cow_ears
+ero_feral_fantasy_set_v2_cosmetics_cow_horn:
+  Pack:
+    custom_model_data: 9925573
+    model: ero_feral_fantasy_set_v2:cow_horn_hat
+  itemname: <white>Cow Horn Cosmetics
+  material: LEATHER_HORSE_ARMOR
+  permission: ero_feral_fantasy_set_v2.ero_feral_fantasy_set_v2_cosmetics_cow_horn
+ero_feral_fantasy_set_v2_cosmetics_cow_tail:
+  Pack:
+    custom_model_data: 9925574
+    model: ero_feral_fantasy_set_v2:cow_tail_backpack_cosmetic
+  itemname: <white>Cow Tail Cosmetics
+  material: LEATHER_HORSE_ARMOR
+  permission: ero_feral_fantasy_set_v2.ero_feral_fantasy_set_v2_cosmetics_cow_tail
+ero_feral_fantasy_set_v2_cosmetics_cow_tail_normal_2:
+  Pack:
+    custom_model_data: 9925577
+    model: ero_feral_fantasy_set_v2:cow_tail_backpack_cosmetic_normal_2
+  itemname: <white>Cow Tail Cosmetics Normal 2
+  material: LEATHER_HORSE_ARMOR
+  permission: ero_feral_fantasy_set_v2.ero_feral_fantasy_set_v2_cosmetics_cow_tail_normal_2
+ero_feral_fantasy_set_v2_cosmetics_cow_tail_self:
+  Pack:
+    custom_model_data: 9925575
+    model: ero_feral_fantasy_set_v2:cow_tail_backpack_cosmetic_self
+  itemname: <white>Cow Tail Cosmetics Self
+  material: LEATHER_HORSE_ARMOR
+  permission: ero_feral_fantasy_set_v2.ero_feral_fantasy_set_v2_cosmetics_cow_tail_self
+ero_feral_fantasy_set_v2_cosmetics_cow_tail_self_2:
+  Pack:
+    custom_model_data: 9925576
+    model: ero_feral_fantasy_set_v2:cow_tail_backpack_cosmetic_self_2
+  itemname: <white>Cow Tail Cosmetics Self 2
+  material: LEATHER_HORSE_ARMOR
+  permission: ero_feral_fantasy_set_v2.ero_feral_fantasy_set_v2_cosmetics_cow_tail_self_2
+ero_feral_fantasy_set_v2_cosmetics_deer_ears:
+  Pack:
+    custom_model_data: 9925578
+    model: ero_feral_fantasy_set_v2:deer_ears_hat
+  itemname: <white>Deer Ears Cosmetics
+  material: LEATHER_HORSE_ARMOR
+  permission: ero_feral_fantasy_set_v2.ero_feral_fantasy_set_v2_cosmetics_deer_ears
+ero_feral_fantasy_set_v2_cosmetics_deer_horn:
+  Pack:
+    custom_model_data: 9925579
+    model: ero_feral_fantasy_set_v2:deer_horn_hat
+  itemname: <white>Deer Horn Cosmetics
+  material: LEATHER_HORSE_ARMOR
+  permission: ero_feral_fantasy_set_v2.ero_feral_fantasy_set_v2_cosmetics_deer_horn
+ero_feral_fantasy_set_v2_cosmetics_deer_tail:
+  Pack:
+    custom_model_data: 9925580
+    model: ero_feral_fantasy_set_v2:deer_tail_backpack_cosmetic
+  itemname: <white>Deer Tail Cosmetics
+  material: LEATHER_HORSE_ARMOR
+  permission: ero_feral_fantasy_set_v2.ero_feral_fantasy_set_v2_cosmetics_deer_tail
+ero_feral_fantasy_set_v2_cosmetics_deer_tail_normal_2:
+  Pack:
+    custom_model_data: 9925583
+    model: ero_feral_fantasy_set_v2:deer_tail_backpack_cosmetic_normal_2
+  itemname: <white>Deer Tail Cosmetics Normal 2
+  material: LEATHER_HORSE_ARMOR
+  permission: ero_feral_fantasy_set_v2.ero_feral_fantasy_set_v2_cosmetics_deer_tail_normal_2
+ero_feral_fantasy_set_v2_cosmetics_deer_tail_self:
+  Pack:
+    custom_model_data: 9925581
+    model: ero_feral_fantasy_set_v2:deer_tail_backpack_cosmetic_self
+  itemname: <white>Deer Tail Cosmetics Self
+  material: LEATHER_HORSE_ARMOR
+  permission: ero_feral_fantasy_set_v2.ero_feral_fantasy_set_v2_cosmetics_deer_tail_self
+ero_feral_fantasy_set_v2_cosmetics_deer_tail_self_2:
+  Pack:
+    custom_model_data: 9925582
+    model: ero_feral_fantasy_set_v2:deer_tail_backpack_cosmetic_self_2
+  itemname: <white>Deer Tail Cosmetics Self 2
+  material: LEATHER_HORSE_ARMOR
+  permission: ero_feral_fantasy_set_v2.ero_feral_fantasy_set_v2_cosmetics_deer_tail_self_2
+ero_feral_fantasy_set_v2_cosmetics_goat_ears:
+  Pack:
+    custom_model_data: 9925584
+    model: ero_feral_fantasy_set_v2:goat_ears_hat
+  itemname: <white>Goat Ears Cosmetics
+  material: LEATHER_HORSE_ARMOR
+  permission: ero_feral_fantasy_set_v2.ero_feral_fantasy_set_v2_cosmetics_goat_ears
+ero_feral_fantasy_set_v2_cosmetics_goat_horn:
+  Pack:
+    custom_model_data: 9925585
+    model: ero_feral_fantasy_set_v2:goat_horn_hat
+  itemname: <white>Goat Horn Cosmetics
+  material: LEATHER_HORSE_ARMOR
+  permission: ero_feral_fantasy_set_v2.ero_feral_fantasy_set_v2_cosmetics_goat_horn
+ero_feral_fantasy_set_v2_cosmetics_goat_tail:
+  Pack:
+    custom_model_data: 9925586
+    model: ero_feral_fantasy_set_v2:goat_tail_backpack_cosmetic
+  itemname: <white>Goat Tail Cosmetics
+  material: LEATHER_HORSE_ARMOR
+  permission: ero_feral_fantasy_set_v2.ero_feral_fantasy_set_v2_cosmetics_goat_tail
+ero_feral_fantasy_set_v2_cosmetics_goat_tail_normal_2:
+  Pack:
+    custom_model_data: 9925589
+    model: ero_feral_fantasy_set_v2:goat_tail_backpack_cosmetic_normal_2
+  itemname: <white>Goat Tail Cosmetics Normal 2
+  material: LEATHER_HORSE_ARMOR
+  permission: ero_feral_fantasy_set_v2.ero_feral_fantasy_set_v2_cosmetics_goat_tail_normal_2
+ero_feral_fantasy_set_v2_cosmetics_goat_tail_self:
+  Pack:
+    custom_model_data: 9925587
+    model: ero_feral_fantasy_set_v2:goat_tail_backpack_cosmetic_self
+  itemname: <white>Goat Tail Cosmetics Self
+  material: LEATHER_HORSE_ARMOR
+  permission: ero_feral_fantasy_set_v2.ero_feral_fantasy_set_v2_cosmetics_goat_tail_self
+ero_feral_fantasy_set_v2_cosmetics_goat_tail_self_2:
+  Pack:
+    custom_model_data: 9925588
+    model: ero_feral_fantasy_set_v2:goat_tail_backpack_cosmetic_self_2
+  itemname: <white>Goat Tail Cosmetics Self 2
+  material: LEATHER_HORSE_ARMOR
+  permission: ero_feral_fantasy_set_v2.ero_feral_fantasy_set_v2_cosmetics_goat_tail_self_2
+ero_feral_fantasy_set_v2_cosmetics_horse_ears:
+  Pack:
+    custom_model_data: 9925590
+    model: ero_feral_fantasy_set_v2:horse_ears_hat
+  itemname: <white>Horse Ears Cosmetics
+  material: LEATHER_HORSE_ARMOR
+  permission: ero_feral_fantasy_set_v2.ero_feral_fantasy_set_v2_cosmetics_horse_ears
+ero_feral_fantasy_set_v2_cosmetics_horse_horn:
+  Pack:
+    custom_model_data: 9925591
+    model: ero_feral_fantasy_set_v2:horse_horn_hat
+  itemname: <white>Horse Horn Cosmetics
+  material: LEATHER_HORSE_ARMOR
+  permission: ero_feral_fantasy_set_v2.ero_feral_fantasy_set_v2_cosmetics_horse_horn
+ero_feral_fantasy_set_v2_cosmetics_horse_tail:
+  Pack:
+    custom_model_data: 9925592
+    model: ero_feral_fantasy_set_v2:horse_tail_backpack_cosmetic
+  itemname: <white>Horse Tail Cosmetics
+  material: LEATHER_HORSE_ARMOR
+  permission: ero_feral_fantasy_set_v2.ero_feral_fantasy_set_v2_cosmetics_horse_tail
+ero_feral_fantasy_set_v2_cosmetics_horse_tail_normal_2:
+  Pack:
+    custom_model_data: 9925595
+    model: ero_feral_fantasy_set_v2:horse_tail_backpack_cosmetic_normal_2
+  itemname: <white>Horse Tail Cosmetics Normal 2
+  material: LEATHER_HORSE_ARMOR
+  permission: ero_feral_fantasy_set_v2.ero_feral_fantasy_set_v2_cosmetics_horse_tail_normal_2
+ero_feral_fantasy_set_v2_cosmetics_horse_tail_self:
+  Pack:
+    custom_model_data: 9925593
+    model: ero_feral_fantasy_set_v2:horse_tail_backpack_cosmetic_self
+  itemname: <white>Horse Tail Cosmetics Self
+  material: LEATHER_HORSE_ARMOR
+  permission: ero_feral_fantasy_set_v2.ero_feral_fantasy_set_v2_cosmetics_horse_tail_self
+ero_feral_fantasy_set_v2_cosmetics_horse_tail_self_2:
+  Pack:
+    custom_model_data: 9925594
+    model: ero_feral_fantasy_set_v2:horse_tail_backpack_cosmetic_self_2
+  itemname: <white>Horse Tail Cosmetics Self 2
+  material: LEATHER_HORSE_ARMOR
+  permission: ero_feral_fantasy_set_v2.ero_feral_fantasy_set_v2_cosmetics_horse_tail_self_2
+ero_feral_fantasy_set_v2_cosmetics_sheep_ears:
+  Pack:
+    custom_model_data: 9925596
+    model: ero_feral_fantasy_set_v2:sheep_ears_hat
+  itemname: <white>Sheep Ears Cosmetics
+  material: LEATHER_HORSE_ARMOR
+  permission: ero_feral_fantasy_set_v2.ero_feral_fantasy_set_v2_cosmetics_sheep_ears
+ero_feral_fantasy_set_v2_cosmetics_sheep_horn:
+  Pack:
+    custom_model_data: 9925597
+    model: ero_feral_fantasy_set_v2:sheep_horn_hat
+  itemname: <white>Sheep Horn Cosmetics
+  material: LEATHER_HORSE_ARMOR
+  permission: ero_feral_fantasy_set_v2.ero_feral_fantasy_set_v2_cosmetics_sheep_horn
+ero_feral_fantasy_set_v2_cosmetics_sheep_tail:
+  Pack:
+    custom_model_data: 9925598
+    model: ero_feral_fantasy_set_v2:sheep_tail_backpack_cosmetic
+  itemname: <white>Sheep Tail Cosmetics
+  material: LEATHER_HORSE_ARMOR
+  permission: ero_feral_fantasy_set_v2.ero_feral_fantasy_set_v2_cosmetics_sheep_tail
+ero_feral_fantasy_set_v2_cosmetics_sheep_tail_normal_2:
+  Pack:
+    custom_model_data: 9925601
+    model: ero_feral_fantasy_set_v2:sheep_tail_backpack_cosmetic_normal_2
+  itemname: <white>Sheep Tail Cosmetics Normal 2
+  material: LEATHER_HORSE_ARMOR
+  permission: ero_feral_fantasy_set_v2.ero_feral_fantasy_set_v2_cosmetics_sheep_tail_normal_2
+ero_feral_fantasy_set_v2_cosmetics_sheep_tail_self:
+  Pack:
+    custom_model_data: 9925599
+    model: ero_feral_fantasy_set_v2:sheep_tail_backpack_cosmetic_self
+  itemname: <white>Sheep Tail Cosmetics Self
+  material: LEATHER_HORSE_ARMOR
+  permission: ero_feral_fantasy_set_v2.ero_feral_fantasy_set_v2_cosmetics_sheep_tail_self
+ero_feral_fantasy_set_v2_cosmetics_sheep_tail_self_2:
+  Pack:
+    custom_model_data: 9925600
+    model: ero_feral_fantasy_set_v2:sheep_tail_backpack_cosmetic_self_2
+  itemname: <white>Sheep Tail Cosmetics Self 2
+  material: LEATHER_HORSE_ARMOR
+  permission: ero_feral_fantasy_set_v2.ero_feral_fantasy_set_v2_cosmetics_sheep_tail_self_2
+
+# 512a6bdd000acb75ca940f10907e8629
